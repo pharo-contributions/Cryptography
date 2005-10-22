@@ -1,0 +1,1 @@
+This class tests the DES algorithm using a test case defined by Ron Rivest in (http://theory.lcs.mit.edu/~rivest/destest.txt), which according to his analysis should uncover all possible single-point failures.

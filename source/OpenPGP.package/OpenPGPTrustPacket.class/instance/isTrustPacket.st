@@ -1,0 +1,3 @@
+testing
+isTrustPacket
+	^true

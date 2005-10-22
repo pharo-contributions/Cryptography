@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "OpenPGPSignatureData",
+	"category" : "OpenPGP-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"creationTime",
+		"signer"
+	],
+	"name" : "OpenPGPSignatureV3Data",
+	"type" : "normal"
+}

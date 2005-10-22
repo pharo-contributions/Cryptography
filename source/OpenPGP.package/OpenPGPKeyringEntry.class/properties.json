@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "hmm 3/26/2002 19:19",
+	"super" : "Object",
+	"category" : "OpenPGP-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"PreferredKeys"
+	],
+	"instvars" : [
+		"packets"
+	],
+	"name" : "OpenPGPKeyringEntry",
+	"type" : "normal"
+}

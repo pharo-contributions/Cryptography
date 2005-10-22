@@ -1,0 +1,3 @@
+accessing
+publicKey
+	^algorithmSpecificData publicKey

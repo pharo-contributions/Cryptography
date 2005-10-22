@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "hmm 3/30/2002 14:32",
+	"super" : "Object",
+	"category" : "OpenPGP-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DefaultPrivateKeyFile",
+		"DefaultPublicKeyFile"
+	],
+	"instvars" : [
+		"publicKeys",
+		"privateKeys",
+		"options"
+	],
+	"name" : "OpenPGP",
+	"type" : "normal"
+}

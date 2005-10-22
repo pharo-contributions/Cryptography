@@ -1,0 +1,3 @@
+visitor
+handlePublicKeyEncryptedSessionKeyPacket: anOpenPGPPublicKeyEncryptedSessionKeyPacket
+	"do nothing"

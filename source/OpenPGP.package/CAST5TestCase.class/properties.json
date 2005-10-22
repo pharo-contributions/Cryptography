@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "hmm 3/26/2002 18:19",
+	"super" : "TestCase",
+	"category" : "OpenPGP-Algorithms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CAST5TestCase",
+	"type" : "normal"
+}

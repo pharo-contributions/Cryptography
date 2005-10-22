@@ -1,0 +1,1 @@
+This class serves as a central interface to the OpenPGP implementation classes. Clients should not reference those classes directly, but they may use all non-private methods on the class side.

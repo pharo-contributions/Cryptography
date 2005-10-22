@@ -1,0 +1,3 @@
+accessing
+numMPIs
+	^4

@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "hmm 3/26/2002 18:20",
+	"super" : "FeistelCipher",
+	"category" : "OpenPGP-Algorithms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EBitSelectionTable",
+		"S1",
+		"S2",
+		"S3",
+		"S4",
+		"S5",
+		"S6",
+		"S7",
+		"S8",
+		"SBoxes"
+	],
+	"instvars" : [
+		"shortKey"
+	],
+	"name" : "CAST5",
+	"type" : "normal"
+}

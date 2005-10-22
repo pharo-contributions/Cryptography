@@ -1,0 +1,1 @@
+This test case checks that the 3 test key/plaintext pairs (for 40, 80 and 128 bit key length) given in the CAST5 spec are encoded and decoded correctly.

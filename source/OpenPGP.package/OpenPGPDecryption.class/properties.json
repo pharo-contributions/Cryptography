@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "OpenPGPVisitor",
+	"category" : "OpenPGP-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"symmetricKeyPacket",
+		"publicKeyPacket",
+		"cipher"
+	],
+	"name" : "OpenPGPDecryption",
+	"type" : "normal"
+}

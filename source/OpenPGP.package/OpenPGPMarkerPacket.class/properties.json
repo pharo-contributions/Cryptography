@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OpenPGPPacket",
+	"category" : "OpenPGP-Packets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OpenPGPMarkerPacket",
+	"type" : "normal"
+}

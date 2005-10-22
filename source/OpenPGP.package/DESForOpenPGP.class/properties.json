@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "hmm 3/26/2002 19:15",
+	"super" : "FeistelCipher",
+	"category" : "OpenPGP-Algorithms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EBitSelectionTable",
+		"IIP",
+		"IP",
+		"P",
+		"PC1",
+		"PC2",
+		"SBoxes"
+	],
+	"instvars" : [ ],
+	"name" : "DESForOpenPGP",
+	"type" : "normal"
+}

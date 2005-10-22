@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "hmm 3/26/2002 19:16",
+	"super" : "BlockCipher",
+	"category" : "OpenPGP-Algorithms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"des1",
+		"des2",
+		"des3"
+	],
+	"name" : "TripleDESForOpenPGP",
+	"type" : "normal"
+}

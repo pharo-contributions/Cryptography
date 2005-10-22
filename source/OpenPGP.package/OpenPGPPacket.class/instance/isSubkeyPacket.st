@@ -1,0 +1,3 @@
+testing
+isSubkeyPacket
+	^false
