@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_RSA_MSATWORK
+	^2

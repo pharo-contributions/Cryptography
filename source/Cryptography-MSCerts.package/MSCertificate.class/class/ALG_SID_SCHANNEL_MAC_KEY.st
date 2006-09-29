@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_SCHANNEL_MAC_KEY
+	^4

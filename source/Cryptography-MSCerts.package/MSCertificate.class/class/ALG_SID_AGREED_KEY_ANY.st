@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_AGREED_KEY_ANY
+	^3

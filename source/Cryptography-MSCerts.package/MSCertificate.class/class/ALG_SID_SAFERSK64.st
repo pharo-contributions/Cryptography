@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_SAFERSK64
+	^7

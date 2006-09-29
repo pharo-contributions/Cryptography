@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_PCT1_MASTER
+	^4

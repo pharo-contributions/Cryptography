@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_SCHANNEL_ENC_KEY
+	^7

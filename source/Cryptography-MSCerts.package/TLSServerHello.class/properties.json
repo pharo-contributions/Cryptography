@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-MSCerts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"random",
+		"serverVersion",
+		"sessionID",
+		"cipherSuite",
+		"compressionMethod",
+		"rawData",
+		"handShake",
+		"extensions"
+	],
+	"name" : "TLSServerHello",
+	"type" : "normal"
+}

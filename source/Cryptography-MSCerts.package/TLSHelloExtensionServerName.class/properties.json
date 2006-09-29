@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RJT 7/24/2006 23:47",
+	"super" : "TLSHelloExtension",
+	"category" : "Cryptography-MSCerts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"serverNames"
+	],
+	"name" : "TLSHelloExtensionServerName",
+	"type" : "normal"
+}

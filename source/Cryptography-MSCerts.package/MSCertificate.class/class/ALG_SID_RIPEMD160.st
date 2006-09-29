@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_RIPEMD160
+	^7

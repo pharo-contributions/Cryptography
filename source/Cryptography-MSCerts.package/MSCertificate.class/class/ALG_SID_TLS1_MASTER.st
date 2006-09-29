@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_TLS1_MASTER
+	^6

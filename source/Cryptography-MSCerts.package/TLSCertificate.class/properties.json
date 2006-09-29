@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-MSCerts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certificate",
+		"rawData",
+		"handShake"
+	],
+	"name" : "TLSCertificate",
+	"type" : "normal"
+}

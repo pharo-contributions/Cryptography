@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_SSL2_MASTER
+	^5

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TLSHelloExtension",
+	"category" : "Cryptography-MSCerts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TLSHelloExtensionClientCertificateCRL",
+	"type" : "normal"
+}

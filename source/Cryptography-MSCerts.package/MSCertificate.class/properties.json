@@ -1,0 +1,27 @@
+{
+	"commentStamp" : "",
+	"super" : "X509v3Certificate",
+	"category" : "Cryptography-MSCerts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"AlgDictionary"
+	],
+	"instvars" : [
+		"keyType",
+		"reserved",
+		"aiKeyAlg",
+		"magic",
+		"bitLength",
+		"publicExponent",
+		"modulus_n",
+		"prime1_p",
+		"prime2_q",
+		"exp1_dmodpminus1",
+		"exp2_dmodqminus1",
+		"coefficient_invqmodp",
+		"privateExponent_d"
+	],
+	"name" : "MSCertificate",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+algSymbols
+ALG_SID_SCHANNEL_MASTER_HASH
+	^2
