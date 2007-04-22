@@ -1,10 +1,8 @@
 private
 signedContentInfoFrom: mailMsg
 
-	| text textDigest signerInfo attr signedAttrsDer signedDigest signedData contentInfo |
-	text := mailMsg text withInternetLineEndings.
-	text := text copyFrom: 1 to: text size - 2.
-	textDigest := SHA1 hashMessage: text.
+	| textDigest signerInfo attr signedAttrsDer signedDigest signedData contentInfo |
+	textDigest := SHA1 hashMessage: mailMsg text withInternetLineEndings.
 
 	signerInfo := CMSSignerInfo new.
 	signerInfo version: 1.
