@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "rww 10/1/2006 10:04",
+	"super" : "HierarchicalUrl",
+	"category" : "SSL-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HttpsUrl",
+	"type" : "normal"
+}

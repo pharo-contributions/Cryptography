@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "rww 10/1/2006 11:00",
+	"super" : "Object",
+	"category" : "SSL-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"protocolCap",
+		"pendingWriteData",
+		"pendingReadData",
+		"state"
+	],
+	"name" : "SSLSocket",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "rww 10/1/2006 10:07",
+	"super" : "Object",
+	"category" : "SSL-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certificateStore",
+		"listener",
+		"handler",
+		"connections"
+	],
+	"name" : "SSLServer",
+	"type" : "normal"
+}

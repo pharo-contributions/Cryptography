@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSL-Cipher Suites",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"AllSuites"
+	],
+	"instvars" : [
+		"cipherType",
+		"keyExchangeAlgorithm",
+		"bulkCipherAlgorithm",
+		"macAlgorithm"
+	],
+	"name" : "SSLCipherSuite",
+	"type" : "normal"
+}

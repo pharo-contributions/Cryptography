@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLRecord",
+	"category" : "SSL-Records",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mac"
+	],
+	"name" : "SSLCompressedWithMAC",
+	"type" : "normal"
+}

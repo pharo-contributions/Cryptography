@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLMessage",
+	"category" : "SSL-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"data"
+	],
+	"name" : "SSLApplicationData",
+	"type" : "normal"
+}

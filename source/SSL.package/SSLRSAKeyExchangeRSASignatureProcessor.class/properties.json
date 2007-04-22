@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSL-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"publicKey",
+		"privateKey",
+		"secret"
+	],
+	"name" : "SSLRSAKeyExchangeRSASignatureProcessor",
+	"type" : "normal"
+}

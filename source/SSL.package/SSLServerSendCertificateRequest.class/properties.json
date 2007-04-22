@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLHandshakeSender",
+	"category" : "SSL-Handshake Senders",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLServerSendCertificateRequest",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+mac algorithms
+shaMacAlgorithms
+
+	^ #sha

@@ -1,0 +1,6 @@
+initialize-release
+initializeReadAndWriteStates
+
+	self securityCoordinator setPendingConnectionSecurityStates.
+	self installReadConnectionState.
+	self installWriteConnectionState.

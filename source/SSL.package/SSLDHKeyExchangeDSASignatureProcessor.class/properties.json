@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLDHKeyExchangeAnonSignatureProcessor",
+	"category" : "SSL-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"publicKey",
+		"privateKey"
+	],
+	"name" : "SSLDHKeyExchangeDSASignatureProcessor",
+	"type" : "normal"
+}

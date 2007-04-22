@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLCipherSuite",
+	"category" : "SSL-Cipher Suites",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TlsDhAnonWithRc4128Md5",
+	"type" : "normal"
+}

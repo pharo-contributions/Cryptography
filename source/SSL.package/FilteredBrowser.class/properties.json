@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Browser",
+	"category" : "SSL-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"systemCategoryFilter"
+	],
+	"name" : "FilteredBrowser",
+	"type" : "normal"
+}

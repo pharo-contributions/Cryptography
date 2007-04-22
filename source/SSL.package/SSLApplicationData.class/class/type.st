@@ -1,0 +1,4 @@
+constants
+type
+
+	^ 23

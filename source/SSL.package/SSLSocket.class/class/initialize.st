@@ -1,0 +1,4 @@
+buttons
+initialize
+
+	self openButtonBar.

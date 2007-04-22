@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLSecurityCoordinator",
+	"category" : "SSL-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TLS10SecurityCoordinator",
+	"type" : "normal"
+}

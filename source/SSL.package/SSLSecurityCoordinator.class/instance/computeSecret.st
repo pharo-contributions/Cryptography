@@ -1,0 +1,4 @@
+secret
+computeSecret
+
+	self subclassResponsibility

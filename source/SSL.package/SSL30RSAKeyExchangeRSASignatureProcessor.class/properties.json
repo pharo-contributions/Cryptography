@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLRSAKeyExchangeRSASignatureProcessor",
+	"category" : "SSL-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSL30RSAKeyExchangeRSASignatureProcessor",
+	"type" : "normal"
+}

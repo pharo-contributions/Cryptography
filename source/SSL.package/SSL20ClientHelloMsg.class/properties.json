@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLHandshakeProtocolMsg",
+	"category" : "SSL-Handshake Msgs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"clientVersion",
+		"cipherSuites",
+		"sessionId",
+		"random"
+	],
+	"name" : "SSL20ClientHelloMsg",
+	"type" : "normal"
+}

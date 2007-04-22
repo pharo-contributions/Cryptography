@@ -1,0 +1,4 @@
+converting
+asByteArray
+
+	^ ByteArray new

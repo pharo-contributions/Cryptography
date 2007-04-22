@@ -1,0 +1,4 @@
+constants
+hexCode
+
+	^ self subclassResponsibility

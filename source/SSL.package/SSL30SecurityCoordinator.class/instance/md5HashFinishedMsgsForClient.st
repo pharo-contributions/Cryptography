@@ -1,0 +1,4 @@
+hashing
+md5HashFinishedMsgsForClient
+
+	^ self md5HashFinishedMsgsWithSenderValue: 16r434C4E54 asByteArray

@@ -1,0 +1,4 @@
+accessing
+signatureAlgorithm
+
+	^ #null

@@ -1,0 +1,1 @@
+I am a Socket that knows about the dangers of remaining open across snapshot.

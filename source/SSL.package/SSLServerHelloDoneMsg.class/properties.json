@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLHandshakeProtocolMsg",
+	"category" : "SSL-Handshake Msgs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLServerHelloDoneMsg",
+	"type" : "normal"
+}

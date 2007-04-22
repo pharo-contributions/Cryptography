@@ -1,0 +1,4 @@
+mac algorithms
+nullMacAlgorithm
+
+	^ #null

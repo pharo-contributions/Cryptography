@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLCompressionSecurityState",
+	"category" : "SSL-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLNullCompressionSecurityState",
+	"type" : "normal"
+}

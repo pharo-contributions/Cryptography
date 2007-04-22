@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSL-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connectionEnd",
+		"cipherSuite",
+		"originalVersion",
+		"messagesProcessed",
+		"masterSecret",
+		"clientRandom",
+		"serverRandom"
+	],
+	"name" : "SSLSecurityParameters",
+	"type" : "normal"
+}

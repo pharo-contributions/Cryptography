@@ -1,0 +1,4 @@
+secret
+installKeysFromKeyBlock: keyBlock
+
+	self subclassResponsibility

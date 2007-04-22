@@ -1,0 +1,4 @@
+accessing
+keyMaterialLength
+
+	^ 24

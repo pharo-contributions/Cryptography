@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLCipher",
+	"category" : "SSL-Records",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"paddingLength",
+		"padding"
+	],
+	"name" : "SSLBlockCipher",
+	"type" : "normal"
+}

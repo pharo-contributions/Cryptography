@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLTracingConnHandler",
+	"category" : "SSL-Testing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLClosingConnHandler",
+	"type" : "normal"
+}

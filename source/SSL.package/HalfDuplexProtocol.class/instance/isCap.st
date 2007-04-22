@@ -1,0 +1,4 @@
+queries
+isCap
+
+	^ false

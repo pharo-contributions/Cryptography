@@ -1,0 +1,4 @@
+accessing
+requiresServerCertificate
+
+	^ false

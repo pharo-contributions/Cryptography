@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLHandshakeProtocolMsg",
+	"category" : "SSL-Handshake Msgs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certificateTypes",
+		"certificateAuthorities"
+	],
+	"name" : "SSLCertificateRequestMsg",
+	"type" : "normal"
+}

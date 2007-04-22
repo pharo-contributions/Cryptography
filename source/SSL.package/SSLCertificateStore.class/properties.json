@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSL-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certificates",
+		"privateKeys",
+		"rootCerts"
+	],
+	"name" : "SSLCertificateStore",
+	"type" : "normal"
+}

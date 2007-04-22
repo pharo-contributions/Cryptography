@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "HalfDuplexProtocol",
+	"category" : "SSL-Stack-Protocols",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compressionState"
+	],
+	"name" : "SSLCompressor",
+	"type" : "normal"
+}

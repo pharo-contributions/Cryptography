@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSL-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connection",
+		"compressionState",
+		"cipherState",
+		"macState",
+		"sequenceNumber"
+	],
+	"name" : "SSLConnectionSecurityState",
+	"type" : "normal"
+}

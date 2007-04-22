@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLHandshakeState",
+	"category" : "SSL-Handshake States",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLServerWaitingForClientFinished",
+	"type" : "normal"
+}

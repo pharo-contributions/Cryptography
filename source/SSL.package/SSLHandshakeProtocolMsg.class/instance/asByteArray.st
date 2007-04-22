@@ -1,0 +1,4 @@
+converting
+asByteArray
+
+	self subclassResponsibility

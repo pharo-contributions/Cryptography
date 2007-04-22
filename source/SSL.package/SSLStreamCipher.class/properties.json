@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSLCipher",
+	"category" : "SSL-Records",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSLStreamCipher",
+	"type" : "normal"
+}

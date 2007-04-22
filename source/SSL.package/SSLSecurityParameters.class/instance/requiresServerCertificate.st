@@ -1,0 +1,4 @@
+queries
+requiresServerCertificate
+
+	^ self cipherSuite requiresServerCertificate

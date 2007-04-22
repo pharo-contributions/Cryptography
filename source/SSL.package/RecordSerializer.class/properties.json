@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HalfDuplexProtocol",
+	"category" : "SSL-Stack-Protocols",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RecordSerializer",
+	"type" : "normal"
+}

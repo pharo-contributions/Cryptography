@@ -1,0 +1,4 @@
+queries
+requiresClientCertificate
+
+	^ false

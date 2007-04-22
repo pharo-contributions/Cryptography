@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "rww 10/1/2006 10:04",
+	"super" : "DuplexProtocolStackTopCap",
+	"category" : "SSL-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connection",
+		"version",
+		"handshakeStateMachine",
+		"securityParams",
+		"securityCoordinator",
+		"certificateStore",
+		"currentReadState",
+		"currentWriteState",
+		"pendingReadState",
+		"pendingWriteState",
+		"isTracing"
+	],
+	"name" : "SSLConnectionProtocolCap",
+	"type" : "normal"
+}

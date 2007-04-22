@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "HalfDuplexProtocol",
+	"category" : "SSL-Stack-Protocols",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pendingHandshakeMsg",
+		"readState"
+	],
+	"name" : "MessageDefragmenter",
+	"type" : "normal"
+}
