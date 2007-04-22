@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "BlockCipher",
+	"category" : "Cryptography-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"cipher",
+		"vector"
+	],
+	"name" : "BlockCipherMode",
+	"type" : "normal"
+}

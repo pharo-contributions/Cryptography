@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-RandomAndPrime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"target",
+		"iterations",
+		"satisfied",
+		"samples",
+		"minusOne",
+		"k",
+		"n0"
+	],
+	"name" : "MillerRabin",
+	"type" : "normal"
+}

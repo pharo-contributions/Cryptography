@@ -1,0 +1,3 @@
+accessing
+keySize
+	^ self shouldNotImplement

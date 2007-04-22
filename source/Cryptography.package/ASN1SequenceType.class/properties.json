@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1UnmappedType",
+	"category" : "Cryptography-ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASN1SequenceType",
+	"type" : "normal"
+}

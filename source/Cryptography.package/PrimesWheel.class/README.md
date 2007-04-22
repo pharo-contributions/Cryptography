@@ -1,0 +1,1 @@
+My instances are wheels of primes. See the class comment in PrimesFinder.

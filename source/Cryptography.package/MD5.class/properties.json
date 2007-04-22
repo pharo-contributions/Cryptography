@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "HashFunction",
+	"category" : "Cryptography-MD5",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ABCDTable",
+		"IndexTable",
+		"ShiftTable",
+		"SinTable"
+	],
+	"instvars" : [
+		"state"
+	],
+	"name" : "MD5",
+	"type" : "normal"
+}

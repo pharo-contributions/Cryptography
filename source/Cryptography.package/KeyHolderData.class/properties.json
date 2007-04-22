@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RJT 2/9/2007 11:17",
+	"super" : "Object",
+	"category" : "Cryptography-RandomAndPrime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"key"
+	],
+	"name" : "KeyHolderData",
+	"type" : "normal"
+}

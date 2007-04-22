@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-DSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"p",
+		"q",
+		"g",
+		"y"
+	],
+	"name" : "DSAPublicKey",
+	"type" : "normal"
+}

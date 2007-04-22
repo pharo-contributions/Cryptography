@@ -1,0 +1,3 @@
+private
+positionOfCounter
+	^ 1

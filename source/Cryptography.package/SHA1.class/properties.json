@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "HashFunction",
+	"category" : "Cryptography-SHA1",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"K1",
+		"K2",
+		"K3",
+		"K4"
+	],
+	"instvars" : [
+		"totalA",
+		"totalB",
+		"totalC",
+		"totalD",
+		"totalE",
+		"totals"
+	],
+	"name" : "SHA1",
+	"type" : "normal"
+}

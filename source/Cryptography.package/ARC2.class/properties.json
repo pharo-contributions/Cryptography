@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "RJT 3/30/2007 09:48",
+	"super" : "BlockCipher",
+	"category" : "Cryptography-ARC2",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"PITABLE"
+	],
+	"instvars" : [
+		"T1",
+		"T8",
+		"TM",
+		"keyHolder",
+		"j"
+	],
+	"name" : "ARC2",
+	"type" : "normal"
+}

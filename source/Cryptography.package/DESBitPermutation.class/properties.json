@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "hmm 3/26/2002 18:15",
+	"super" : "Object",
+	"category" : "Cryptography-DES",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ChunkBits",
+		"ChunkMask"
+	],
+	"instvars" : [
+		"tables"
+	],
+	"name" : "DESBitPermutation",
+	"type" : "normal"
+}

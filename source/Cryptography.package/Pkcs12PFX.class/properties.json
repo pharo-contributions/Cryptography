@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"version",
+		"authSafe",
+		"macData"
+	],
+	"name" : "Pkcs12PFX",
+	"type" : "normal"
+}

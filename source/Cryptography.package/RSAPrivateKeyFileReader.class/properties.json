@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-X509-Readers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bytes",
+		"decryptedBytes",
+		"iv",
+		"password"
+	],
+	"name" : "RSAPrivateKeyFileReader",
+	"type" : "normal"
+}

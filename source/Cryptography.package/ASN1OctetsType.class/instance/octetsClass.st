@@ -1,0 +1,4 @@
+accessing
+octetsClass
+
+	^ self subclassResponsibility

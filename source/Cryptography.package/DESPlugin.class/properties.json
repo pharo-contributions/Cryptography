@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ProtoObject",
+	"category" : "Cryptography-DES",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"byteBit",
+		"bigByte",
+		"pc1",
+		"pc2",
+		"totRot",
+		"sp1",
+		"sp2",
+		"sp3",
+		"sp4",
+		"sp5",
+		"sp6",
+		"sp7",
+		"sp8"
+	],
+	"name" : "DESPlugin",
+	"type" : "normal"
+}

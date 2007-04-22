@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-DSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"p",
+		"q",
+		"g",
+		"x",
+		"y",
+		"random"
+	],
+	"name" : "DSAKeyPairGenerator",
+	"type" : "normal"
+}

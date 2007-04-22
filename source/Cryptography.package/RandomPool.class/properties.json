@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Stream",
+	"category" : "Cryptography-RandomAndPrime",
+	"classinstvars" : [
+		"default"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"key",
+		"pool",
+		"outputStream",
+		"inputIndex"
+	],
+	"name" : "RandomPool",
+	"type" : "normal"
+}

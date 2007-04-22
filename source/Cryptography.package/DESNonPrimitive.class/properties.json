@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "BlockCipher",
+	"category" : "Cryptography-DES",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EBitSelectionTable",
+		"IIP",
+		"IP",
+		"P",
+		"PC1",
+		"PC2",
+		"SBoxes"
+	],
+	"instvars" : [
+		"k"
+	],
+	"name" : "DESNonPrimitive",
+	"type" : "normal"
+}

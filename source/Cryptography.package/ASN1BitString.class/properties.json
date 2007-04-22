@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1Value",
+	"category" : "Cryptography-ASN1-Objects",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bytes",
+		"bitsPadding"
+	],
+	"name" : "ASN1BitString",
+	"type" : "normal"
+}

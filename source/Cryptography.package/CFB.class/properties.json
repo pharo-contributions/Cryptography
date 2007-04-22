@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BlockCipherMode",
+	"category" : "Cryptography-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CFB",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-X509-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"keyIdentifier",
+		"certIssuer",
+		"certSerialNumber"
+	],
+	"name" : "X509AuthorityKeyIdentifier",
+	"type" : "normal"
+}

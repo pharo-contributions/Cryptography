@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "rww 4/11/2004 14:55",
+	"super" : "Object",
+	"category" : "Cryptography-RSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hash",
+		"hashLen",
+		"rand",
+		"publicKey",
+		"privateKey",
+		"encodingParameter"
+	],
+	"name" : "RSAEncryptionScheme",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RandomGenerator",
+	"category" : "Cryptography-RandomAndPrime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"seed",
+		"key"
+	],
+	"name" : "SecureRandom",
+	"type" : "normal"
+}

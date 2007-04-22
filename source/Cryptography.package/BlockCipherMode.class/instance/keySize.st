@@ -1,0 +1,3 @@
+accessing
+keySize
+	^ cipher keySize

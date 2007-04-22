@@ -1,0 +1,4 @@
+testing
+isOptional
+
+	^ self optional

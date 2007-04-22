@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "cmm 5/11/2006 22:33",
+	"super" : "BlockCipherMode",
+	"category" : "Cryptography-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"counter",
+		"counterBits",
+		"maximumCounterValue"
+	],
+	"name" : "CTR",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-ElGamal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"modulo",
+		"generator",
+		"generatorRaisedToA"
+	],
+	"name" : "ElGamalPublicKey",
+	"type" : "normal"
+}

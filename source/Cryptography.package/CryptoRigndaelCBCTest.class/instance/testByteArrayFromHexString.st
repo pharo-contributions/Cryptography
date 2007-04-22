@@ -1,0 +1,8 @@
+tests
+testByteArrayFromHexString
+	"this test requres that the cryptography core method fromHexString be loaded the main purpose of the method fromHexString is to
+	ensure leading zeros are not chopped off and that small case letters in hex strings are allowed"
+	self assert: (ByteArray fromHexString: '16r000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f') storeString =
+	'((ByteArray new: 32) at: 2 put: 1; at: 3 put: 2; at: 4 put: 3; at: 5 put: 4; at: 6 put: 5; at: 7 put: 6; at: 8 put: 7; at: 9 put: 8; at: 10 put: 9; at: 11 put: 10; at: 12 put: 11; at: 13 put: 12; at: 14 put: 13; at: 15 put: 14; at: 16 put: 15; at: 17 put: 16; at: 18 put: 17; at: 19 put: 18; at: 20 put: 19; at: 21 put: 20; at: 22 put: 21; at: 23 put: 22; at: 24 put: 23; at: 25 put: 24; at: 26 put: 25; at: 27 put: 26; at: 28 put: 27; at: 29 put: 28; at: 30 put: 29; at: 31 put: 30; at: 32 put: 31; yourself)'.
+	self assert: (ByteArray fromHexString: '000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f') storeString =
+	'((ByteArray new: 32) at: 2 put: 1; at: 3 put: 2; at: 4 put: 3; at: 5 put: 4; at: 6 put: 5; at: 7 put: 6; at: 8 put: 7; at: 9 put: 8; at: 10 put: 9; at: 11 put: 10; at: 12 put: 11; at: 13 put: 12; at: 14 put: 13; at: 15 put: 14; at: 16 put: 15; at: 17 put: 16; at: 18 put: 17; at: 19 put: 18; at: 20 put: 19; at: 21 put: 20; at: 22 put: 21; at: 23 put: 22; at: 24 put: 23; at: 25 put: 24; at: 26 put: 25; at: 27 put: 26; at: 28 put: 27; at: 29 put: 28; at: 30 put: 29; at: 31 put: 30; at: 32 put: 31; yourself)'.

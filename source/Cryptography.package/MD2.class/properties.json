@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "HashFunction",
+	"category" : "Cryptography-MD4",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"PITable"
+	],
+	"instvars" : [ ],
+	"name" : "MD2",
+	"type" : "normal"
+}

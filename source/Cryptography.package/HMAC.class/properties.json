@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hash",
+		"key",
+		"ipad",
+		"epad"
+	],
+	"name" : "HMAC",
+	"type" : "normal"
+}

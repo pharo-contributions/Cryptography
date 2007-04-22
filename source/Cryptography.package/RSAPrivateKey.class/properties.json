@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-RSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"p",
+		"q",
+		"dP",
+		"dQ",
+		"qInv"
+	],
+	"name" : "RSAPrivateKey",
+	"type" : "normal"
+}

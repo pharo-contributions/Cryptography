@@ -1,0 +1,1 @@
+Instances of this class can be used to permute bits in an integer according to a predefined mapping. It's used for DES encryption in several places.

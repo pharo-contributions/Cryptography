@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1UnstructuredType",
+	"category" : "Cryptography-ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASN1SetOfType",
+	"type" : "normal"
+}

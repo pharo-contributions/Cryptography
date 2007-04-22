@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Cryptography-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elGamalGenerators"
+	],
+	"name" : "CryptoElGamalTest",
+	"type" : "normal"
+}

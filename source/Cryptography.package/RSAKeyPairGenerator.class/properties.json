@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-RSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bits",
+		"p",
+		"q",
+		"d"
+	],
+	"name" : "RSAKeyPairGenerator",
+	"type" : "normal"
+}

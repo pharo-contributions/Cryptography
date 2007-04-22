@@ -1,0 +1,1 @@
+Fortuna is a cryptographically secure pseudorandom number generator specified by Niels Ferguson and Bruce Schneier in chapter 10 of "Practical Cryptography."  This generator utilizes a Rijndael (AES) cipher in CTR mode and is patent-free.

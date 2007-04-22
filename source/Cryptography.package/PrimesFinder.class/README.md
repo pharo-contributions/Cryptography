@@ -1,0 +1,1 @@
+My instances search for primes of a given size. They implement a probabilistic method. For speed, they first test for divisibility by the primest up to 2000 (in a deterministic way). Next, they employ a probabilistic test (such as MillerRabin).

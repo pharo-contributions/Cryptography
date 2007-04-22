@@ -1,0 +1,3 @@
+protocol
+sharedKey
+	^ sharedKey

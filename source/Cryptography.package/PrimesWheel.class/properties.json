@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-RandomAndPrime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"primes",
+		"residues",
+		"satisfied"
+	],
+	"name" : "PrimesWheel",
+	"type" : "normal"
+}

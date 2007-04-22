@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "X520AbstractName",
+	"category" : "Cryptography-X509",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "X520Pkcs9EmailAddress",
+	"type" : "normal"
+}

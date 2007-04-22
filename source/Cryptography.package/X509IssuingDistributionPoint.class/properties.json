@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-X509-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"distributionPoint",
+		"onlyContainsUserCerts",
+		"onlyContainsCACerts",
+		"onlySomeReasons",
+		"indirectCRL",
+		"onlyContainsAttributeCerts"
+	],
+	"name" : "X509IssuingDistributionPoint",
+	"type" : "normal"
+}
