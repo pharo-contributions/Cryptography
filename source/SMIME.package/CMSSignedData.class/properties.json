@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SMIME-CMS",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"version",
+		"digestAlgorithms",
+		"encapContentInfo",
+		"certificates",
+		"crls",
+		"signerInfos"
+	],
+	"name" : "CMSSignedData",
+	"type" : "normal"
+}

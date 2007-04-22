@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SMIME-CMS",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"version",
+		"kekid",
+		"keyEncryptionAlgorithm",
+		"encryptedKey"
+	],
+	"name" : "CMSKEKRecipientInfo",
+	"type" : "normal"
+}
