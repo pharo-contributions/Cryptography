@@ -24,6 +24,24 @@ signedContentInfoFrom: mailMsg
 		attrValues: (Set with: DateAndTime now);
 		yourself.
 	signerInfo signedAttrs add: attr.
+	attr := CMSAttribute new
+		attrType: (ASN1ObjectId fromString: '1.3.6.1.4.1.311.16.4');
+		attrValues: (Set with: (ASN1Stream decodeBytes: (ASN1Stream 
+			encode: signerInfo sid 
+			withType: ((ASN1Module name: #cms) find: #SignerIdentifier))));
+		yourself.
+	signerInfo signedAttrs add: attr.
+	attr := CMSAttribute new
+		attrType: (ASN1ObjectId fromString: '1.2.840.113549.1.9.16.2.11');
+		attrValues: (Set with: (ASN1ExplicitContextValue new
+			tagIndex: 0;
+			tagValue: (ASN1Stream decodeBytes: (ASN1Stream 
+				encode: signerInfo sid 
+				withType: ((ASN1Module name: #cms) find: #SignerIdentifier)));
+			tagIsPrimitive: false;
+			yourself));
+		yourself.
+	signerInfo signedAttrs add: attr.
 	signerInfo signatureAlgorithm: (X509AlgorithmIdentifier oidString: '1.2.840.113549.1.1.1' parameters: ASN1Null new).
 
 	"Compute the Signature"

@@ -4,7 +4,7 @@ sign: mailMsg
 	| textMsg contentInfo bodyText sigMsg newMsg |
 	textMsg := MailMessage empty.
 	textMsg body: (MIMEDocument 
-		contentType: 'application/pkcs7-signature' 
+		contentType: 'text/plain' 
 		content: mailMsg body contents).
 	textMsg setField: 'content-transfer-encoding' to: (MIMEHeaderValue fromMIMEHeader: '7bit').
 	textMsg setField: 'content-type' to: ((MIMEHeaderValue fromMIMEHeader: 'text/plain')
@@ -34,7 +34,7 @@ sign: mailMsg
 	newMsg setField: 'content-type' to: ((MIMEHeaderValue fromMIMEHeader: 'multipart/signed')
 		parameterAt: 'micalg' put: 'sha1';
 		parameterAt: 'boundary' put: MailMessage generateSeparator;
-		parameterAt: 'protocol' put: '"application/pkcs7-signature"';
+		parameterAt: 'protocol' put: 'application/pkcs7-signature';
 		yourself).
 	newMsg setField: 'mime-version' to: (MIMEHeaderValue fromMIMEHeader: '1.0').
 	newMsg setField: 'date' to: (MIMEHeaderValue fromMIMEHeader: DateAndTime now printMIMEDayDateAndTime).
