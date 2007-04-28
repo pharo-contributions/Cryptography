@@ -15,13 +15,13 @@ signedContentInfoFrom: mailMsg
 		yourself.
 	signerInfo signedAttrs add: attr.
 	attr := CMSAttribute new
-		attrType: (ASN1ObjectId fromString: '1.2.840.113549.1.9.4');
-		attrValues: (Set with: textDigest);
+		attrType: (ASN1ObjectId fromString: '1.2.840.113549.1.9.5');
+		attrValues: (Set with: DateAndTime now);
 		yourself.
 	signerInfo signedAttrs add: attr.
 	attr := CMSAttribute new
-		attrType: (ASN1ObjectId fromString: '1.2.840.113549.1.9.5');
-		attrValues: (Set with: DateAndTime now);
+		attrType: (ASN1ObjectId fromString: '1.2.840.113549.1.9.4');
+		attrValues: (Set with: textDigest);
 		yourself.
 	signerInfo signedAttrs add: attr.
 	attr := CMSAttribute new
