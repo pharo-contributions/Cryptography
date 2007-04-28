@@ -1,7 +1,7 @@
 private
 processSigned: mailMsg
 
-	| textMsg sigMsg contentInfo textDigest signedDigest cert publicKey signedAttrsDer hashAttr certs fromEmails |
+	| textMsg sigMsg contentInfo textDigest signedDigest cert publicKey signedAttrsDer hashAttr certs fromEmails childCert parentCert |
 	textMsg := mailMsg parts 
 		detect: [:e | e body contentType = 'text/plain'] 
 		ifNone: [nil].
@@ -17,8 +17,21 @@ processSigned: mailMsg
 	fromEmails do: [:fromEmail |
 		self certStore atEmail: fromEmail putCerts: certs].
 
+	1 to: certs size - 1 do: [:idx |
+		childCert := certs at: idx.
+		parentCert := certs at: idx + 1.
+		(childCert verifyFromParentCertificate: parentCert)
+			ifFalse: [^ 'bad certificate chain']].
+	childCert := certs last.
+	parentCert := self certStore rootCertificates 
+		detect: [:eachCert | eachCert tbsCertificate subject = childCert tbsCertificate issuer] 
+		ifNone: [childCert].
+	(childCert verifyFromParentCertificate: parentCert)
+			ifFalse: [^ 'bad certificate chain'].
+
 	cert := certs first.
 	publicKey := cert tbsCertificate subjectPublicKeyInfo asPublicKey.
+
 	textDigest := SHA1 hashMessage: textMsg text withInternetLineEndings.
 	contentInfo content signerInfos do: [:eachSignerInfo |
 		hashAttr := eachSignerInfo signedAttrs
