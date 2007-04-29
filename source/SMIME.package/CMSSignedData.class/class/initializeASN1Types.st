@@ -38,18 +38,19 @@ initializeASN1Types
 		add: #issuer type: #Name;
 		add: #serialNumber type: #CertificateSerialNumber;
 		yourself.
+
 	module byteArray: #SubjectKeyIdentifier.
-	module set: #SignedAttributes of: #Attribute.
 	module assign: #SignatureAlgorithmIdentifier from: #AlgorithmIdentifier.
 	module byteArray: #SignatureValue.
-	module set: #UnsignedAttributes of: #Attribute.
 
+	module any: #AttributeValue.
+	module set: #AttributeValues of: #AttributeValue.
 	(module sequence: #Attribute mapping: CMSAttribute)
 		add: #attrType type: #ASN1ObjectIdentifierType;
 		add: #attrValues type: #AttributeValues;
 		yourself.
-	module set: #AttributeValues of: #AttributeValue.
-	module any: #AttributeValue.
+	module set: #SignedAttributes of: #Attribute.
+	module set: #UnsignedAttributes of: #Attribute.
 
 	module set: #CertificateSet of: #CertificateChoices.
 	(module choice: #CertificateChoices)
