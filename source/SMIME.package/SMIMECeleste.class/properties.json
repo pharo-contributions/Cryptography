@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ScaffoldingCeleste",
+	"category" : "SMIME",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"smimeAgent"
+	],
+	"name" : "SMIMECeleste",
+	"type" : "normal"
+}

@@ -56,4 +56,4 @@ processSigned: mailMsg
 			v15VerifySignature: eachSignerInfo signature 
 			ofMessageHash: signedDigest)
 				ifFalse: [^ 'bad message hash']].
-	^ mailMsg
+	^ textMsg
