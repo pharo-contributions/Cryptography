@@ -6,9 +6,8 @@ messageText
 	mailDB ifNil: [ ^self messageTextIfNoDB ].
 	(currentMsgID isNil) ifTrue: [^''].
 
-	"msg := self smimeAgent processMsg: self currentMessage."
-	msg := self currentMessage.
+	msg := self smimeAgent processMsg: self currentMessage.
 
 	SuppressWorthlessHeaderFields
-		ifTrue: [^ self currentMessageSecurityHeaderText, String cr, String cr, msg formattedText]
+		ifTrue: [^ self currentMessageSecurityHeaderText, String cr, String cr,  self currentMessage cleanedHeader asText, String cr , msg bodyTextFormatted]
 		ifFalse: [^ self currentMessageSecurityHeaderText, String cr, String cr, msg text isoToSqueak].

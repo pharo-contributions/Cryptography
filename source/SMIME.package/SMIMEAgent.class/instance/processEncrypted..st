@@ -2,6 +2,7 @@ private
 processEncrypted: mailMsg
 
 	| contentInfo recipientInfo contentEncryptionKey iv tdes decrypted |
+	self canDecrypt ifFalse: [^ self error: 'cannot decrypt'].
 	contentInfo := ASN1Stream 
 		decodeBytes: mailMsg body content asByteArray
 		withType: ((ASN1Module name: #cms) find: #ContentInfo).

@@ -28,5 +28,5 @@ ownerPrivateKey: pk
 	cipher := epki cipherWithPassword: self password.
 	epki encryptedData: (cipher encrypt: asn1).
 
-	self storeData ownerPrivateKey: epki
+	self storeData ownerPrivateKey: epki.
 	self writeStoreData.

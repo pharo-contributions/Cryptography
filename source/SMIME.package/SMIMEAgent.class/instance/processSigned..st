@@ -2,12 +2,8 @@ private
 processSigned: mailMsg
 
 	| textMsg sigMsg contentInfo textDigest signedDigest cert publicKey signedAttrsDer hashAttr certs fromEmails childCert parentCert |
-	textMsg := mailMsg parts 
-		detect: [:e | e body contentType = 'text/plain'] 
-		ifNone: [nil].
-	sigMsg := mailMsg parts 
-		detect: [:e | e body contentType = 'application/pkcs7-signature'] 
-		ifNone: [nil].
+	textMsg := mailMsg parts first.
+	sigMsg := mailMsg parts last.
 
 	contentInfo := ASN1Stream 
 		decodeBytes: sigMsg body content asByteArray

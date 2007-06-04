@@ -1,5 +1,7 @@
 private
 toggleEncrypted
 
-	(SMIMEAgent new canEncryptFor: self to) ifFalse: [^ self].
+	self to isEmpty ifTrue: [^ self].
+	(MailAddressParser addressesIn: self to asString) do: [:e |
+		(celeste smimeAgent canEncryptFor: e) ifFalse: [^ self]].
 	self shouldEncrypt: self shouldEncrypt not.

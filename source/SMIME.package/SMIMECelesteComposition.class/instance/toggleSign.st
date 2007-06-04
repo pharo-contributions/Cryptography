@@ -1,5 +1,5 @@
 private
 toggleSign
 
-	SMIMEAgent new canSign ifFalse: [^ self].
+	celeste smimeAgent canSign ifFalse: [^ self].
 	self shouldSign: self shouldSign not.

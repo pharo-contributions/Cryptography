@@ -5,10 +5,12 @@ currentMessageSecurityHeaderText
 	currentMsgID isNil ifTrue: [^ ''].
 	message := self currentMessage.
 	isEncrypted := self smimeAgent isEncryptedMsg: message.
-	isEncrypted ifTrue: [
-		msg := self smimeAgent processEncrypted: message.
-		goodDecryption := msg isKindOf: MailMessage.
-		goodDecryption ifTrue: [message := msg]].
+	(isEncrypted and: [self smimeAgent canDecrypt])
+		ifTrue: [
+			msg := self smimeAgent processEncrypted: message.
+			goodDecryption := msg isKindOf: MailMessage.
+			goodDecryption ifTrue: [message := msg]]
+		ifFalse: [goodDecryption := false].
 	isSigned := self smimeAgent isSignedMsg: message.
 	isSigned ifTrue: [
 		msg := self smimeAgent processSigned: message.

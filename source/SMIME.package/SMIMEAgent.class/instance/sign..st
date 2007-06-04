@@ -2,7 +2,7 @@ api
 sign: mailMsg
 
 	| textMsg contentInfo bodyText sigMsg newMsg |
-	textMsg := MailMessage empty.
+"	textMsg := MailMessage empty.
 	textMsg body: (MIMEDocument 
 		contentType: 'text/plain' 
 		content: mailMsg body contents).
@@ -11,8 +11,8 @@ sign: mailMsg
 		parameterAt: 'charset' put: 'US-ASCII';
 		parameterAt: 'format' put: 'flowed';
 		yourself).
-
-	contentInfo := self signedContentInfoFrom: textMsg.
+"
+	contentInfo := self signedContentInfoFrom: mailMsg.
 	bodyText := ASN1Stream 
 		encode: contentInfo 
 		withType: ((ASN1Module name: #cms) find: #ContentInfo).
@@ -30,7 +30,7 @@ sign: mailMsg
 		yourself).
 
 	newMsg := MailMessage empty.
-	newMsg parts: (OrderedCollection with: textMsg with: sigMsg).
+	newMsg parts: (OrderedCollection with: mailMsg with: sigMsg).
 	newMsg setField: 'content-type' to: ((MIMEHeaderValue fromMIMEHeader: 'multipart/signed')
 		parameterAt: 'micalg' put: 'sha1';
 		parameterAt: 'boundary' put: MailMessage generateSeparator;
