@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"transportCap",
+		"pendingAuth",
+		"state"
+	],
+	"name" : "SSHUserAuthPipe",
+	"type" : "normal"
+}

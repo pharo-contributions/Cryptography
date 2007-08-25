@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHAsciiMessage",
+	"type" : "normal"
+}

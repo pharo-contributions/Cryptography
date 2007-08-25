@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connection",
+		"compressionState",
+		"cipherState",
+		"macState",
+		"packagerState",
+		"sequenceNumber"
+	],
+	"name" : "SSHConnectionSecurityState",
+	"type" : "normal"
+}

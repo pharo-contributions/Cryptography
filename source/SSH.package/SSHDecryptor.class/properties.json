@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "HalfDuplexProtocol",
+	"category" : "SSH-Stack-Protocols",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pendingPacket",
+		"cipherState"
+	],
+	"name" : "SSHDecryptor",
+	"type" : "normal"
+}

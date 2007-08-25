@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHStageSecurityState",
+	"category" : "SSH-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHMsgPackagerSecurityState",
+	"type" : "normal"
+}

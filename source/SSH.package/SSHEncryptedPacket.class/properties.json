@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHAbstractPacket",
+	"category" : "SSH-Packets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mac"
+	],
+	"name" : "SSHEncryptedPacket",
+	"type" : "normal"
+}

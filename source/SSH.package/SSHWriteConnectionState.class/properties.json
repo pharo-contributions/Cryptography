@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHConnectionSecurityState",
+	"category" : "SSH-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHWriteConnectionState",
+	"type" : "normal"
+}

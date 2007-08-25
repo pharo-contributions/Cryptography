@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "HalfDuplexProtocol",
+	"category" : "SSH-Stack-Protocols",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compressionState"
+	],
+	"name" : "SSHDecompressor",
+	"type" : "normal"
+}

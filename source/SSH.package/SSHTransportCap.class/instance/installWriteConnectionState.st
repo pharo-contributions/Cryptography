@@ -1,0 +1,4 @@
+initialize-release
+installWriteConnectionState
+
+	self installWriteConnectionState: self securityCoordinator asWriteSecurityState.

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHCipherSecurityState",
+	"category" : "SSH-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHAsciiSecurityState",
+	"type" : "normal"
+}

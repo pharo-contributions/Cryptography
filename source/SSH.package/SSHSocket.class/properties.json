@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connPipe",
+		"pendingWriteData",
+		"state"
+	],
+	"name" : "SSHSocket",
+	"type" : "normal"
+}

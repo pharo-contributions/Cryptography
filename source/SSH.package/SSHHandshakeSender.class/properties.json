@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Handshake",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"machine"
+	],
+	"name" : "SSHHandshakeSender",
+	"type" : "normal"
+}

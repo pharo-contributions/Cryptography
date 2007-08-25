@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compressionAlgorithm",
+		"bulkCipherAlgorithm",
+		"macAlgorithm",
+		"packagerAlgorithm",
+		"hashSize"
+	],
+	"name" : "SSHSecurityParameters",
+	"type" : "normal"
+}

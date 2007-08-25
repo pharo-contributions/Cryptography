@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHAbstractPacket",
+	"category" : "SSH-Packets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHCompressedPacket",
+	"type" : "normal"
+}

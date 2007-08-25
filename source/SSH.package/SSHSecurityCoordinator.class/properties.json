@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connection",
+		"keyExchangeProcessor",
+		"securityParams"
+	],
+	"name" : "SSHSecurityCoordinator",
+	"type" : "normal"
+}
