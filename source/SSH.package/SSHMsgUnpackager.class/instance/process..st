@@ -2,5 +2,5 @@ protocol
 process: data
 
 	| transformData |
-	transformData := self macState unpackage: data.
+	transformData := self packagerState unpackage: data.
 	self basicProcess: transformData.

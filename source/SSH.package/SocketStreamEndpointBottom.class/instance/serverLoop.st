@@ -4,7 +4,7 @@ serverLoop
 	[Processor yield.
 		[self socketStream isDataAvailable
 			ifTrue: [self receive: self socketStream]
-			ifFalse: [[self socket socketStream receiveData] on: Error do: [:e | ]].
+			ifFalse: [self socketStream receiveData].
 		 self socketStream isConnected]
 			whileTrue]
 				on: Error
