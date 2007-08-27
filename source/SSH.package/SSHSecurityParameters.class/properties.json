@@ -10,7 +10,9 @@
 		"bulkCipherAlgorithm",
 		"macAlgorithm",
 		"packagerAlgorithm",
-		"hashSize"
+		"hashSize",
+		"clientKeyInit",
+		"serverKeyInit"
 	],
 	"name" : "SSHSecurityParameters",
 	"type" : "normal"

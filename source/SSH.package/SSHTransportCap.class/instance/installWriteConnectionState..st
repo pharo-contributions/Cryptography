@@ -1,4 +1,4 @@
-initialize-release
+states
 installWriteConnectionState: state
 
 	self writeState notNil 

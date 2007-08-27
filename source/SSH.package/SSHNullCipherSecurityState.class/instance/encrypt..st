@@ -2,9 +2,9 @@ process
 encrypt: data
 
 	^ SSHEncryptedPacket new
-		packetLength: data packetLength;
-		paddingLength: data paddingLength;
-		payload: data payload;
-		padding: data padding;
+		encryptedPayload: ((data packetLength asByteArrayOfSize: 4), 
+			data paddingLength asByteArray, 
+			data payload, 
+			data padding);
 		mac: data mac;
 		yourself

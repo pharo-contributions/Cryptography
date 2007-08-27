@@ -1,4 +1,4 @@
 process
-addMessageSenderClass: aMsgSendClass
+addMsgSenderClass: aMsgSendClass
 
 	self messageSenders add: (aMsgSendClass newOnMachine: self).

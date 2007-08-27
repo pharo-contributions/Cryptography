@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"publicHostKeyAndCertificates",
+		"f",
+		"signature"
+	],
+	"name" : "SSHKeyExchangeDHReplyMessage",
+	"type" : "normal"
+}

@@ -1,0 +1,5 @@
+accessing
+encryptionAlgorithmsServerToClient
+	"Answer the value of encryptionAlgorithmsServerToClient"
+
+	^ encryptionAlgorithmsServerToClient

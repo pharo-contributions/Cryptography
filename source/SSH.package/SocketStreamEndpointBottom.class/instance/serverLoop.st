@@ -1,12 +1,10 @@
 process
 serverLoop
 
-	[Processor yield.
-		[self socketStream isDataAvailable
-			ifTrue: [self receive: self socketStream]
-			ifFalse: [self socketStream receiveData].
-		 self socketStream isConnected]
-			whileTrue]
-				on: Error
-				do: [:ex | self halt. self duplexStack notNil ifTrue: [self duplexStack processError: ex]].
+	Processor yield.
+	[self socketStream isDataAvailable
+		ifTrue: [self receive: self socketStream]
+		ifFalse: [[self socketStream receiveData] on: Error do: [:ex | ]].
+	self socketStream isConnected]
+		whileTrue.
 	self kill.

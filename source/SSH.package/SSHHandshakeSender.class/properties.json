@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "SSH-Handshake",
+	"category" : "SSH-Msg Senders",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

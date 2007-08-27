@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"e"
+	],
+	"name" : "SSHKeyExchangeDHInitMessage",
+	"type" : "normal"
+}

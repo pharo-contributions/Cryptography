@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHHandshakeSender",
+	"category" : "SSH-Msg Senders",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHSendIdentification",
+	"type" : "normal"
+}

@@ -1,15 +1,13 @@
 process
-decrypt: data
+decrypt: dataStream
 
-	| stream packet |
-	stream := data readStream.
+	| packet |
 	packet := SSHCompressedWithMACPacket new.
 	packet
-		packetLength: (stream next: 4) asInteger;
-		paddingLength: stream next.
-	packet 
-		payload: (stream next: packet packetLength);
-		padding: (stream next: packet paddingLength);
-		mac: (stream next: self macHashSize);
+		packetLength: (dataStream next: 4) asInteger;
+		paddingLength: dataStream next;
+		payload: (dataStream next: packet packetLength - 1 - packet paddingLength);
+		padding: (dataStream next: packet paddingLength);
+		mac: (dataStream next: self macHashSize);
 		yourself.
 	^ packet

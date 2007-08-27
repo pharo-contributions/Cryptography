@@ -1,0 +1,5 @@
+accessing
+compressionAlgorithmsClientToServer
+	"Answer the value of compressionAlgorithmsClientToServer"
+
+	^ compressionAlgorithmsClientToServer

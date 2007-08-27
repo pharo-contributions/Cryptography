@@ -1,4 +1,4 @@
-initialize-release
+states
 installReadConnectionState
 
 	self installReadConnectionState: self securityCoordinator asReadSecurityState.

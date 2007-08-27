@@ -4,5 +4,5 @@ initializeOnConnection: conn
 	connection := conn.
 	pendingStates := OrderedCollection new.
 	messageSenders := OrderedCollection new.
-	self addStateClass: SSLServerWaitingForClientHello.
+	self addStateClass: SSHInitialState.
 	self transitionToNextState.

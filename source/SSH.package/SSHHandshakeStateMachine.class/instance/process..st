@@ -2,6 +2,13 @@ process
 process: msg
 
 	| shouldTransition |
-	shouldTransition := self state process: msg.
+	Transcript 
+		cr; 
+		nextPutAll: self securityCoord endpointString;
+		nextPutAll: '>>';
+		nextPutAll: 'processing... ';
+		nextPutAll: msg asString;
+		flush.
+	shouldTransition := msg process: self state.
 	shouldTransition
 		ifTrue: [self transitionToNextState].

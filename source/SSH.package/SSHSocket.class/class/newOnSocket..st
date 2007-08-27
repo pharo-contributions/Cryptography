@@ -1,8 +1,9 @@
 instance creation
 newOnSocket: socket
 
-	| cap sslSocket |
+	| cap sshSocket |
 	cap := SSHTransportCap newOnSocket: socket.
-	sslSocket := self basicNewOnPipe: cap.
-	sslSocket start.
-	^ sslSocket
+	sshSocket := self basicNewOnPipe: cap.
+	sshSocket answerClient.
+	sshSocket start.
+	^ sshSocket
