@@ -3,6 +3,6 @@ processIdentification: msg
 
 	self connection binary.
 	self connection installReadConnectionState.	
-	self addMsgSenderClass: SSHClientSendKeyInit.
+	self addMsgSenderClass: SSHSendKeyInit.
 	self addStateClass: SSHClientWaitingForKeyInit.
 	^ true

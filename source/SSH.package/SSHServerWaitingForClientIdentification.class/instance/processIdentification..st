@@ -3,6 +3,6 @@ processIdentification: msg
 
 	self connection binary.
 	self connection installReadConnectionState.	
-	self addMsgSenderClass: SSHServerSendKeyInit.
+	self addMsgSenderClass: SSHSendKeyInit.
 	self addStateClass: SSHServerWaitingForKeyInit.
 	^ true

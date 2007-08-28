@@ -14,4 +14,4 @@ asByteArray
 		(self nameListOn: self languagesClientToServer),
 		(self nameListOn: self languagesServerToClient),
 		(self firstKeyExchangePacketFollows ifTrue: [#(1)] ifFalse: [#(0)]),
-		#(0).
+		(0 asByteArrayOfSize: 4).
