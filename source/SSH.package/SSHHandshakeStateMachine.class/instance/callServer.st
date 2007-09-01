@@ -1,10 +1,10 @@
 process
 callServer
 
+	self securityCoord makeClient.
 	self addMsgSenderClass: SSHSendIdentification.
 	self addStateClass: SSHClientWaitingForServerIdentification.
 	self transitionToNextState.
-	self securityCoord makeClient.
-	self securityCoord securityParams bulkCipherAlgorithm: #null.
-	self securityCoord securityParams packagerAlgorithm: #binary.
+	self securityCoord pendingReadState: self securityCoord asReadSecurityState.
+	self securityCoord pendingWriteState: self securityCoord asWriteSecurityState.
 	self connection installWriteConnectionState.

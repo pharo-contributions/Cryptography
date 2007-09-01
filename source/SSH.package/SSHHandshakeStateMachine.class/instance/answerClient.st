@@ -1,10 +1,10 @@
 process
 answerClient
 
+	self securityCoord makeServer.
 	self addMsgSenderClass: SSHSendIdentification.
 	self addStateClass: SSHServerWaitingForClientIdentification.
 	self transitionToNextState.
-	self securityCoord makeServer.
-	self securityCoord securityParams bulkCipherAlgorithm: #null.
-	self securityCoord securityParams packagerAlgorithm: #binary.
+	self securityCoord pendingReadState: self securityCoord asReadSecurityState.
+	self securityCoord pendingWriteState: self securityCoord asWriteSecurityState.
 	self connection installWriteConnectionState.

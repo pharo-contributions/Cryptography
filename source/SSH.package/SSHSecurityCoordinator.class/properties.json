@@ -9,6 +9,8 @@
 		"connection",
 		"isClient",
 		"keyExchangeProcessor",
+		"pendingReadState",
+		"pendingWriteState",
 		"securityParams"
 	],
 	"name" : "SSHSecurityCoordinator",

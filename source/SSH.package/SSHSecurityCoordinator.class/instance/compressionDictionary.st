@@ -2,5 +2,5 @@ conn states
 compressionDictionary
 
 	^ Dictionary new
-		at: #null put: SSHNullCompressionSecurityState;
+		at: 'none' put: SSHNullCompressionSecurityState;
 		yourself.

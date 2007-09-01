@@ -1,0 +1,4 @@
+accessing
+hashClass
+
+	^ SHA1

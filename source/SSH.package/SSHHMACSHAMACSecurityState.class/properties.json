@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHMACSecurityState",
+	"category" : "SSH-State",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hMAC",
+		"readKey",
+		"writeKey"
+	],
+	"name" : "SSHHMACSHAMACSecurityState",
+	"type" : "normal"
+}

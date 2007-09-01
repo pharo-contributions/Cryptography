@@ -1,4 +1,4 @@
 process
 processClientDHInitMsg: dhInitMsg
 
-	e := dhInitMsg e.
+	self e: dhInitMsg e.

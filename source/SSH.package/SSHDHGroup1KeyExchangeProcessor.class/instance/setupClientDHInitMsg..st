@@ -1,6 +1,6 @@
 setup
 setupClientDHInitMsg: dhInitMsg
 
-	e := diffieHellman sendMessage.
-	dhInitMsg e: e.
+	self e: diffieHellman sendMessage.
+	dhInitMsg e: self e.
 	

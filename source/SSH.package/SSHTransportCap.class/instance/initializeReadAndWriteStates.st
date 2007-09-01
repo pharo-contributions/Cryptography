@@ -1,5 +1,5 @@
 initialize-release
 initializeReadAndWriteStates
 
-	self installReadConnectionState: self securityCoordinator asInitialReadSecurityState.
-	self installWriteConnectionState: self securityCoordinator asInitialWriteSecurityState.
+	self installReadConnectionState.
+	self installWriteConnectionState.

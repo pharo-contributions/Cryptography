@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"diffieHellman",
-		"e"
+		"e",
+		"f"
 	],
 	"name" : "SSHDHGroup1KeyExchangeProcessor",
 	"type" : "normal"
