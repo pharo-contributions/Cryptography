@@ -3,5 +3,5 @@ processDHReply: msg
 
 	self securityCoord processServerDHReplyMsg: msg.
 	self addMsgSenderClass: SSHSendNewKeys.
-	self addStateClass: SSHWaitingForNewKeys.
+	self addStateClass: SSHClientWaitingForNewKeys.
 	^ true

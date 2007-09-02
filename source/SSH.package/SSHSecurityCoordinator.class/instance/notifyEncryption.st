@@ -1,4 +1,0 @@
-events
-notifyEncryption
-
-	self halt.

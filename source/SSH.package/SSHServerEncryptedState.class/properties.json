@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHHandshakeState",
+	"category" : "SSH-Handshake",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHServerEncryptedState",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"serviceName"
+	],
+	"name" : "SSHServiceAcceptMessage",
+	"type" : "normal"
+}

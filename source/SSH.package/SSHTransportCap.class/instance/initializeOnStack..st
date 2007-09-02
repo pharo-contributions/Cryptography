@@ -5,3 +5,4 @@ initializeOnStack: aStack
 	self initializeHandshakeStateMachine.
 	self initializeSecurityCoordinator.
 	self initializeReadAndWriteStates.
+	self binary.

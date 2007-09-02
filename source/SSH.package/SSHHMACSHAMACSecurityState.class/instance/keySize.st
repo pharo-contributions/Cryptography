@@ -1,0 +1,4 @@
+accessing
+keySize
+
+	^ self hashSize

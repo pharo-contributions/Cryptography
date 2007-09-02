@@ -1,4 +1,4 @@
 process
 encrypt: data
 
-	^ data asByteArray.
+	^ data asByteArray, String lf asByteArray.

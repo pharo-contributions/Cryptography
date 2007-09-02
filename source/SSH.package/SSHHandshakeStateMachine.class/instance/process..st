@@ -10,5 +10,6 @@ process: msg
 		nextPutAll: msg asString;
 		flush.
 	shouldTransition := msg process: self state.
+	self sendMessages.
 	shouldTransition
 		ifTrue: [self transitionToNextState].

@@ -1,4 +1,4 @@
-process
+conversions
 fromStringOnStream: stream
 
 	| size |

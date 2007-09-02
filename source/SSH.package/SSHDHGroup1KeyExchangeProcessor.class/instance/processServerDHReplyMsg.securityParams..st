@@ -10,5 +10,5 @@ processServerDHReplyMsg: dhReplyMsg securityParams: securityParams
 		verifySignature: dhReplyMsg signature 
 		ofMessageHash: (SHA1 hashMessage: securityParams exchangeHash))
 			ifFalse: [self error: 'bad signature'].
-	self halt.
+
 

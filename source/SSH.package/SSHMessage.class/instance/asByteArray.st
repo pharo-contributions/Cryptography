@@ -1,4 +1,4 @@
 process
 asByteArray
 
-	^ #() asByteArray
+	^ self type asByteArray

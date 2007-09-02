@@ -1,4 +1,4 @@
 process
 decrypt: dataStream
 
-	^ dataStream nextLineLf.
+	^ (dataStream upToAll: String lf asByteArray) asString.

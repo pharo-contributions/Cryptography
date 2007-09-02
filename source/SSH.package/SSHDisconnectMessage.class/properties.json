@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"reasonCode",
+		"description",
+		"language"
+	],
+	"name" : "SSHDisconnectMessage",
+	"type" : "normal"
+}

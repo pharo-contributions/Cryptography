@@ -1,7 +1,6 @@
 process
 fromStream: stream
 
-self halt.
 	super fromStream: stream.
 	self publicHostKeyAndCertificates: (self fromStringOnStream: stream).
 	self f: (self fromMpintOnStream: stream).

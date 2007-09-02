@@ -7,7 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"listener",
-		"connections"
+		"connections",
+		"publicKey",
+		"privateKey"
 	],
 	"name" : "SSHServer",
 	"type" : "normal"
