@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinarySubMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"password",
+		"newPassword"
+	],
+	"name" : "SSHUserAuthPasswordRequestSubMessage",
+	"type" : "normal"
+}

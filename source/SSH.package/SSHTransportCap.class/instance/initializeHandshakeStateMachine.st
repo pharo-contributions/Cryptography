@@ -1,4 +1,4 @@
 initialize-release
 initializeHandshakeStateMachine
 	
-	self handshakeStateMachine: (SSHHandshakeStateMachine newOnConnection: self).
+	self handshakeStateMachine: (SSHTransportHandshakeStateMachine newOnConnection: self).

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-UserAuth Handshake",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"machine"
+	],
+	"name" : "SSHUserAuthHandshakeState",
+	"type" : "normal"
+}

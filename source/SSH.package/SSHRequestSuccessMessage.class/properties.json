@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SSHRequestSuccessMessage",
+	"type" : "normal"
+}

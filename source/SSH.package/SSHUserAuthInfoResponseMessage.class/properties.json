@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"numResponses",
+		"responses"
+	],
+	"name" : "SSHUserAuthInfoResponseMessage",
+	"type" : "normal"
+}

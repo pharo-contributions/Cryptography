@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SSH-Transport Handshake",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"machine"
+	],
+	"name" : "SSHTransportHandshakeState",
+	"type" : "normal"
+}

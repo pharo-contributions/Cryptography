@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinaryMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"instruction",
+		"language",
+		"numPrompts",
+		"prompts",
+		"echos"
+	],
+	"name" : "SSHUserAuthInfoRequestMessage",
+	"type" : "normal"
+}

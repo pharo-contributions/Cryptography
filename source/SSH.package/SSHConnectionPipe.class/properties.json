@@ -6,9 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"userAuthPipe",
-		"pendingConn",
-		"state"
+		"transportCap",
+		"socket"
 	],
 	"name" : "SSHConnectionPipe",
 	"type" : "normal"

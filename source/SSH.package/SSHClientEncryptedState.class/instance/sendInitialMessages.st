@@ -1,4 +1,8 @@
 process
 sendInitialMessages
 
-	self connection sendServiceRequest: 'ssh-userauth'.
+	| requestMsg |
+	requestMsg := SSHServiceRequestMessage new
+		serviceName: 'ssh-userauth';
+		yourself.
+	self machine sendMsg: requestMsg.

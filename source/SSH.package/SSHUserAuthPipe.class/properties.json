@@ -7,8 +7,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"transportCap",
-		"pendingAuth",
-		"state"
+		"socket",
+		"stateMachine",
+		"userName",
+		"password"
 	],
 	"name" : "SSHUserAuthPipe",
 	"type" : "normal"
