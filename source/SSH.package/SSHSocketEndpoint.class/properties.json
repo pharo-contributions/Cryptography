@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ProtocolLayer",
+	"category" : "SSH-Connections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connPipe",
+		"userName"
+	],
+	"name" : "SSHSocketEndpoint",
+	"type" : "normal"
+}

@@ -8,9 +8,7 @@
 	"instvars" : [
 		"transportCap",
 		"socket",
-		"stateMachine",
-		"userName",
-		"password"
+		"stateMachine"
 	],
 	"name" : "SSHUserAuthPipe",
 	"type" : "normal"

@@ -1,5 +1,4 @@
 accessing
 userName
-	"Answer the value of userName"
 
-	^ userName
+	^ self socket userName

@@ -8,5 +8,6 @@ processUserAuthFailure: msg
 	(msg authentications includes: 'keyboard-interactive')
 		ifTrue: [
 			self sendKeyboardInteractiveUserAuthRequest.
-			^ false].
+			self addStateClass: SSHUserAuthClientWaitingForInfoRequest.
+			^ true].
 	^ false

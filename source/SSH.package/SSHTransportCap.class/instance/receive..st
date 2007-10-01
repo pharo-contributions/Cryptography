@@ -6,4 +6,4 @@ receive: msg
 			ifTrue: [self basicReceive: msg]
 			ifFalse: [self error: 'bad msg number']]
 		ifFalse: [self handshakeStateMachine process: msg].
-	self readState incrementSequenceNumber.
+	self readState ifNotNil: [self readState incrementSequenceNumber].

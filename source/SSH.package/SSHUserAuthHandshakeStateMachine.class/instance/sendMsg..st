@@ -8,4 +8,4 @@ sendMsg: msg
 		nextPutAll: 'sending... ';
 		nextPutAll: msg asString;
 		flush.
-	self connection send: msg.
+	self connection basicSend: msg.

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHUserAuthHandshakeState",
+	"category" : "SSH-UserAuth Handshake",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"infoRequest",
+		"infoResponse",
+		"promptNumber",
+		"responseData"
+	],
+	"name" : "SSHUserAuthClientWaitingForKeyboardInteractiveUserResponse",
+	"type" : "normal"
+}

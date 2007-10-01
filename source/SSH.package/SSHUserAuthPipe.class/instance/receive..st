@@ -5,4 +5,4 @@ receive: msg
 		ifTrue: [self isAuthenticated
 			ifTrue: [self basicReceive: msg]
 			ifFalse: [self error: 'bad msg number']]
-		ifFalse: [self stateMachine process: msg].
+		ifFalse: [self stateMachine processReceived: msg].

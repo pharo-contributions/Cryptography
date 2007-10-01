@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "SSHBinarySubMessage",
+	"category" : "SSH-Messages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"termEnvironmentVariable",
+		"widthChars",
+		"heightRows",
+		"widthPixels",
+		"heightPixels",
+		"terminalModes"
+	],
+	"name" : "SSHChannelRequestPtySubMessage",
+	"type" : "normal"
+}

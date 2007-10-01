@@ -1,4 +1,4 @@
 protocol
 send: msg
 
-	self transportCap send: msg.
+	self stateMachine processSent: msg.

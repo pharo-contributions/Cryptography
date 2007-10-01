@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"recipientChannel",
+		"bytesToAdd"
+	],
 	"name" : "SSHChannelWindowAdjustMessage",
 	"type" : "normal"
 }

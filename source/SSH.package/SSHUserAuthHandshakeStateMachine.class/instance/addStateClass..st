@@ -1,4 +1,6 @@
 process
 addStateClass: aStateClass
 
-	self pendingStates add: (aStateClass newOnMachine: self).
+	| inst |
+	self pendingStates add: (inst := aStateClass newOnMachine: self).
+	^ inst
