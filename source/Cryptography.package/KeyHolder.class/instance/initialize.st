@@ -1,3 +1,3 @@
 initialize-release
 initialize
-	self random: (SecureRandom picker nextBytesNonZero: 32)
+	self random: (SecureRandom new nextBytesNonZero: 32)

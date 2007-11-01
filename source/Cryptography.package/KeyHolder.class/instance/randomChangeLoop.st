@@ -3,7 +3,7 @@ randomChangeLoop
 	"This loop changes the random and reencrypts the data every 100ms"
 	| pKey randomGenerator |
 	self randomChangeProcess: ([
-		randomGenerator := SecureRandom picker.
+		randomGenerator := SecureRandom new.
 		[
 			pKey := self key.
 			self random: (randomGenerator nextBytesNonZero: 32).
