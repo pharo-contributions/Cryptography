@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "ul 3/3/2008 22:39",
+	"super" : "SmartSyntaxInterpreterPlugin",
+	"category" : "Cryptography-MD5",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MD5Plugin",
+	"type" : "normal"
+}
