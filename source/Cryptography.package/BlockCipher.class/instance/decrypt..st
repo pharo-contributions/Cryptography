@@ -2,7 +2,7 @@ accessing
 decrypt: aByteArray
 	"Answer a copy of aByteArray which is decrypted with my key."
 	| decryptedBlock |
-	decryptedBlock _ 
+	decryptedBlock := 
 		self 
 			decrypt: aByteArray copy
 			from: 1

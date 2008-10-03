@@ -3,7 +3,7 @@ step: data template: item selector: selector
 	"Perform one step in the round"
 
 	| args |
-	args _  {
+	args :=  {
 		state at: (item at: 1).
 		state at: (item at: 2).
 		state at: (item at: 3).

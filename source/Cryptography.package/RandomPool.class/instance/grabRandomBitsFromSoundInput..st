@@ -4,27 +4,27 @@ grabRandomBitsFromSoundInput: bitCount
 
 	| recorder buf mid samples bitMask randomBits bit |
 	"collect some sound data"
-	recorder _ SoundRecorder new clearRecordedSound.
+	recorder := SoundRecorder new clearRecordedSound.
 	recorder resumeRecording.
 	(Delay forSeconds: 1) wait.
 	recorder stopRecording.
-	buf _ recorder condensedSamples.
+	buf := recorder condensedSamples.
 
 	"grab bitCount samples from the middle"
-	mid _ buf monoSampleCount // 2.
-	samples _ buf copyFrom: mid to: mid + bitCount - 1.
+	mid := buf monoSampleCount // 2.
+	samples := buf copyFrom: mid to: mid + bitCount - 1.
 
 	"find the least significant bit that varies"
-	bitMask _ 1.
+	bitMask := 1.
 	[bitMask < 16r10000 and:
 	 [(samples collect: [:s | s bitAnd: bitMask]) asSet size < 2]]
-		whileTrue: [bitMask _ bitMask bitShift: 1].
+		whileTrue: [bitMask := bitMask bitShift: 1].
 	bitMask = 16r10000 ifTrue: [^ self error: 'sound samples do not vary'].
 
 	"pack the random bits into a positive integer"
-	randomBits _ 0.
+	randomBits := 0.
 	1 to: samples size do: [:i |
-		bit _ ((samples at: i) bitAnd: bitMask) = 0 ifTrue: [0] ifFalse: [1].
-		randomBits _ (randomBits bitShift: 1) + bit].
+		bit := ((samples at: i) bitAnd: bitMask) = 0 ifTrue: [0] ifFalse: [1].
+		randomBits := (randomBits bitShift: 1) + bit].
 
 	self nextPutAll: randomBits

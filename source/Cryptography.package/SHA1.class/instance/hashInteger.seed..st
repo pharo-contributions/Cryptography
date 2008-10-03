@@ -4,23 +4,23 @@ hashInteger: aPositiveInteger seed: seedInteger
 
 	| buffer dstIndex |
 	"Initialize totalA through totalE to their seed values."
-	totalA _ ThirtyTwoBitRegister new
+	totalA := ThirtyTwoBitRegister new
 		load: ((seedInteger bitShift: - 128) bitAnd: 16rFFFFFFFF).
-	totalB _ ThirtyTwoBitRegister new
+	totalB := ThirtyTwoBitRegister new
 		load: ((seedInteger bitShift: - 96) bitAnd: 16rFFFFFFFF).
-	totalC _ ThirtyTwoBitRegister new
+	totalC := ThirtyTwoBitRegister new
 		load: ((seedInteger bitShift: - 64) bitAnd: 16rFFFFFFFF).
-	totalD _ ThirtyTwoBitRegister new
+	totalD := ThirtyTwoBitRegister new
 		load: ((seedInteger bitShift: - 32) bitAnd: 16rFFFFFFFF).
-	totalE _ ThirtyTwoBitRegister new
+	totalE := ThirtyTwoBitRegister new
 		load: (seedInteger bitAnd: 16rFFFFFFFF).
 	self initializeTotalsArray.
 
 	"pad integer with zeros"
-	buffer _ ByteArray new: 64.
-	dstIndex _ 0.
+	buffer := ByteArray new: 64.
+	dstIndex := 0.
 	aPositiveInteger digitLength to: 1 by: -1 do: [:i |
-		buffer at: (dstIndex _ dstIndex + 1) put: (aPositiveInteger digitAt: i)].
+		buffer at: (dstIndex := dstIndex + 1) put: (aPositiveInteger digitAt: i)].
 
 	"process that one block"
 	self processBuffer: buffer.

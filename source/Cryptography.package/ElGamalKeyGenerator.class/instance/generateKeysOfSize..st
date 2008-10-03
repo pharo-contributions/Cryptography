@@ -1,5 +1,5 @@
 private
 generateKeysOfSize: numberOfBits
-	p _ PrimesFinder safePrimeOfSize: numberOfBits.
-	alpha _ self class generatorOfZp: p.
-	a _ SecureRandom picker nextInt: p-2
+	p := PrimesFinder safePrimeOfSize: numberOfBits.
+	alpha := self class generatorOfZp: p.
+	a := SecureRandom picker nextInt: p-2

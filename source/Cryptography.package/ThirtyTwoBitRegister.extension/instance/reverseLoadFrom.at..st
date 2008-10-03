@@ -4,5 +4,5 @@ reverseLoadFrom: aByteArray at: index
 starting at the given index. Consider the first byte to contain the most
 significant bits of the word (i.e., use big-endian byte ordering)."
 
-	hi _ ((aByteArray at: index + 3) bitShift: 8) + ( aByteArray at: index + 2).
-	low _ ((aByteArray at: index + 1) bitShift: 8) + ( aByteArray at: index).
+	hi := ((aByteArray at: index + 3) bitShift: 8) + ( aByteArray at: index + 2).
+	low := ((aByteArray at: index + 1) bitShift: 8) + ( aByteArray at: index).

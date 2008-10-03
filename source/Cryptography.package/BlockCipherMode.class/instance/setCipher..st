@@ -1,4 +1,4 @@
 initialization-release
 setCipher: aCipher 
-	cipher _ aCipher.
+	cipher := aCipher.
 	self initialVector: (ByteArray new: self blockSize)

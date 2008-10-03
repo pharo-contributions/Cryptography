@@ -1,4 +1,4 @@
 class initialization
 startUp
 	super startUp.
-	Picker ifNil: [ Picker _ self withGeneratedKey ]
+	Picker ifNil: [ Picker := self withGeneratedKey ]

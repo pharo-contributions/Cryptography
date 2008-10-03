@@ -1,3 +1,3 @@
 initialization
 bits: anInteger
-	bits _ anInteger
+	bits := anInteger
