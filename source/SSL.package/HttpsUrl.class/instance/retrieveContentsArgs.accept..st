@@ -2,7 +2,7 @@ as yet unclassified
 retrieveContentsArgs: args accept: mimeType
 
 	| contents |
-	contents _ (HttpsSocket
+	contents := (HttpsSocket
 		httpsGetDocumentFromUrl: self withoutFragment
 		args: args
 		accept: mimeType

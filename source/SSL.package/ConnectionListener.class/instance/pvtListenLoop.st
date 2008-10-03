@@ -3,7 +3,7 @@ pvtListenLoop
 	[
 		self pvtNewListenLoop
 	] on: Error do: [ :ex |
-		process _ nil.
+		process := nil.
 		self destroySockets.
 		ex pass.
 	]

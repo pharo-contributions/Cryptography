@@ -2,8 +2,8 @@ private
 newListener
 	| listener |
 
-	self flag: #todo. "listener _ self socketClass newTCP."
-	listener _ Socket newTCP.
+	self flag: #todo. "listener := self socketClass newTCP."
+	listener := Socket newTCP.
 	listener setOption: 'SO_REUSEADDR' value: true.
 	listener setOption: 'SO_LINGER' value: false.
 	"backlog is how many simultaneous connections to accept at the same time"

@@ -3,7 +3,7 @@ openOnSystemCategoryFilter: filter
 	"FilteredBrowser openOnSystemCategoryFilter: 'SqueakElib'."
 
 	| newBrowser |
-	newBrowser _ self new.
+	newBrowser := self new.
 	newBrowser systemCategoryFilter: filter.
 	self 
 		openBrowserView: (newBrowser openEditString: nil)

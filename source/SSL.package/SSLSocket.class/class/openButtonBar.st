@@ -9,7 +9,7 @@ openButtonBar
 		add: self workspaceButton;
 		add: self gcButton;
 		yourself.
-	row _ AlignmentMorph newRow
+	row := AlignmentMorph newRow
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
 		addAllMorphs: buttons asArray;

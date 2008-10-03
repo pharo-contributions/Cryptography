@@ -1,5 +1,5 @@
 initialize-release
 connectTo: host port: port
 
-	hostName _ host.
+	hostName := host.
 	^super connectTo: hostName port: port

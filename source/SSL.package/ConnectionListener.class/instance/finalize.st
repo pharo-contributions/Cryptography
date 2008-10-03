@@ -6,7 +6,7 @@ finalize
 	process ~~ nil ifTrue: [
 		process terminate.
 	].
-	process _ nil.
+	process := nil.
 	self destroySockets.
 
 

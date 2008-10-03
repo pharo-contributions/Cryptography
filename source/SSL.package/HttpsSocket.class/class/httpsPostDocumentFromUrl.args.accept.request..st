@@ -14,10 +14,10 @@ proxy server if one has been registered.  tk 7/23/97 17:12"
 		ifTrue: [port := self defaultPort]
 		ifFalse: [port := url port].
 	page := url fullPath.
-	argString _ argsDict
+	argString := argsDict
 		ifNotNil: [
-			argString _ self argString: argsDict.
-			argString first = $? ifTrue: [ argString _ argString copyFrom: 2 to: argString size]]
+			argString := self argString: argsDict.
+			argString first = $? ifTrue: [ argString := argString copyFrom: 2 to: argString size]]
 		ifNil: [''].
 
 	serverAddr := NetNameResolver addressForName: serverName timeout: 20.

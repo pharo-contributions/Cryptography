@@ -2,7 +2,7 @@ snapshot
 shutDown: quitting
 	"We're about to snapshot and quit: shut down any open connections."
 
-	InstanceList _ InstanceList select: [ :sock | sock isConnected].
+	InstanceList := InstanceList select: [ :sock | sock isConnected].
 	(quitting and: [InstanceList notEmpty]) ifTrue:
 		[(self confirm: (String streamContents: [ :str |
 				str nextPutAll: 'Open network connections exist to the following hosts:'.

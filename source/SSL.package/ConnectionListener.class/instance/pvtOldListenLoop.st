@@ -2,12 +2,12 @@ private
 pvtOldListenLoop
 	"see comment on ConnectionQueue>>oldStyleListenLoop"
 	| socket |
-	socket _ nil.
+	socket := nil.
 
 	[ true ] whileTrue: [
 		(socket == nil) ifTrue: [
 			"try to create a new socket for listening"
-			socket _ Socket createIfFail: [ nil ]].
+			socket := Socket createIfFail: [ nil ]].
 
 		(socket == nil)
 		ifTrue: [(Delay forMilliseconds: 100) wait]
@@ -18,12 +18,12 @@ pvtOldListenLoop
 			socket isConnected
 				ifTrue: ["connection established"
 					"mutex critical: [" handlerBlock value: socket "]".
-					socket _ nil]
+					socket := nil]
 				ifFalse: [
 					socket isWaitingForConnection
 						ifFalse: [
 							socket destroy. 
-							socket _ nil. 
+							socket := nil. 
 							(NetworkError new 
 								messageText: 'port unavailable: ', portNumber asString; 
 								signal;

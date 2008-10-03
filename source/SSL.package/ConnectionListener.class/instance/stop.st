@@ -3,7 +3,7 @@ stop
 	process ~~ nil ifTrue: [
 		process terminate.
 	].
-	process _ nil.
+	process := nil.
 
 	"We do the following in a timely manner instead of relying on
 	finalization because we may want to turn right around and start
