@@ -4,7 +4,9 @@ validateCertificate: childCert fromParentCertificate: parentCert
 	(DateAndTime now 
 		between: childCert tbsCertificate validity notBefore
 		and: childCert tbsCertificate validity notAfter)
-			ifFalse: [self sendAlertCode: 45. ^ false].
+			ifFalse: [self sendAlertCode: 46. ^ false].
 	childCert tbsCertificate issuer = parentCert tbsCertificate subject
-		ifFalse: [^ false].
+		ifFalse: [
+			self sendAlertCode: 46.
+			^ false].
 	^ childCert verifyFromParentCertificate: parentCert.

@@ -5,4 +5,4 @@ switchToClosed
 	self protocolCap: nil.
 	[self triggerEvent: #closed]
 		on: Error
-		do: [:ex | Transcript show: ex messageText].
+		do: [:ex | Transcript show: '{SSLSocket>>switchToClosed - ' , ex messageText , '}'].

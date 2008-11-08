@@ -9,9 +9,16 @@ getData
 			[[count := self socket receiveDataInto: buf.
 			 ^buf copyFrom: 1 to: count]
 				on: Error
-				do: [:ex | ^ nil]]
+				do: [:ex |
+					Transcript show: '{SSL-EARLYENDOFDATA: ' , ex printString , '}'.
+					^ nil
+				]]
 		ifFalse:
-			[[self socket waitForDataFor: 10] on: Error do: [:e | ]].
+			[[self socket waitForDataFor: 10]
+				on: Error
+				do: [:e |
+					Transcript show: '{SSL-TIMEOUT: ' , e printString , '}'.
+				]].
 	 self isConnected]
 		whileTrue.
 	^nil

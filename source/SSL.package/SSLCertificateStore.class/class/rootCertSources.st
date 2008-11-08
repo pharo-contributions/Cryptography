@@ -12,4 +12,5 @@ rootCertSources
 		add: self verisignC4PCAG3v2;
 		add: self verisignTSACA;
 		add: self verisignSecureServer;
+		add: self equifaxSecureCA;
 		yourself.
