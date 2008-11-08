@@ -1,7 +1,8 @@
 root certs
 rootCertSources
 
-	^ OrderedCollection new
+	| certList aCat anIndex |
+	certList :=	OrderedCollection new
 		add: self class1cacert;
 		add: self class3cacert;
 		add: self thawtePremiumServerCA;
@@ -12,5 +13,12 @@ rootCertSources
 		add: self verisignC4PCAG3v2;
 		add: self verisignTSACA;
 		add: self verisignSecureServer;
-		add: self equifaxSecureCA;
 		yourself.
+ 
+		aCat := (SSLCertificateStore class organization).
+		anIndex := (aCat listAtCategoryNamed: 
+			(SSLCertificateStore certCategoryName asSymbol)).
+		anIndex do: [:aMethod |
+			  certList add: (self perform: aMethod). ].
+
+	^certList.
