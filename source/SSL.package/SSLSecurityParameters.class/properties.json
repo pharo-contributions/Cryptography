@@ -12,7 +12,8 @@
 		"messagesProcessed",
 		"masterSecret",
 		"clientRandom",
-		"serverRandom"
+		"serverRandom",
+		"requiresClientCertificate"
 	],
 	"name" : "SSLSecurityParameters",
 	"type" : "normal"
