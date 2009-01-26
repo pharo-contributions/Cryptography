@@ -2,7 +2,7 @@ initialize-release
 unpredictableStringsDo: aBlock
 	"Enumerate sources of information from my environment that should be generally hard to guess."
 	| time |
-	time := Time millisecondsToRun:
+	time _ Time millisecondsToRun:
 		[ aBlock
 			value: World imageForm bits compressToByteArray ;
 			value: Sensor mousePoint x asString ;

@@ -4,4 +4,4 @@ counter: anInteger
 		uint: counterBits
 		at: self positionOfCounter
 		put: anInteger.
-	counter := anInteger
+	counter _ anInteger

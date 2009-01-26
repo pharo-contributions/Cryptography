@@ -5,9 +5,9 @@ primitiveBigDivide
 
 	| rem div quo |
 	self export: true.
-	quo := interpreterProxy stackObjectValue: 0.
-	div := interpreterProxy stackObjectValue: 1.
-	rem := interpreterProxy stackObjectValue: 2.
+	quo _ interpreterProxy stackObjectValue: 0.
+	div _ interpreterProxy stackObjectValue: 1.
+	rem _ interpreterProxy stackObjectValue: 2.
 
 	interpreterProxy success:
 		(interpreterProxy fetchClassOf: rem) = interpreterProxy classLargePositiveInteger.
@@ -17,17 +17,17 @@ primitiveBigDivide
 		(interpreterProxy fetchClassOf: quo) = interpreterProxy classLargePositiveInteger.
 	interpreterProxy failed ifTrue:[^ nil].
 
-	dsaRemainder := interpreterProxy firstIndexableField: rem.
-	dsaDivisor := interpreterProxy firstIndexableField: div.
-	dsaQuotient := interpreterProxy firstIndexableField: quo.
+	dsaRemainder _ interpreterProxy firstIndexableField: rem.
+	dsaDivisor _ interpreterProxy firstIndexableField: div.
+	dsaQuotient _ interpreterProxy firstIndexableField: quo.
 
-	divisorDigitCount := interpreterProxy stSizeOf: div.
-	remainderDigitCount := interpreterProxy stSizeOf: rem.
+	divisorDigitCount _ interpreterProxy stSizeOf: div.
+	remainderDigitCount _ interpreterProxy stSizeOf: rem.
 
 	"adjust pointers for base-1 indexing"
-	dsaRemainder := dsaRemainder - 1.
-	dsaDivisor := dsaDivisor - 1.
-	dsaQuotient := dsaQuotient - 1.
+	dsaRemainder _ dsaRemainder - 1.
+	dsaDivisor _ dsaDivisor - 1.
+	dsaQuotient _ dsaQuotient - 1.
 
 	self bigDivideLoop.
 	interpreterProxy pop: 3.

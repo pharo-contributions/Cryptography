@@ -14,7 +14,7 @@ testRFC3602Case4
               83ce9f9a102ee99d49a53e87f4c3da55
 "
 	| result |
-	result := ((CBC on: (Rijndael new keySize: 16;
+	result _ ((CBC on: (Rijndael new keySize: 16;
 					
 					key: (ByteArray fromHexString: '56e47a38c5598974bc46903dba290349')))
 				initialVector: (ByteArray fromHexString: '8ce82eefbea0da3c44699ed7db51b7d9'))

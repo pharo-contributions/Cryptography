@@ -17,8 +17,6 @@ initializeTagToTypeDispatchTable
 		at: 20 put: ASN1TeletexStringType new;
 		at: 22 put: ASN1IA5StringType new;
 		at: 23 put: ASN1UTCTimeType new;
-		at: 26 put: ASN1VisibleStringType new;
-		at: 27 put: ASN1GeneralStringType new;
 		at: 28 put: ASN1UniversalStringType new;
 		at: 30 put: ASN1BMPStringType new;
 		yourself.

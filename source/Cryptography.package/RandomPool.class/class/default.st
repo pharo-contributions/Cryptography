@@ -1,3 +1,3 @@
 default
 default
-	^ default ifNil: [default := self new: 4096]
+	^ default ifNil: [default _ self new: 4096]

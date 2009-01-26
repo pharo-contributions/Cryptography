@@ -10,20 +10,20 @@ Key generation:
 
 Example of encryption:
 | elgamal pub priv c |
-elgamal := ElGamalKeyGenerator new.
+elgamal _ ElGamalKeyGenerator new.
 elgamal generateKeysOfSize: 15.
-pub := elgamal publicKey.
-priv := elgamal privateKey.
-c := pub encryptElement: 31.
+pub _ elgamal publicKey.
+priv _ elgamal privateKey.
+c _ pub encryptElement: 31.
 priv decryptElement: c.
 
 
 Example of signature:
 | elgamal pub priv signature |
-elgamal := ElGamalKeyGenerator new.
+elgamal _ ElGamalKeyGenerator new.
 elgamal generateKeysOfSize: 15.
-pub := elgamal publicKey.
-priv := elgamal privateKey.
-signature := priv signMessage: 'hello'.
+pub _ elgamal publicKey.
+priv _ elgamal privateKey.
+signature _ priv signMessage: 'hello'.
 pub verifySignature: signature onMessage: 'hello'.
 

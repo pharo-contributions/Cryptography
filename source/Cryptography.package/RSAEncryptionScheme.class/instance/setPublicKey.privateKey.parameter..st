@@ -1,5 +1,5 @@
 initialization
 setPublicKey: aRSAPublicKey privateKey: aRSAPrivateKey parameter: aString
-	publicKey := aRSAPublicKey.
-	privateKey := aRSAPrivateKey.
-	encodingParameter := aString
+	publicKey _ aRSAPublicKey.
+	privateKey _ aRSAPrivateKey.
+	encodingParameter _ aString

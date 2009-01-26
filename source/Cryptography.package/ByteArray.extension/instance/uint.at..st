@@ -19,8 +19,8 @@ uint: bits at: anInteger
 	bits == 8 
 		ifTrue:
 			[ ^ self byteAt: anInteger ].
-	bytes := bits // 8.
-	answer := LargePositiveInteger new: bytes.
+	bytes _ bits // 8.
+	answer _ LargePositiveInteger new: bytes.
 	1 to: bytes do:
 		[ :digitPosition |
 		answer

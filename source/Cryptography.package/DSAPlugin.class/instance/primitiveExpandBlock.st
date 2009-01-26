@@ -7,8 +7,8 @@ primitiveExpandBlock
 	self var: #wordPtr declareC: 'unsigned int *wordPtr'.
 	self var: #bytePtr declareC: 'unsigned char *bytePtr'.
 
-	expanded := interpreterProxy stackObjectValue: 0.
-	buf := interpreterProxy stackObjectValue: 1.
+	expanded _ interpreterProxy stackObjectValue: 0.
+	buf _ interpreterProxy stackObjectValue: 1.
 	interpreterProxy success: (interpreterProxy isWords: expanded).
 	interpreterProxy success: (interpreterProxy isBytes: buf).
 	interpreterProxy failed ifTrue: [^ nil].
@@ -17,24 +17,24 @@ primitiveExpandBlock
 	interpreterProxy success: ((interpreterProxy stSizeOf: buf) = 64).
 	interpreterProxy failed ifTrue: [^ nil].
 
-	wordPtr := interpreterProxy firstIndexableField: expanded.
-	bytePtr := interpreterProxy firstIndexableField: buf.
+	wordPtr _ interpreterProxy firstIndexableField: expanded.
+	bytePtr _ interpreterProxy firstIndexableField: buf.
 
-	src := 0.
+	src _ 0.
 	0 to: 15 do: [:i |
-		v := ((bytePtr at: src) << 24) +
+		v _ ((bytePtr at: src) << 24) +
 			((bytePtr at: src + 1) << 16) +
 			((bytePtr at: src + 2) << 8) +
 			(bytePtr at: src + 3).
 		wordPtr at: i put: v.
-		src := src + 4].
+		src _ src + 4].
 
 	16 to: 79 do: [:i |
-		v := (((wordPtr at: i - 3) bitXor:
+		v _ (((wordPtr at: i - 3) bitXor:
 			 (wordPtr at: i - 8)) bitXor:
 			 (wordPtr at: i - 14)) bitXor:
 			 (wordPtr at: i - 16).
-		v := self leftRotate: v by: 1.
+		v _ self leftRotate: v by: 1.
 		wordPtr at: i put: v].
 
 	interpreterProxy pop: 2.

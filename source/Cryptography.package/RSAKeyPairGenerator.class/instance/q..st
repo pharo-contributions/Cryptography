@@ -1,3 +1,3 @@
 private
 q: anInteger
-	q := anInteger
+	q _ anInteger

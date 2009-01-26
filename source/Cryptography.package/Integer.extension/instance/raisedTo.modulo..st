@@ -2,14 +2,14 @@
 raisedTo: y modulo: n
 	"Answer the modular exponential. Code by Jesse Welton."
 	| s t u |
-	s := 1.
-	t := self.
-	u := y.
+	s _ 1.
+	t _ self.
+	u _ y.
 	[u = 0] whileFalse: [
 		u odd ifTrue: [
-			s := s * t.
-			s >= n ifTrue: [s := s \\\ n]].
-		t := t * t.
-		t >= n ifTrue: [t := t \\\ n].
-		u := u bitShift: -1].
+			s _ s * t.
+			s >= n ifTrue: [s _ s \\\ n]].
+		t _ t * t.
+		t >= n ifTrue: [t _ t \\\ n].
+		u _ u bitShift: -1].
 	^ s normalize

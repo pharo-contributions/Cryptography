@@ -4,9 +4,9 @@ verify: signatureString isSignatureOf: aStringOrStream
 	"Note: Random numbers are not needed for signature verification; thus, there is no need to call initRandomFromUser before verifying a signature."
 
 	| hasher h sig |
-	hasher := SHA1 new.
+	hasher _ SHA1 new.
 	(aStringOrStream class isBytes)
-		ifTrue: [h := hasher hashMessage: aStringOrStream]
-		ifFalse: [h := hasher hashStream: aStringOrStream].
-	sig := self stringToSignature: signatureString.
+		ifTrue: [h _ hasher hashMessage: aStringOrStream]
+		ifFalse: [h _ hasher hashStream: aStringOrStream].
+	sig _ self stringToSignature: signatureString.
 	^ self verifySignature: sig ofMessageHash: h

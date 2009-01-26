@@ -1,7 +1,5 @@
 hash algorithms
 testMD5
-
-	self assert: (MD5 hashMessage: '') asInteger = 16rD41D8CD98F00B204E9800998ECF8427E.
 	self assert: (MD5 hashMessage: 'a') asInteger = 16r0CC175B9C0F1B6A831C399E269772661.
 	self assert: (MD5 hashMessage: 'abc') asInteger = 16r900150983CD24FB0D6963F7D28E17F72.
 	self assert: (MD5 hashMessage: 'message digest') asInteger = 16rF96B697D7CB7938D525A2F31AAF161D0.

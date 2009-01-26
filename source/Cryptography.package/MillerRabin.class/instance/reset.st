@@ -1,8 +1,8 @@
 computing
 reset
-	iterations := 0.
-	satisfied := true.
-	minusOne := target - 1.
-	samples := minusOne.
-	k := minusOne lowBit - 1.
-	n0 := minusOne bitShift: k negated
+	iterations _ 0.
+	satisfied _ true.
+	minusOne _ target - 1.
+	samples _ minusOne.
+	k _ minusOne lowBit - 1.
+	n0 _ minusOne bitShift: k negated

@@ -4,9 +4,9 @@ round: data selector: selector round: round
 
 	| shiftIndex template abcd |
 	1 to: 16 do: [ :i |
-		shiftIndex := (i - 1) \\ 4 + 1.
-		abcd := ABCDTable at: shiftIndex.
-		template := {
+		shiftIndex _ (i - 1) \\ 4 + 1.
+		abcd _ ABCDTable at: shiftIndex.
+		template _ {
 			abcd at: 1. abcd at: 2. abcd at: 3. abcd at: 4.
 			(IndexTable at: round) at: i.
 			(ShiftTable at: round) at: shiftIndex.

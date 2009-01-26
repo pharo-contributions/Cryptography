@@ -1,9 +1,9 @@
 ElGamal
 performElGamalEncryption: bits
 	| elgamal pub priv c element |
-	elgamal := self elGamalGeneratorOfSize: bits.
-	pub := elgamal publicKey.
-	priv := elgamal privateKey.
-	element := (SecureRandom picker nextBits: bits).
-	c := pub encryptElement: element.
+	elgamal _ self elGamalGeneratorOfSize: bits.
+	pub _ elgamal publicKey.
+	priv _ elgamal privateKey.
+	element _ (SecureRandom picker nextBits: bits).
+	c _ pub encryptElement: element.
 	self assert: (priv decryptElement: c) = element

@@ -1,4 +1,4 @@
 initialization
 setupPrimeOfSize: bits
-	prime := PrimesFinder safePrimeOfSize: bits.
-	generator := ElGamalKeyGenerator generatorOfZp: prime
+	prime _ PrimesFinder safePrimeOfSize: bits.
+	generator _ ElGamalKeyGenerator generatorOfZp: prime

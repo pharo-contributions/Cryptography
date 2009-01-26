@@ -3,7 +3,7 @@ blocksIn: aByteArray from: startIndex to: endIndex do: oneArgBlock
 	| tempBlock |
 	self isStreamCipher
 		ifFalse: [ self validateEndpointsFrom: startIndex to: endIndex ].
-	tempBlock := ByteArray new: self blockSize.
+	tempBlock _ ByteArray new: self blockSize.
 	startIndex to: endIndex
 		by: self blockSize
 		do: 

@@ -1,6 +1,6 @@
 ElGamal
 initializeElGamalGenerators
-	elGamalGenerators := Dictionary new
+	elGamalGenerators _ Dictionary new
 
 		at: 512
 		put:

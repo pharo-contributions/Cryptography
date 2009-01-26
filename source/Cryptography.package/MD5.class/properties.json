@@ -1,10 +1,15 @@
 {
-	"commentStamp" : "ul 3/3/2008 23:40",
+	"commentStamp" : "<historical>",
 	"super" : "HashFunction",
 	"category" : "Cryptography-MD5",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"ABCDTable",
+		"IndexTable",
+		"ShiftTable",
+		"SinTable"
+	],
 	"instvars" : [
 		"state"
 	],

@@ -1,3 +1,3 @@
 initialization
 generator: anInteger
-	generator := anInteger
+	generator _ anInteger

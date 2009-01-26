@@ -1,4 +1,4 @@
 protocol
 receiveMessage: anInteger
-	sharedKey := anInteger raisedTo: secret modulo: prime.
+	sharedKey _ anInteger raisedTo: secret modulo: prime.
 	^ sharedKey

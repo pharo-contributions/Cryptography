@@ -10,11 +10,11 @@ primitiveDESTransform
 	self var: 'data' declareC: 'unsigned char *data'.
 	self var: 'cooked' declareC: 'unsigned long *cooked'.
 	self var: 'work' declareC: 'unsigned long work[2]'.
-	self cCode: '/* Hi ho, Hi ho...*/' inSmalltalk: [work := 1].
+	self cCode: '/* Hi ho, Hi ho...*/' inSmalltalk: [work _ 1].
 	interpreterProxy methodArgumentCount = 2
 		ifFalse:[^interpreterProxy primitiveFail].
-	data := self checkedBytePtrOf: (interpreterProxy stackValue: 1).
-	cooked := self checkedWordPtrOf: (interpreterProxy stackValue: 0).
+	data _ self checkedBytePtrOf: (interpreterProxy stackValue: 1).
+	cooked _ self checkedWordPtrOf: (interpreterProxy stackValue: 0).
 	interpreterProxy failed
 		ifTrue: [ ^nil ].
 	self scrunch: data to: work.
