@@ -2,29 +2,29 @@ OAEP encoder
 decode: em parameter: parameter
 	| emLen maskedSeed maskedDB seedMask seed dbMask dataBlock dbLen pHash pHashPrima i terminado b |
 	parameter size > (2 raisedTo: 60) ifTrue: [self error: 'decoding error'].
-	emLen _ em size.
+	emLen := em size.
 	emLen < (2 * hashLen + 1) ifTrue: [self error: 'decoding error'].
 
-	maskedSeed _ em copyFrom: 1 to: hashLen.
-	maskedDB _ em copyFrom: (hashLen + 1) to: emLen.
-	seedMask _ self maskOfLength: hashLen fromString: maskedDB.
-	seed _ maskedSeed bitXor: seedMask.
-	dbMask _ self maskOfLength: (emLen - hashLen) fromString: seed.
-	dataBlock _ maskedDB bitXor: dbMask.
-	dbLen _ dataBlock size.
+	maskedSeed := em copyFrom: 1 to: hashLen.
+	maskedDB := em copyFrom: (hashLen + 1) to: emLen.
+	seedMask := self maskOfLength: hashLen fromString: maskedDB.
+	seed := maskedSeed bitXor: seedMask.
+	dbMask := self maskOfLength: (emLen - hashLen) fromString: seed.
+	dataBlock := maskedDB bitXor: dbMask.
+	dbLen := dataBlock size.
 
-	pHash _ (hash hashMessage: parameter) asByteArrayOfSize: hashLen.
-	pHashPrima _ dataBlock copyFrom: 1 to: hashLen.
-	i _ hashLen + 1.
-	terminado _ false.
+	pHash := (hash hashMessage: parameter) asByteArrayOfSize: hashLen.
+	pHashPrima := dataBlock copyFrom: 1 to: hashLen.
+	i := hashLen + 1.
+	terminado := false.
 	[terminado] whileFalse: 
-		[b _ dataBlock at: i.
+		[b := dataBlock at: i.
 		b=0 ifTrue: 
-			[i _ i+1.
+			[i := i+1.
 			i > dbLen ifTrue: [self error: 'decoding error']]
 		ifFalse: 
 			[b=1 
-				ifTrue: [terminado _ true]
+				ifTrue: [terminado := true]
 				ifFalse: [self error: 'decoding error']
 			]
 		].

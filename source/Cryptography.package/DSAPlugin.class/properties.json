@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "ProtoObject",
+	"super" : "InterpreterPlugin",
 	"category" : "Cryptography-DSA",
 	"classinstvars" : [ ],
 	"pools" : [ ],

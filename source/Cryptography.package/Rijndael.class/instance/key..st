@@ -1,6 +1,6 @@
 accessing
 key: aByteArray
-"	nK _ aByteArray size * 8 / 32."
+"	nK := aByteArray size * 8 / 32."
 	self setSystem.
 	self expandKey: aByteArray.
 	self eqExpandKey

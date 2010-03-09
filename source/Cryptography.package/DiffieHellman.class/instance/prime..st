@@ -1,3 +1,3 @@
 initialization
 prime: anInteger
-	prime _ anInteger
+	prime := anInteger

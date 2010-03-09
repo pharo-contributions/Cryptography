@@ -10,5 +10,5 @@ testRFC3602Case1
 	((CBC on: (Rijndael new keySize: 16;
 			 key: (ByteArray fromHexString: '06A9214036B8A15B512E03D534120006')))
 		initialVector: (ByteArray fromHexString: '3DAFBA429D9EB430B422DA802C9FAC41'))
-		encryptBlock: (result _ 'Single block msg' asByteArray).
+		encryptBlock: (result := 'Single block msg' asByteArray).
 	self assert: result hex = 'E353779C1079AEB82708942DBE77181A'

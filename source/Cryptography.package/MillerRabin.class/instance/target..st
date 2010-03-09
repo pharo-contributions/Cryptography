@@ -1,4 +1,4 @@
 accessing
 target: anInteger
-	target _ anInteger.
+	target := anInteger.
 	self reset

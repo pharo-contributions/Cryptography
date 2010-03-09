@@ -3,16 +3,16 @@ addBackDivisorDigitShift: digitShift
 	"Add back the divisor shifted left by the given number of digits. This is done only when the estimate of quotient digit was one larger than the correct value."
 
 	| carry rIndex sum |
-	carry _ 0.
-	rIndex _ digitShift + 1.
+	carry := 0.
+	rIndex := digitShift + 1.
 	1 to: divisorDigitCount do: [:i |
-		sum _ (dsaRemainder at: rIndex) + (dsaDivisor at: i) + carry.
+		sum := (dsaRemainder at: rIndex) + (dsaDivisor at: i) + carry.
 		dsaRemainder at: rIndex put: (sum bitAnd: 16rFF).
-		carry _ sum bitShift: -8.
-		rIndex _ rIndex + 1].
+		carry := sum bitShift: -8.
+		rIndex := rIndex + 1].
 
 	"do final carry"
-	sum _ (dsaRemainder at: rIndex) + carry.
+	sum := (dsaRemainder at: rIndex) + carry.
 	dsaRemainder at: rIndex put: (sum bitAnd: 16rFF).
 
 	"Note: There should be a final carry that cancels out the excess borrow."

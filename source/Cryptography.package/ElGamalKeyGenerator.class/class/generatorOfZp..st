@@ -5,8 +5,8 @@ generatorOfZp: safePrimeP
 	See Handbook of Applied Cryptography, Ch.4, p.163 "
 
 	| alpha p n |
-	p _ safePrimeP.
-	n _ p - 1.
-	[alpha _ SecureRandom picker nextInt: n.
+	p := safePrimeP.
+	n := p - 1.
+	[alpha := SecureRandom picker nextInt: n.
 	((alpha raisedTo: n/2 modulo: p) = 1 or: [(alpha raisedTo: 2 modulo: p) = 1])] whileFalse.
 	^ alpha

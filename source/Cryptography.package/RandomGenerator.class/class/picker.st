@@ -1,3 +1,3 @@
 create
 picker
-	^ picker ifNil: [ picker _ self withGeneratedKey ]
+	^ picker ifNil: [ picker := self withGeneratedKey ]
