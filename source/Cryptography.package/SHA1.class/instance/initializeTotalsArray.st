@@ -2,7 +2,7 @@ private
 initializeTotalsArray
 	"Initialize the totals array from the registers for use with the primitives."
 
-	totals _ Bitmap new: 5.
+	totals := Bitmap new: 5.
 	totals at: 1 put: totalA asInteger.
 	totals at: 2 put: totalB asInteger.
 	totals at: 3 put: totalC asInteger.

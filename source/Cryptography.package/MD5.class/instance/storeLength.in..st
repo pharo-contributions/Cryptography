@@ -4,9 +4,9 @@ storeLength: bitLength in: aByteArray
 	little-endian representation of the original message length in bits."
 
 	| n i |
-	n _ bitLength.
-	i _ aByteArray size - 8 + 1.
+	n := bitLength.
+	i := aByteArray size - 8 + 1.
 	[n > 0] whileTrue: [
 		aByteArray at: i put: (n bitAnd: 16rFF).
-		n _ n bitShift: -8.
-		i _ i + 1].
+		n := n bitShift: -8.
+		i := i + 1].

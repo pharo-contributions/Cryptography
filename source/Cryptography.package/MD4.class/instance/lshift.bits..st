@@ -5,6 +5,6 @@ lshift: u bits: s
 	"
 
 	| lo |
-	lo _ u bitAnd: 16rFFFFFFFF.
+	lo := u bitAnd: 16rFFFFFFFF.
 	^ (lo << s bitAnd: 16rFFFFFFFF)
 		bitOr: lo >> (32 - s)

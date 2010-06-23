@@ -1,7 +1,7 @@
 accessing
 encryptBlock: aByteArray
 	| kSubI |
-	kSubI _ self nextBlock.
+	kSubI := self nextBlock.
 	aByteArray withIndexDo:
 		[ : eachByte : x |
 		aByteArray 

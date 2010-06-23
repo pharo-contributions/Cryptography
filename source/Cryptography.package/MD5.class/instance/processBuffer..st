@@ -3,8 +3,8 @@ processBuffer: aByteArray
 	"Process a 64-byte buffer"
 
 	| saveState data |
-	saveState _ state collect: [ :item | item copy ].
-	data _ Array new: 16.
+	saveState := state collect: [ :item | item copy ].
+	data := Array new: 16.
 	1 to: 16 do: [ :index |
 		data at: index put:
 			(ThirtyTwoBitRegister new reverseLoadFrom: aByteArray at: (index * 4) - 3)].

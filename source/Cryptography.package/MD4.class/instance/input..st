@@ -1,3 +1,3 @@
 accessing
 input: anArray 
-	input _ anArray
+	input := anArray

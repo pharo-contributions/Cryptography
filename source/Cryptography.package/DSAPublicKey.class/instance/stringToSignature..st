@@ -7,11 +7,11 @@ stringToSignature: aString
 	where <r> and <s> are large positive integers represented by strings of hexidecimal digits."
 
 	| prefix stream r s |
-	prefix _ '[DSA digital signature '.
+	prefix := '[DSA digital signature '.
 	(aString beginsWith: prefix) ifFalse: [self error: 'bad signature prefix'].
-	stream _ ReadStream on: aString.
+	stream := ReadStream on: aString.
 	stream position: prefix size.
-	r _ Integer readFrom: stream base: 16.
+	r := Integer readFrom: stream base: 16.
 	stream next.
-	s _ Integer readFrom: stream base: 16.
+	s := Integer readFrom: stream base: 16.
 	^ Array with: r with: s

@@ -3,8 +3,8 @@ asByteArrayOfSize: aSize
 	"Answer a ByteArray of aSize with my value, most-significant byte first."
 	| answer digitPos |
 	aSize < self digitLength ifTrue: [ CryptographyError signal: 'number to large for byte array' ].
-	answer _ ByteArray new: aSize.
-	digitPos _ 1.
+	answer := ByteArray new: aSize.
+	digitPos := 1.
 	aSize 
 		to: aSize - self digitLength + 1
 		by: -1
@@ -13,5 +13,5 @@ asByteArrayOfSize: aSize
 			answer 
 				at: pos
 				put: (self digitAt: digitPos).
-			digitPos _ digitPos + 1 ].
+			digitPos := digitPos + 1 ].
 	^ answer

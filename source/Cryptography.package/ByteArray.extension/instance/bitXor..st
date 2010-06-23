@@ -1,7 +1,7 @@
 *cryptography-core
 bitXor: aByteArray
 	| answer |
-	answer _ self copy.
+	answer := self copy.
 	1 to: (self size min: aByteArray size) do: 
 		[ :each | 
 		answer 
