@@ -1,7 +1,7 @@
 class initialization
 initializeLogTable
 
-	LogTable := 
+	LogTable _ 
 #(0    0   25    1   50    2   26  198   75  199   27  104   51  238  223    3 
 
  100    4  224   14   52  141  129  239   76  113    8  200  248  105   28  193 

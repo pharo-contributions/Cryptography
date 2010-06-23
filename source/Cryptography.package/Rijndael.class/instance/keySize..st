@@ -1,3 +1,3 @@
 accessing
 keySize: anInteger
-	nK  := anInteger * 8 / 32
+	nK  _ anInteger * 8 / 32

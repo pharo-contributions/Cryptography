@@ -1,3 +1,3 @@
 initialize
 initializeCtr
-	ctr := (Rijndael key: key) ctr
+	ctr _ (Rijndael key: key) ctr

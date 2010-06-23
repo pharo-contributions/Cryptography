@@ -1,5 +1,5 @@
 initialization
 initialize
-	rand := Random new.
-	hash := SHA1 new.
-	hashLen := 20
+	rand _ Random new.
+	hash _ SHA1 new.
+	hashLen _ 20

@@ -1,4 +1,4 @@
 accessing
 += anInteger
-	candidate := candidate + anInteger.
+	candidate _ candidate + anInteger.
 	wheel += anInteger

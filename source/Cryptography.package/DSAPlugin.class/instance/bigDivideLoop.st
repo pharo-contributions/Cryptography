@@ -4,32 +4,32 @@ bigDivideLoop
 
 	| d1 d2 firstDigit firstTwoDigits thirdDigit q digitShift qTooBig |
 	"extract the top two digits of the divisor"
-	d1 := dsaDivisor at: divisorDigitCount.
-	d2 := dsaDivisor at: divisorDigitCount - 1.
+	d1 _ dsaDivisor at: divisorDigitCount.
+	d2 _ dsaDivisor at: divisorDigitCount - 1.
 
 	remainderDigitCount to: divisorDigitCount + 1 by: -1 do: [:j |
 		"extract the top several digits of remainder."
-		firstDigit := dsaRemainder at: j.
-		firstTwoDigits := (firstDigit bitShift: 8) + (dsaRemainder at: j - 1).
-		thirdDigit := dsaRemainder at: j - 2.
+		firstDigit _ dsaRemainder at: j.
+		firstTwoDigits _ (firstDigit bitShift: 8) + (dsaRemainder at: j - 1).
+		thirdDigit _ dsaRemainder at: j - 2.
 
 		"estimate q, the next digit of the quotient"
 		firstDigit = d1
-			ifTrue: [q := 255]
-			ifFalse: [q := firstTwoDigits // d1].
+			ifTrue: [q _ 255]
+			ifFalse: [q _ firstTwoDigits // d1].
 
 		"adjust the estimate of q if necessary"
 		(d2 * q) > (((firstTwoDigits - (q * d1)) bitShift: 8) + thirdDigit) ifTrue: [	
-			q := q - 1.
+			q _ q - 1.
 			(d2 * q) > (((firstTwoDigits - (q * d1)) bitShift: 8) + thirdDigit) ifTrue: [
-				q := q - 1]].
+				q _ q - 1]].
 
-		digitShift := j - divisorDigitCount - 1.
+		digitShift _ j - divisorDigitCount - 1.
 		q > 0 ifTrue: [
-			qTooBig := self subtractDivisorMultipliedByDigit: q digitShift: digitShift.
+			qTooBig _ self subtractDivisorMultipliedByDigit: q digitShift: digitShift.
 			qTooBig ifTrue: [  "this case is extremely rare"
 				self addBackDivisorDigitShift: digitShift.
-				q := q - 1]].
+				q _ q - 1]].
 
 		"record this digit of the quotient"
 		dsaQuotient at: digitShift + 1 put: q].

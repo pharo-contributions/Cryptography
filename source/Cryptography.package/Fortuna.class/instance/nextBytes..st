@@ -5,7 +5,7 @@ nextBytes: anInteger
 	(anInteger between: 0 and:  1048576  "2 raisedTo: 20")
 		ifFalse:
 			[ CryptographyError signal: 'program error, should not generate this much data with the same key.' ].
-	data := self generateBlocks: ((anInteger / 16) roundUpTo: 1).
+	data _ self generateBlocks: ((anInteger / 16) roundUpTo: 1).
 	"Switch to a new key to avoid later compromises of this output."
 	self setKey: (self generateBlocks: 2).
 	^ data size = anInteger

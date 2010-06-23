@@ -12,7 +12,7 @@ finalHash
 		  (totalE asInteger)].
 
 	"compute final hash when using primitives"
-	r := 0.
+	r _ 0.
 	1 to: 5 do: [:i |
-		r := r bitOr: ((totals at: i) bitShift: (32 * (5 - i)))].
+		r _ r bitOr: ((totals at: i) bitShift: (32 * (5 - i)))].
 	^ r

@@ -8,13 +8,13 @@ hashStream: aPositionableStream
 
 	aPositionableStream atEnd ifTrue: [self error: 'empty stream'].
 
-	startPosition := aPositionableStream position.
+	startPosition _ aPositionableStream position.
 	[aPositionableStream atEnd] whileFalse: [
-		buf := aPositionableStream next: 64.
+		buf _ aPositionableStream next: 64.
 		(aPositionableStream atEnd not and: [buf size = 64])
 			ifTrue: [self processBuffer: buf]
 			ifFalse: [
-				bitLength := (aPositionableStream position - startPosition) * 8.
+				bitLength _ (aPositionableStream position - startPosition) * 8.
 				self processFinalBuffer: buf bitLength: bitLength]].
 
 	^ self finalHash asByteArrayOfSize: 20.

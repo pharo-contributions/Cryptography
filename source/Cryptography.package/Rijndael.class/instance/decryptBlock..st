@@ -1,5 +1,5 @@
 accessing
 decryptBlock: aByteArray
-	state := self stateFromBytes: aByteArray.
+	state _ self stateFromBytes: aByteArray.
 	self decryptState: state.
 	self storeState: state into: aByteArray

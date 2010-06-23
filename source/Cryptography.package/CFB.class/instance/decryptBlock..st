@@ -1,7 +1,7 @@
 accessing
 decryptBlock: aByteArray 
 	| nextVector |
-	nextVector := aByteArray copy.
+	nextVector _ aByteArray copy.
 	cipher encryptBlock: vector.
 	1 
 		to: aByteArray size

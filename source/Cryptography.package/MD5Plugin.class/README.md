@@ -1,1 +1,0 @@
-I'm an MD5 plugin, my implementation is based on RFC 1321 (http://tools.ietf.org/html/rfc1321) Appendix A.

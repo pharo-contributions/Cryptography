@@ -1,7 +1,7 @@
 primality testing
 isProbablyPrime: p
 	| probabilistic |
-	probabilistic := self new.
+	probabilistic _ self new.
 	probabilistic target: p.
 	[probabilistic satisfied
 		and:

@@ -1,7 +1,7 @@
 testing
 genericARC2TestKey: key effectiveKeyLength: aLength plaintext: plainText ciphertext: ciphertext
 	| vector rc2 |
-	vector := plainText copy.
+	vector _ plainText copy.
 	rc2 := ARC2 key: key effectiveKeyLength: aLength.
 	rc2 encryptBlock: vector.
 	self assert: vector = ciphertext.

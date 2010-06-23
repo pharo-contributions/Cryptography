@@ -1,11 +1,11 @@
 RSA
 genericRSATest: bits
 	| generator public private msg c |
-	generator := RSAKeyPairGenerator new bits: bits.
-	public := generator publicKey. "this may take a while"
-	private := generator privateKey.
+	generator _ RSAKeyPairGenerator new bits: bits.
+	public _ generator publicKey. "this may take a while"
+	private _ generator privateKey.
 
-	msg := 1234567890987654321. "the plaintext"
+	msg _ 1234567890987654321. "the plaintext"
 	
-c := public crypt: msg. "the ciphertext (print it and take a look)"
+c _ public crypt: msg. "the ciphertext (print it and take a look)"
 	self assert: (private crypt: c) = msg

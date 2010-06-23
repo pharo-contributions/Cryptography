@@ -1,5 +1,5 @@
 initialization-release
 destroy
 	key destroy.
-	key := 0.
-	seed := 0
+	key _ 0.
+	seed _ 0

@@ -4,8 +4,8 @@ nextRandom160
 	"Details: Try again in the extremely unlikely chance that zero is encountered."
 
 	| result |
-	result := 0.
+	result _ 0.
 	[result = 0] whileTrue: [
-		result := SHA1 new hashInteger: key seed: seed.
-		key := key + result + 1].
+		result _ SHA1 new hashInteger: key seed: seed.
+		key _ key + result + 1].
 	^ result

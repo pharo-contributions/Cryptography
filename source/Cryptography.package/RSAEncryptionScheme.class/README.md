@@ -1,14 +1,14 @@
 Example:
 
 | rsa pub priv rsaes c |
-rsa := RSAKeyPairGenerator new.
+rsa _ RSAKeyPairGenerator new.
 rsa bits: 1024.
-pub := rsa publicKey.
-priv := rsa privateKey. 
+pub _ rsa publicKey.
+priv _ rsa privateKey. 
 
-rsaes := RSAEncryptionScheme new.
+rsaes _ RSAEncryptionScheme new.
 rsaes setPublicKey: pub privateKey: priv parameter: 'p'.
 
-c := rsaes encrypt: 'hola'.
+c _ rsaes encrypt: 'hola'.
 (rsaes decrypt: c) asString.
 

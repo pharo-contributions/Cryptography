@@ -1,3 +1,3 @@
 accessing
 blockSize: anInteger
-	nB  := anInteger * 8 / 32
+	nB  _ anInteger * 8 / 32

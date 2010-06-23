@@ -1,6 +1,6 @@
 key schedule
 eqExpandKey
-	eqExpandedKey := Array new:  nB * (nR + 1).
+	eqExpandedKey _ Array new:  nB * (nR + 1).
 
 	1 to: nB do: [:j |
 		eqExpandedKey at: 0*nB + j put: (expandedKey at: 0*nB + j).

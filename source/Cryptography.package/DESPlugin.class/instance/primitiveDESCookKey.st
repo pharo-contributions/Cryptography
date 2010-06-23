@@ -12,9 +12,9 @@ primitiveDESCookKey
 	self var: 'cooked' declareC: 'unsigned long *cooked'.
 	interpreterProxy methodArgumentCount = 3
 		ifFalse:[^interpreterProxy primitiveFail].
-	raw := self checkedBytePtrOf: (interpreterProxy stackValue: 2).
-	encode := interpreterProxy stackIntegerValue: 1.
-	cooked := self checkedWordPtrOf: (interpreterProxy stackValue: 0).
+	raw _ self checkedBytePtrOf: (interpreterProxy stackValue: 2).
+	encode _ interpreterProxy stackIntegerValue: 1.
+	cooked _ self checkedWordPtrOf: (interpreterProxy stackValue: 0).
 	interpreterProxy failed
 		ifTrue: [ ^nil ].
 	self processKey: raw mode: encode to: cooked.
