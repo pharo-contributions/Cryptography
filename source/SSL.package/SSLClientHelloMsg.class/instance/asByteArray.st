@@ -5,7 +5,8 @@ asByteArray
 	encodedSuites := (self cipherSuites 
 		inject: (WriteStream on: ByteArray new)
 		into: [:stream :cipherSuite | 
-			stream nextPutAll: cipherSuite codeAsByteArray]) contents.
+			stream nextPutAll: cipherSuite codeAsByteArray.
+			stream]) contents.
 	encodedCompressionMethods := (self compressionMethods
 		inject: (WriteStream on: ByteArray new)
 		into: [:stream :compressionMethod | 
