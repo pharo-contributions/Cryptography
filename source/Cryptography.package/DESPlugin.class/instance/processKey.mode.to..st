@@ -6,8 +6,7 @@ processKey: keyPtr mode: encode to: cookedPtr
 	self var: 'pc1m' declareC: 'unsigned char pc1m[56]'.
 	self var: 'pcr' declareC: 'unsigned char pcr[56]'.
 	self var: 'rawKey' declareC: 'unsigned long rawKey[32]'.
-	self cCode: '/* Who is Keyser Soze? */' inSmalltalk: [pcr := 1. pc1m
-:= 1. rawKey := 1].
+	self cCode: '/* Who is Keyser Soze? */' inSmalltalk: [pcr := 1. pc1m := 1. rawKey := 1].
 	0 to: 55 do: [ :j |
 		l := pc1 at: j.
 		m := l bitAnd: 7.

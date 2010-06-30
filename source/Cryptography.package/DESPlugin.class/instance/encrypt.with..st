@@ -77,7 +77,7 @@ encrypt: dataPtr with: key
 	work := (right>>16 bitXor: left) bitAnd: 16r0000FFFF.
 	left := left bitXor: work.
 	right := right bitXor: work<<16.
-	work :=(right>>4 bitXor: left) bitAnd: 16r0F0F0F0F.
+	work := (right>>4 bitXor: left) bitAnd: 16r0F0F0F0F.
 	left := left bitXor: work.
 	right := right bitXor: work<<4.
 

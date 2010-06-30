@@ -1,10 +1,14 @@
 accessing
 hashStream: aPositionableStream
-	"MD5 new hashStream: (ReadStream on: 'foo')"
+
 	| startPosition buf bitLength |
 	self initialize.
 
-	"aPositionableStream atEnd ifTrue: [self error: 'empty stream']."
+	aPositionableStream atEnd ifTrue: [
+		buf := ByteArray new: 64.
+		buf at: 1 put: 128.
+		self processBuffer: buf.
+		^self finalValue ].
 
 	startPosition := aPositionableStream position.
 	[aPositionableStream atEnd] whileFalse: [

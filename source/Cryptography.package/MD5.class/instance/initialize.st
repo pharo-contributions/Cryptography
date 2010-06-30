@@ -1,9 +1,6 @@
 initialization
 initialize
 	"Some magic numbers to get the process started"
-	state := OrderedCollection newFrom: {
-		(ThirtyTwoBitRegister new load: 16r67452301).
-		(ThirtyTwoBitRegister new load: 16rEFCDAB89).
-		(ThirtyTwoBitRegister new load: 16r98BADCFE).
-		(ThirtyTwoBitRegister new load: 16r10325476)}.
+
+	state := ByteArray withAll: #(1 35 69 103 137 171 205 239 254 220 186 152 118 84 50 16)
 
