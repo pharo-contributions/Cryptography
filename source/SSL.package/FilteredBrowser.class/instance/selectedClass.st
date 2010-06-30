@@ -3,8 +3,7 @@ selectedClass
 	"Answer the class that is currently selected. Answer nil if no selection 
 	exists."
 
-	| name envt |
+	| name |
 	(name := self selectedClassName) ifNil: [^ nil].
 	"(envt := self selectedEnvironment) ifNil: [^ nil]."
-	envt := (Smalltalk environmentForCategory: self selectedSystemCategoryName).
-	^ envt at: name
+	^ Smalltalk at: name
