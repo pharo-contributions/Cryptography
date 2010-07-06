@@ -1,6 +1,6 @@
 private
 expandedBlock: aByteArray
-	"Convert the given 64 byte buffer into 80 32-bit registers and answer the result." 
+	"Convert the given 64 byte buffer into 64 32-bit registers and answer the result." 
 	| out src |
 	out := Array new: 64.
 	src := 1.

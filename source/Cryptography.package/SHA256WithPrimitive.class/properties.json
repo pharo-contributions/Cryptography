@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "HashFunction",
+	"commentStamp" : "",
+	"super" : "SHA256",
 	"category" : "Cryptography-SHA256",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "SHA256",
+	"instvars" : [
+		"state"
+	],
+	"name" : "SHA256WithPrimitive",
 	"type" : "normal"
 }
