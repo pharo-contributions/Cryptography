@@ -1,12 +1,12 @@
 support
 encrypt: dataPtr with: key
 	| fVal work right left |
-	self var: 'dataPtr' declareC: 'unsigned long *dataPtr'.
-	self var: 'key' declareC: 'unsigned long *key'.
-	self var: 'fVal' declareC: 'unsigned long fVal'.
-	self var: 'work' declareC: 'unsigned long work'.
-	self var: 'right' declareC: 'unsigned long right'.
-	self var: 'left' declareC: 'unsigned long left'.
+	<var: #dataPtr type: 'unsigned long *'>
+	<var: #key type: 'unsigned long *'>
+	<var: #fVal type: 'unsigned long'>
+	<var: #work type: 'unsigned long'>
+	<var: #right type: 'unsigned long'>
+	<var: #left type: 'unsigned long'>
 
 	left := dataPtr at: 0.
 	right := dataPtr at: 1.
@@ -35,7 +35,7 @@ encrypt: dataPtr with: key
 	0 to: 28 by: 4 do: [ :round |
 		work := right << 28 bitOr: right >> 4.
 		work := work bitXor: (key at: round).
-		fVal := sp7 at: (work bitAnd: 16r3F).
+		fVal := sp7 at: (work bitAnd: 16r3F). 
 		fVal := fVal bitOr: (sp5 at: (work >> 8 bitAnd: 16r3F)).
 		fVal := fVal bitOr: (sp3 at: (work >> 16 bitAnd: 16r3F)).
 		fVal := fVal bitOr: (sp1 at: (work >> 24 bitAnd: 16r3F)).

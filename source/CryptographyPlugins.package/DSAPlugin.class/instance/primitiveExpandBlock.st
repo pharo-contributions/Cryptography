@@ -3,9 +3,9 @@ primitiveExpandBlock
 	"Expand a 64 byte ByteArray (the first argument) into and an Bitmap of 80 32-bit words (the second argument). When reading a 32-bit integer from the ByteArray, consider the first byte to contain the most significant bits of the word (i.e., use big-endian byte ordering)."
 
 	| expanded buf wordPtr bytePtr src v |
-	self export: true.
-	self var: #wordPtr declareC: 'unsigned int *wordPtr'.
-	self var: #bytePtr declareC: 'unsigned char *bytePtr'.
+	<export: true>
+	<var: #wordPtr type: 'unsigned int *'>
+	<var: #bytePtr type: 'unsigned char *'>
 
 	expanded := interpreterProxy stackObjectValue: 0.
 	buf := interpreterProxy stackObjectValue: 1.

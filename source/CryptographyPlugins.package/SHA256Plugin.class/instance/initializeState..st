@@ -1,10 +1,11 @@
-as yet unclassified
+private
 initializeState: state
 	"#(2 3 5 7 11 13 17 19) collect: [:x | (x asFloat sqrt fractionPart * (2 raisedTo: 32)) truncated storeStringHex ]"
 
-	self static: false.
-	self inline: true.
-	self var: #state type: #'unsigned int*'.
+	<static: false>
+	<inline: true>
+	<var: #state type: 'unsigned int *'>
+
 	state at: 0 put: 16r6A09E667.
 	state at: 1 put: 16rBB67AE85.
 	state at: 2 put: 16r3C6EF372.

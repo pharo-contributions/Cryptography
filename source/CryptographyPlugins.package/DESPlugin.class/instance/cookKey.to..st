@@ -3,11 +3,12 @@ cookKey: rawPtr to: cookPtr
 	"preprocess the key to more useful format"
 
 	| raw0 raw1 cook |
-	self var: 'cook' declareC: 'unsigned long cook'.
-	self var: 'cookPtr' declareC: 'unsigned long *cookPtr'. "32 words"
-	self var: 'rawPtr' declareC: 'unsigned long *rawPtr'. "32 words"
-	self var: 'raw0' declareC: 'unsigned long raw0'.
-	self var: 'raw1' declareC: 'unsigned long raw1'.
+	<var: #cook type: 'unsigned long'>
+	<var: #cookPtr type: 'unsigned long *'>
+	<var: #rawPtr type: 'unsigned long *'>
+	<var: #raw0 type: 'unsigned long'>
+	<var: #raw1 type: 'unsigned long'>
+
 	0 to: 15 do: [ :i |
 		raw0 := rawPtr at: i*2.
 		raw1 := rawPtr at: i*2 + 1.

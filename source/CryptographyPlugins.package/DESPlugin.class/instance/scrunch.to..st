@@ -1,7 +1,8 @@
 support
 scrunch: bytePtr to: wordPtr
-	self var: 'bytePtr' declareC: 'unsigned char *bytePtr'.
-	self var: 'wordPtr' declareC: 'unsigned long *wordPtr'.
+	<var: #bytePtr type: 'unsigned char *'>
+	<var: #wordPtr type: 'unsigned long *'>
+
 	wordPtr at: 0 put:
 		(bytePtr at: 0) << 24 +
 		((bytePtr at: 1) << 16) +
