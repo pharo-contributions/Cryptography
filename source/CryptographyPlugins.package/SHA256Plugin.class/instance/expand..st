@@ -1,14 +1,13 @@
-private
+as yet unclassified
 expand: w
 
 	| s0 s1 |
-	<static: false>
-	<inline: true>
-	<var: #w type: 'unsigned int *'>
-	<var: #s0 type: 'unsigned int'>
-	<var: #s1 type: 'unsigned int'>
-	<var: #i type: 'unsigned int'>
-
+	self static: false.
+	self inline: true.
+	self var: #w type: #'unsigned int*'.
+	self var: #s0 type: #'unsigned int'.
+	self var: #s1 type: #'unsigned int'.
+	self var: #i type: #'unsigned int'.
 	16 to: 63 do: [ :i |
 		s0 := (((w at: i - 15) >> 7) bitOr: ((w at: i - 15) << (32 - 7)))
 			bitXor: (	(((w at: i - 15) >> 18) bitOr: ((w at: i - 15) << (32 - 18)))

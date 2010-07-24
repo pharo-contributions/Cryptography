@@ -6,11 +6,10 @@ primitiveDESTransform
 	param2 = cooked key:  WordArray[32]"
 
 	| data work cooked |
-	<export: true>
-	<var: #data type: 'unsigned char *'>
-	<var: #cooked type: 'unsigned long *'>
-	<var: #work declareC: 'unsigned long work[2]'>
-
+	self export: true.
+	self var: 'data' declareC: 'unsigned char *data'.
+	self var: 'cooked' declareC: 'unsigned long *cooked'.
+	self var: 'work' declareC: 'unsigned long work[2]'.
 	self cCode: '/* Hi ho, Hi ho...*/' inSmalltalk: [work := 1].
 	interpreterProxy methodArgumentCount = 2
 		ifFalse:[^interpreterProxy primitiveFail].

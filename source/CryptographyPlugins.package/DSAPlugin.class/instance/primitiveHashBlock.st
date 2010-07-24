@@ -3,9 +3,9 @@ primitiveHashBlock
 	"Hash a Bitmap of 80 32-bit words (the first argument), using the given state (the second argument)."
 
 	| state buf statePtr bufPtr a b c d e tmp |
-	<export: true>
-	<var: #statePtr type: 'unsigned int *'>
-	<var: #bufPtr type: 'unsigned int *'>
+	self export: true.
+	self var: #statePtr declareC: 'unsigned int *statePtr'.
+	self var: #bufPtr declareC: 'unsigned int *bufPtr'.
 
 	state := interpreterProxy stackObjectValue: 0.
 	buf := interpreterProxy stackObjectValue: 1.

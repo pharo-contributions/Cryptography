@@ -1,6 +1,5 @@
 translation
 declareCVarsIn: cg
-
 	cg var: 'byteBit' declareC: 'unsigned short byteBit[8] = {
 128,64,32,16,8,4,2,1 }'.
 	cg var: 'bigByte' declareC:
@@ -157,3 +156,5 @@ declareCVarsIn: cg
 		0x10040000L, 0x10001000L, 0x10001040L, 0x00000000L,
 		0x10041040L, 0x00041000L, 0x00041000L, 0x00001040L,
 		0x00001040L, 0x00040040L, 0x10000000L, 0x10041000L }'.
+
+

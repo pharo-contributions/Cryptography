@@ -4,7 +4,7 @@ primitiveBigDivide
 	"Assume: quo starts out filled with zeros."
 
 	| rem div quo |
-	<export: true>
+	self export: true.
 	quo := interpreterProxy stackObjectValue: 0.
 	div := interpreterProxy stackObjectValue: 1.
 	rem := interpreterProxy stackObjectValue: 2.

@@ -3,8 +3,8 @@ primitiveHighestNonZeroDigitIndex
 	"Called with one LargePositiveInteger argument. Answer the index of the top-most non-zero digit."
 
 	| arg bigIntPtr i |
-	<export: true>
-	<var: #bigIntPtr type: 'unsigned char *'>
+	self export: true.
+	self var: #bigIntPtr declareC: 'unsigned char *bigIntPtr'.
 
 	arg := interpreterProxy stackObjectValue: 0.
 	interpreterProxy success:

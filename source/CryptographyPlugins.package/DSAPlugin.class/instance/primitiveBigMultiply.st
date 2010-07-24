@@ -4,10 +4,10 @@ primitiveBigMultiply
 	"Assume: prod starts out filled with zeros"
 
 	| prod f2 f1 prodLen f1Len f2Len prodPtr f2Ptr f1Ptr digit carry k sum |
-	<export: true>
-	<var: #prodPtr type: 'unsigned char *'>
-	<var: #f2Ptr type: 'unsigned char *'>
-	<var: #f1Ptr type: 'unsigned char *'>
+	self export: true.
+	self var: #prodPtr declareC: 'unsigned char *prodPtr'.
+	self var: #f2Ptr declareC: 'unsigned char *f2Ptr'.
+	self var: #f1Ptr declareC: 'unsigned char *f1Ptr'.
 
 	prod := interpreterProxy stackObjectValue: 0.
 	f2 := interpreterProxy stackObjectValue: 1.

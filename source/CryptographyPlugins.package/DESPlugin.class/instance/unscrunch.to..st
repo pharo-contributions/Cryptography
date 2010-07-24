@@ -1,8 +1,7 @@
 support
 unscrunch: wordPtr to: bytePtr
-	<var: #bytePtr type: 'unsigned char *'>
-	<var: #wordPtr type: 'unsigned long *'>
-
+	self var: 'bytePtr' declareC: 'unsigned char *bytePtr'.
+	self var: 'wordPtr' declareC: 'unsigned long *wordPtr'.
 	bytePtr at: 0 put: (((wordPtr at: 0)>>24) bitAnd: 16rFF).
 	bytePtr at: 1 put: (((wordPtr at: 0)>>16) bitAnd: 16rFF).
 	bytePtr at: 2 put: (((wordPtr at: 0)>>8) bitAnd: 16rFF).
