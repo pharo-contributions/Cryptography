@@ -4,8 +4,6 @@ testDES3
 	plain := 'squeaker'.
 	key := 'hacking!'.
 	plainCopy := plain copy.
-	Transcript cr; show: 'plainCopy: ', plainCopy printString.
 	d := DES key: key.
 	d encryptBlock: plainCopy.
-	Transcript cr; show: 'plainCopy: ', plainCopy printString.
 	self assert: plainCopy asByteArray = #[64 222 70 13 59 145 76 186].
