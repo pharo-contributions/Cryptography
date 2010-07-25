@@ -1,10 +1,11 @@
 as yet unclassified
 testDES3
-	| plain key d |
+	| plain plainCopy key d |
 	plain := 'squeaker'.
 	key := 'hacking!'.
-	Transcript cr; show: 'plain: ', plain printString.
+	plainCopy := plain copy.
+	Transcript cr; show: 'plainCopy: ', plainCopy printString.
 	d := DES key: key.
-	d encryptBlock: plain.
-	Transcript cr; show: 'plain: ', plain printString.
-	self assert: plain asByteArray = #[64 222 70 13 59 145 76 186].
+	d encryptBlock: plainCopy.
+	Transcript cr; show: 'plainCopy: ', plainCopy printString.
+	self assert: plainCopy asByteArray = #[64 222 70 13 59 145 76 186].
