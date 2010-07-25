@@ -6,7 +6,6 @@ transform: block
 	cookedKey size = 32 ifFalse: [ self error: 'DES cooked key damaged'].
 	block size = 8 ifFalse: [ self error: 'DES block must be 8
 bytes'].
-	(block isKindOf: ByteArray) ifFalse: [ self error: 'DES block must be a byte array.'].
 	self primTransform: block using: cookedKey.
 
 	

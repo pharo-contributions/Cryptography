@@ -5,4 +5,4 @@ testDES2
 	key := 'hacking!' asByteArray.
 	d := DES key: key.
 	d encryptBlock: plain.
-	self assert: plain asByteArray = #[64 222 70 13 59 145 76 186]
+	self assert: plain = #[64 222 70 13 59 145 76 186]
