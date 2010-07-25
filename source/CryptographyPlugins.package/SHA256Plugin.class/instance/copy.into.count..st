@@ -1,4 +1,4 @@
-as yet unclassified
+private
 copy: x into: w count: n
 	"copy n unsigned integers from x to w and change their endianness if the platform is little endian"
 

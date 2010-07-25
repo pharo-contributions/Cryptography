@@ -7,9 +7,9 @@ primitiveDESCookKey
 	param3 = cooked key:  WordArray[32]"
 
 	| raw cooked encode |
-	self export: true.
-	self var: 'raw' declareC: 'unsigned char *raw'.
-	self var: 'cooked' declareC: 'unsigned long *cooked'.
+	<export: true>
+	<var: 'raw' declareC: 'unsigned char *raw'>
+	<var: 'cooked' declareC: 'unsigned long *cooked'>
 	interpreterProxy methodArgumentCount = 3
 		ifFalse:[^interpreterProxy primitiveFail].
 	raw := self checkedBytePtrOf: (interpreterProxy stackValue: 2).

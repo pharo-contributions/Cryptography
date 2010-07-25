@@ -1,27 +1,27 @@
-as yet unclassified
+private
 processBuffer: buffer withState: state
 
 	| a b c d e f g h s0 s1 t1 t2 maj ch w |
-	self static: false.
-	self inline: true.
-	self var: #buffer type: #'unsigned int*'.
-	self var: #state type: #'unsigned int*'.
-	self var: #a type: #'unsigned int'.
-	self var: #b type: #'unsigned int'.
-	self var: #c type: #'unsigned int'.
-	self var: #d type: #'unsigned int'.
-	self var: #e type: #'unsigned int'.
-	self var: #f type: #'unsigned int'.
-	self var: #g type: #'unsigned int'.
-	self var: #h type: #'unsigned int'.
-	self var: #i type: #'unsigned int'.
-	self var: #s0 type: #'unsigned int'.
-	self var: #s1 type: #'unsigned int'.
-	self var: #t1 type: #'unsigned int'.
-	self var: #t2 type: #'unsigned int'.
-	self var: #maj type: #'unsigned int'.
-	self var: #ch type: #'unsigned int'.
-	self var: #w declareC: 'unsigned int w[64]'.
+	<static: false>
+	<inline: true>
+	<var: #buffer type: #'unsigned int*'>
+	<var: #state type: #'unsigned int*'>
+	<var: #a type: #'unsigned int'>
+	<var: #b type: #'unsigned int'>
+	<var: #c type: #'unsigned int'>
+	<var: #d type: #'unsigned int'>
+	<var: #e type: #'unsigned int'>
+	<var: #f type: #'unsigned int'>
+	<var: #g type: #'unsigned int'>
+	<var: #h type: #'unsigned int'>
+	<var: #i type: #'unsigned int'>
+	<var: #s0 type: #'unsigned int'>
+	<var: #s1 type: #'unsigned int'>
+	<var: #t1 type: #'unsigned int'>
+	<var: #t2 type: #'unsigned int'>
+	<var: #maj type: #'unsigned int'>
+	<var: #ch type: #'unsigned int'>
+	<var: #w declareC: 'unsigned int w[64]'>
 	self 
 		copy: (self cCoerce: buffer to: #'char*') 
 		into: (self cCoerce: w to: #'char*')

@@ -1,12 +1,12 @@
 support
 encrypt: dataPtr with: key
 	| fVal work right left |
-	self var: 'dataPtr' declareC: 'unsigned long *dataPtr'.
-	self var: 'key' declareC: 'unsigned long *key'.
-	self var: 'fVal' declareC: 'unsigned long fVal'.
-	self var: 'work' declareC: 'unsigned long work'.
-	self var: 'right' declareC: 'unsigned long right'.
-	self var: 'left' declareC: 'unsigned long left'.
+	<var: 'dataPtr' declareC: 'unsigned long *dataPtr'>
+	<var: 'key' declareC: 'unsigned long *key'>
+	<var: 'fVal' declareC: 'unsigned long fVal'>
+	<var: 'work' declareC: 'unsigned long work'>
+	<var: 'right' declareC: 'unsigned long right'>
+	<var: 'left' declareC: 'unsigned long left'>
 
 	left := dataPtr at: 0.
 	right := dataPtr at: 1.

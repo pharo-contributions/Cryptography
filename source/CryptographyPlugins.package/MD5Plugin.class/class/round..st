@@ -8,6 +8,6 @@ round: i
 		withArguments: 
 			(self abcd at: (i \\ 4) + 1), 
 			{ 
-				'(x at: {1})' format: { self indexArray at: i + 1 }.
+				'(buffer at: {1})' format: { self indexArray at: i + 1 }.
 				self shiftArray at: i + 1.
 				self sineArray at: i + 1 }

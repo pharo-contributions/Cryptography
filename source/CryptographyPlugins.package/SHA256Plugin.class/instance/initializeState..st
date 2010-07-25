@@ -1,4 +1,4 @@
-as yet unclassified
+private
 initializeState: state
 	"#(2 3 5 7 11 13 17 19) collect: [:x | (x asFloat sqrt fractionPart * (2 raisedTo: 32)) truncated storeStringHex ]"
 

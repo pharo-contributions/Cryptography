@@ -1,4 +1,4 @@
-as yet unclassified
+private
 expand: w
 
 	| s0 s1 |
