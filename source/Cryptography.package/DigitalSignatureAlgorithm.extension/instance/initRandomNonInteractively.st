@@ -6,4 +6,4 @@ initRandomNonInteractively
 			Date today printString, 
 			SmalltalkImage current platformName printString]."
 
-	self initRandom: (SecureRandom new nextBytesNonZero: 64) asInteger.
+	self initRandom: (SecureRandom withGeneratedKey nextBytesNonZero: 64) asInteger.
