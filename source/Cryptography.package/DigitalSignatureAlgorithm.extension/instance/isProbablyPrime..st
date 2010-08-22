@@ -19,7 +19,6 @@ isProbablyPrime: p
 
 	r := Random new.
 	1 to: iterations do: [:i |
-		Transcript show: i printString; space.
 		a := (r next * 16rFFFFFF) truncated.
 		j := 0.
 		z := (a raisedTo: m modulo: p) normalize.
