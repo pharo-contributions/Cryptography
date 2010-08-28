@@ -1,0 +1,1 @@
+I am a transition to a new ProtocolState.  While making the transition I can perform some action association with the change from the old to the new state.

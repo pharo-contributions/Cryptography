@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "LayeredProtocol-Abstract",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"state",
+		"action"
+	],
+	"name" : "ProtocolStateTransition",
+	"type" : "normal"
+}

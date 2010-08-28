@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ProtocolLayer",
+	"category" : "LayeredProtocol-Extras",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bufferList",
+		"serverProcess"
+	],
+	"name" : "BufferListLayer",
+	"type" : "normal"
+}

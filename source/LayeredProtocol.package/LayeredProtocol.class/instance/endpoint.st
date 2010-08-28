@@ -1,0 +1,4 @@
+protocol
+endpoint
+
+	^self last

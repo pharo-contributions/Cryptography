@@ -1,0 +1,4 @@
+private
+removeUp
+
+	^self removeFirst

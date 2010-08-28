@@ -1,0 +1,1 @@
+I am an abstract endpoint for communication within a LayeredProtocol stack.  (I therefore expect to be the lowest element in that stack.)  I implement a server which waits for incoming data and then passes it up the stack for processing by higher protocol layers.  The actual reading of data from the remote entity must be implemented by my concrete subclasses.

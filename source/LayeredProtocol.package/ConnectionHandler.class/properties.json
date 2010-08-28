@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "LayeredProtocol-Endpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Registry"
+	],
+	"instvars" : [
+		"portNumber",
+		"socketClass",
+		"process",
+		"priority",
+		"handlerBlock",
+		"lastError",
+		"socketsToDestroy"
+	],
+	"name" : "ConnectionHandler",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "IdentityDictionary",
+	"category" : "LayeredProtocol-Abstract",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"default"
+	],
+	"name" : "ProtocolState",
+	"type" : "normal"
+}

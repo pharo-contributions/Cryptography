@@ -1,0 +1,3 @@
+I am a complete protocol implemented as a stack of subprotocols.  One end of the stack (the bottom or `tail') is usually an endpoint communicating with some remote host or process.  The other end (the top or `head') is either the point of communication for my client (which reads and writes only application-oriented data) or even the client itself.
+
+I am created by sending my class the message #on: aSubProtocol.  You can then send me #push: aProtocol as many times as you like, to push aProtocol onto the head of my protocol stack.  When the stack is complete you must send me #install which tells me to finish creating the internal connections between each subprotocol in the stack.  Finally you send me #run which tells the entire protocol stack to start.

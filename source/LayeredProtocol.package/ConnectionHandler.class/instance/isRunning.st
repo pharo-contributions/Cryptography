@@ -1,0 +1,4 @@
+queries
+isRunning
+
+	^process ~~ nil

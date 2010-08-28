@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ProtocolLayer",
+	"category" : "LayeredProtocol-Abstract",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentState",
+		"client"
+	],
+	"name" : "StatefulProtocol",
+	"type" : "normal"
+}

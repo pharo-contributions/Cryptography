@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ProtocolLayer",
+	"category" : "LayeredProtocol-Extras",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"upBlock",
+		"downBlock",
+		"flushBlock",
+		"noteBlock",
+		"cannedString"
+	],
+	"name" : "StreamProtocolAdaptor",
+	"type" : "normal"
+}
