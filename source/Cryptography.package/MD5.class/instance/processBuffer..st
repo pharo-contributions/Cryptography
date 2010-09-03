@@ -1,5 +1,5 @@
 private-buffers
 processBuffer: aByteArray
 
-	self subclassResponsibility
+	self primProcessBuffer: aByteArray withState: state.
 	
