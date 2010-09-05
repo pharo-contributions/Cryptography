@@ -1,5 +1,5 @@
 as yet unclassified
-initializeState: state
+md5InitializeState: state
 
 	<static: false>
 	<inline: true>

@@ -2,4 +2,4 @@ primitives
 primitiveInitializeState: state
 
 	self primitive: 'primitiveInitializeState' parameters: #(ByteArray).
-	self initializeState: (self cCoerce: state to: #'unsigned int*')
+	self md5InitializeState: (self cCoerce: state to: #'unsigned int*')

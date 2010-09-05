@@ -1,5 +1,5 @@
 generated
-processBuffer: buffer withState: state
+md5ProcessBuffer: buffer withState: state
 	"This method is generated. See #compileMethods on the class side."
 	
 	| a b c d |

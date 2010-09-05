@@ -1,5 +1,5 @@
 private
-processBuffer: buffer withState: state
+sha256ProcessBuffer: buffer withState: state
 
 	| a b c d e f g h s0 s1 t1 t2 maj ch w |
 	<static: false>
