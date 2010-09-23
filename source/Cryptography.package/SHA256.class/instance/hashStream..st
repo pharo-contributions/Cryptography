@@ -1,12 +1,16 @@
 accessing
 hashStream: aPositionableStream
 	"Hash the contents of the given stream from the current position to the end using the Secure Hash Algorithm. The SHA algorithm is defined in FIPS PUB 180-1. It is also described on p. 442 of 'Applied Cryptography: Protocols, Algorithms, and Source Code in C' by Bruce Scheier, Wiley, 1996."
-	"SecureHashAlgorithm new hashStream: (ReadStream on: 'foo')"
+	"SHA256 new hashStream: (ReadStream on: 'foo')"
 
 	| startPosition buf bitLength |
-	self initializeTotals.
+	self initialize.
 
-	aPositionableStream atEnd ifTrue: [self error: 'empty stream'].
+	aPositionableStream atEnd ifTrue: [
+		buf := ByteArray new: 64.
+		buf at: 1 put: 128.
+		self processBuffer: buf.
+		^self finalHash ].
 
 	startPosition := aPositionableStream position.
 	[aPositionableStream atEnd] whileFalse: [
@@ -17,4 +21,4 @@ hashStream: aPositionableStream
 				bitLength := (aPositionableStream position - startPosition) * 8.
 				self processFinalBuffer: buf bitLength: bitLength]].
 
-	^self finalHash asByteArrayOfSize: 32.
+	^self finalHash

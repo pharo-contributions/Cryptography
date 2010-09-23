@@ -4,9 +4,7 @@
 	"category" : "Cryptography-RandomAndPrime",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"Picker"
-	],
+	"classvars" : [ ],
 	"instvars" : [
 		"seed",
 		"key"

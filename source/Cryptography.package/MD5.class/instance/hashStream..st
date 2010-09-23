@@ -2,13 +2,13 @@ accessing
 hashStream: aPositionableStream
 
 	| startPosition buf bitLength |
-	self initialize.
+	self initializeState.
 
 	aPositionableStream atEnd ifTrue: [
 		buf := ByteArray new: 64.
 		buf at: 1 put: 128.
 		self processBuffer: buf.
-		^self finalValue ].
+		^self finalHash ].
 
 	startPosition := aPositionableStream position.
 	[aPositionableStream atEnd] whileFalse: [
@@ -19,4 +19,4 @@ hashStream: aPositionableStream
 				bitLength := (aPositionableStream position - startPosition) * 8.
 				self processFinalBuffer: buf bitLength: bitLength]].
 
-	^ self finalValue
+	^ self finalHash

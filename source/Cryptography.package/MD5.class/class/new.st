@@ -2,5 +2,5 @@ as yet unclassified
 new
 
 	self isPluginAvailable 
-		ifTrue: [ ^self basicNew ]
+		ifTrue: [ ^MD5WithPrimitive basicNew ]
 		ifFalse: [ ^MD5NonPrimitive basicNew ]
