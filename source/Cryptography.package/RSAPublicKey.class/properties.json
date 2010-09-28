@@ -6,14 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"bits",
-		"p",
-		"q",
-		"d",
-		"dP",
-		"dQ",
-		"qInv"
+		"exponent",
+		"modulo"
 	],
-	"name" : "RSAKeyPairGenerator",
+	"name" : "RSAPublicKey",
 	"type" : "normal"
 }
