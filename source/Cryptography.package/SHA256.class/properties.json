@@ -5,7 +5,17 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"totalA",
+		"totalB",
+		"totalC",
+		"totalD",
+		"totalE",
+		"totalF",
+		"totalG",
+		"totalH",
+		"totals"
+	],
 	"name" : "SHA256",
 	"type" : "normal"
 }

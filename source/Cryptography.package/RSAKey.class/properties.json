@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Cryptography-RSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exponent",
+		"modulo"
+	],
+	"name" : "RSAKey",
+	"type" : "normal"
+}

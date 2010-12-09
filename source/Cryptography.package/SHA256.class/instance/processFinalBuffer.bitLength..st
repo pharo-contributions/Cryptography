@@ -1,6 +1,6 @@
 private
 processFinalBuffer: buffer bitLength: bitLength
-	"Process given buffer, whose length may be <= 64 bytes, accumulating the results in totalA through totalH. Also process the final padding bits and length."
+	"Process given buffer, whose length may be <= 64 bytes, accumulating the results in totalA through totalE. Also process the final padding bits and length."
 
 	| out |
 	out := ByteArray new: 64.

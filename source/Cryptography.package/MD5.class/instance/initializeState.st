@@ -1,4 +1,0 @@
-initialization
-initializeState
-
-	self subclassResponsibility

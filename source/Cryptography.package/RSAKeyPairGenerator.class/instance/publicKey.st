@@ -1,3 +1,3 @@
 accessing
 publicKey
-	^ RSAPublicKey exponent: self e modulo: self p * self q
+	^ RSAKey exponent: self e modulo: self p * self q

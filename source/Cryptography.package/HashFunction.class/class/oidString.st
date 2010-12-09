@@ -1,4 +1,0 @@
-accessing
-oidString
-
-	^ self subclassResponsibility

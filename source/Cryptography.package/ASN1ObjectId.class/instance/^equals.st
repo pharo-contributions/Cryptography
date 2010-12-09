@@ -1,3 +1,4 @@
 private - parsing
 = anotherOid
-	^anotherOid class = self class and: [self oid = anotherOid oid]
+
+	^ self oid = anotherOid oid

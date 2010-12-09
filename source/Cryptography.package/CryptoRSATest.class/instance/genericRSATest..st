@@ -1,4 +1,4 @@
-tests
+RSA
 genericRSATest: bits
 	| generator public private msg c |
 	generator := RSAKeyPairGenerator new bits: bits.
