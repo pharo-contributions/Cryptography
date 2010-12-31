@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Cryptography-RSA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"a",
+		"b",
+		"u",
+		"v",
+		"gcd"
+	],
+	"name" : "EuclidAlgorithm",
+	"type" : "normal"
+}

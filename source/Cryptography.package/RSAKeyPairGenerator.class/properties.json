@@ -9,7 +9,10 @@
 		"bits",
 		"p",
 		"q",
-		"d"
+		"d",
+		"dP",
+		"dQ",
+		"qInv"
 	],
 	"name" : "RSAKeyPairGenerator",
 	"type" : "normal"

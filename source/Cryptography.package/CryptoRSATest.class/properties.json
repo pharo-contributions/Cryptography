@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"privateKey",
+		"publicKey"
+	],
 	"name" : "CryptoRSATest",
 	"type" : "normal"
 }

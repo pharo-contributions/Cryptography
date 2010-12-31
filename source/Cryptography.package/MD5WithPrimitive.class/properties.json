@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MD5",
+	"category" : "Cryptography-MD5",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MD5WithPrimitive",
+	"type" : "normal"
+}
