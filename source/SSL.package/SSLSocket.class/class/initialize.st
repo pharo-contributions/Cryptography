@@ -1,4 +1,0 @@
-buttons
-initialize
-
-	self openButtonBar.
