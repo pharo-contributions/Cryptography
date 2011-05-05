@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ExternalStructure",
+	"category" : "PasswordHashingFFI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BCryptLinuxFFI",
+	"type" : "normal"
+}
