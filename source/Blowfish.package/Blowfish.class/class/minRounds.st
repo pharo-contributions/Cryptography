@@ -1,0 +1,3 @@
+defaults
+minRounds
+^16

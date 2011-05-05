@@ -1,0 +1,3 @@
+defaults
+maxRounds
+^20

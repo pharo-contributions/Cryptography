@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Blowfish",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"keys",
+		"clear",
+		"encrypted"
+	],
+	"name" : "BlowfishTests",
+	"type" : "normal"
+}

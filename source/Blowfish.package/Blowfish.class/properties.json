@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "PaulDeBruicker 4/21/2011 12:00",
+	"super" : "Object",
+	"category" : "Blowfish",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rounds",
+		"piArray",
+		"s0",
+		"s1",
+		"s2",
+		"s3",
+		"xl",
+		"xr",
+		"current",
+		"key",
+		"data",
+		"index"
+	],
+	"name" : "Blowfish",
+	"type" : "normal"
+}
