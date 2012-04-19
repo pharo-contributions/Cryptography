@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Blowfish",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"keys",
+		"clear",
+		"encrypted"
+	],
+	"name" : "BlowfishProfiling",
+	"type" : "normal"
+}
