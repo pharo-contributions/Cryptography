@@ -1,11 +1,8 @@
 as yet unclassified
 randomBCryptSaltData
 	 
-	| numbers bigAlphas littleAlphas combined targetStream char random |
-	numbers := (46 to: 57) collect: [:each | each asCharacter].
-	bigAlphas := (65 to: 90) collect: [:each | each asCharacter].
-	littleAlphas := (97 to: 122) collect: [:each | each asCharacter].
-	combined:= numbers, bigAlphas, littleAlphas.
+	|  combined targetStream char random |
+     combined:='0123456789ABCDEFGHIJKLMNOPQRSTUVWXZYabcdefghijklmnopqrstuvwxyz'.
 	targetStream := WriteStream on: (String new: self saltDataLength ).
 	random := Random new.
 	[targetStream contents size <= self saltDataLength] whileTrue: 
