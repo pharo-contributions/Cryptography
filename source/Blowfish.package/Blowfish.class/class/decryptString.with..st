@@ -1,6 +1,5 @@
 decrypt
-decryptString: someData with: aKeyString
-|dataToEncrypt |
-dataToEncrypt :=OrderedCollection new.
-someData do:[:each | dataToEncrypt add: each asciiValue ].
-	^self new decrypt: dataToEncrypt asArray with: aKeyString asByteArray .
+decryptString: aString with: aKey
+	|decryptedData |
+	decryptedData := (self new ecbDecrypt: aString asByteArray with: aKey asByteArray  ).
+        ^String fromByteArray:  decryptedData asByteArray .
