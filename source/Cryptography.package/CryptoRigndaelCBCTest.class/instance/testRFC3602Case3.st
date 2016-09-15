@@ -11,7 +11,7 @@ testRFC3602Case3
 	| result |
 	result := ((CBC on: (Rijndael new keySize: 16;
 					
-					key: (ByteArray fromHexString: '6c3ea0477630ce21a2ce334aa746c2cd')))
-				initialVector: (ByteArray fromHexString: 'c782dc4c098c66cbd9cd27d825682c81'))
+					key: (ByteArray fromHexString: '16r6c3ea0477630ce21a2ce334aa746c2cd')))
+				initialVector: (ByteArray fromHexString: '16rc782dc4c098c66cbd9cd27d825682c81'))
 				encrypt: 'This is a 48-byte message (exactly 3 AES blocks)' asByteArray.
-	self assert: result hex = 'D0A02B3836451753D493665D33F0E8862DEA54CDB293ABC7506939276772F8D5021C19216BAD525C8579695D83BA2684D248B3E0F2388C137102846EB06272FF'
+	self assert: result hex = 'd0a02b3836451753d493665d33f0e8862dea54cdb293abc7506939276772f8d5021c19216bad525c8579695d83ba2684d248b3e0f2388c137102846eb06272ff'

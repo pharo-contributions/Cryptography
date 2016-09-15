@@ -8,4 +8,4 @@ test8
 		salt: #(100 43 153 171 68 251 75 31)
 		iterations: 1
 		size: 24) hex.
-	self assert: key = 'F3A95FEC48D7711E985CFE67908C5AB79FA3D7C5CAA5D966'
+	self assert: key = 'f3a95fec48d7711e985cfe67908c5ab79fa3d7c5caa5d966'

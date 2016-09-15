@@ -1,0 +1,4 @@
+*Cryptography
+oidString
+
+	^ self subclassResponsibility

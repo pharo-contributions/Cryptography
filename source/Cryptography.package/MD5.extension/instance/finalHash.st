@@ -1,0 +1,4 @@
+*Cryptography
+finalHash
+
+	self subclassResponsibility

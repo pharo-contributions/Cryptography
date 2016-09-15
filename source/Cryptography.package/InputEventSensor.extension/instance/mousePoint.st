@@ -1,0 +1,4 @@
+*Cryptography
+mousePoint
+
+	^mousePosition

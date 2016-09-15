@@ -5,16 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"totalA",
-		"totalB",
-		"totalC",
-		"totalD",
-		"totalE",
-		"totalF",
-		"totalG",
-		"totalH"
-	],
+	"instvars" : [ ],
 	"name" : "SHA256NonPrimitive",
 	"type" : "normal"
 }

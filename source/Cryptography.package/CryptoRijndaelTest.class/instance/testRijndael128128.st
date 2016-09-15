@@ -6,6 +6,6 @@ testRijndael128128
 
 	cipher := Rijndael new keySize: 16; key: key.
 	cipher encryptBlock: vector.
-	self assert: vector hex = '3925841D02DC09FBDC118597196A0B32'.
+	self assert: vector hex = '3925841d02dc09fbdc118597196a0b32'.
 	cipher decryptBlock: vector.
-	self assert: vector hex = '3243F6A8885A308D313198A2E0370734'
+	self assert: vector hex = '3243f6a8885a308d313198a2e0370734'

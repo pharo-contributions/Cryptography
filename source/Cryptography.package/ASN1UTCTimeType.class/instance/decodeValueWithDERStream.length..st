@@ -10,5 +10,5 @@ decodeValueWithDERStream: derStream length: length
 		(aUTCDateTime copyFrom: 5 to: 6), 'T',
 		(aUTCDateTime copyFrom: 7 to: 8), ':',
 		(aUTCDateTime copyFrom: 9 to: 10), ':',
-		(aUTCDateTime copyFrom: 11 to: 12)))
-			offset: 0
+		(aUTCDateTime copyFrom: 11 to: 12), 'Z'))
+
