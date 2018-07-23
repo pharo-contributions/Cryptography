@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLMessage",
 	"category" : "SSL-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"type"
-	],
+		"type" ],
 	"name" : "SSLChangeCipherSpec",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLMessage",
+	"type" : "normal" }

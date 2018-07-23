@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLStageSecurityState",
 	"category" : "SSL-MAC",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"readKey",
-		"writeKey"
-	],
+		"writeKey" ],
 	"name" : "SSLMACSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLStageSecurityState",
+	"type" : "normal" }

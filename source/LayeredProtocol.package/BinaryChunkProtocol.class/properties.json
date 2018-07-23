@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "ProtocolLayer",
 	"category" : "LayeredProtocol-Extras",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"headerSize",
 		"header",
-		"buffer"
-	],
+		"buffer" ],
 	"name" : "BinaryChunkProtocol",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "ProtocolLayer",
+	"type" : "normal" }

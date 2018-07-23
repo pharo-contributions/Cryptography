@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLHandshakeProtocolMsg",
 	"category" : "SSL-Handshake Msgs",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"exchangeKeys"
-	],
+		"exchangeKeys" ],
 	"name" : "SSLClientKeyExchangeMsg",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLHandshakeProtocolMsg",
+	"type" : "normal" }

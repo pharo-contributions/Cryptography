@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "StatefulProtocol",
 	"category" : "LayeredProtocol-Extras",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "StatefulChunkProtocol",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "StatefulProtocol",
+	"type" : "normal" }

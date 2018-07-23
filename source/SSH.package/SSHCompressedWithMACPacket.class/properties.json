@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHAbstractPacket",
 	"category" : "SSH-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"mac"
-	],
+		"mac" ],
 	"name" : "SSHCompressedWithMACPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHAbstractPacket",
+	"type" : "normal" }

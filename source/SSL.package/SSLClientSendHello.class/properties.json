@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLHandshakeSender",
 	"category" : "SSL-Handshake Senders",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"suite"
-	],
+		"suite" ],
 	"name" : "SSLClientSendHello",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLHandshakeSender",
+	"type" : "normal" }

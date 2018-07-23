@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"newOnConnection:" : " 7/23/2018 10:01:39" },
+	"instance" : {
+		"addMsgSenderClass:" : " 7/23/2018 10:01:39",
+		"addStateClass:" : " 7/23/2018 10:01:39",
+		"connection" : " 7/23/2018 10:01:39",
+		"initializeOnConnection:" : " 7/23/2018 10:01:39",
+		"makeClient" : " 7/23/2018 10:01:39",
+		"messageSenders" : " 7/23/2018 10:01:39",
+		"pendingStates" : " 7/23/2018 10:01:39",
+		"processReceived:" : " 7/23/2018 10:01:39",
+		"processSent:" : " 7/23/2018 10:01:39",
+		"receiveMsg:" : " 7/23/2018 10:01:39",
+		"securityCoord" : " 7/23/2018 10:01:39",
+		"sendMessages" : " 7/23/2018 10:01:39",
+		"sendMsg:" : " 7/23/2018 10:01:39",
+		"state" : " 7/23/2018 10:01:39",
+		"transitionToNextState" : " 7/23/2018 10:01:39" } }

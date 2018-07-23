@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLCipherSuite",
 	"category" : "SSL-Cipher Suites",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "TlsDheRsaWith3DesEdeCbcSha",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLCipherSuite",
+	"type" : "normal" }

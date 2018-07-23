@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "Stream",
 	"category" : "LayeredProtocol-Endpoints",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"buffer",
 		"startPos",
-		"endPos"
-	],
+		"endPos" ],
 	"name" : "BufferStream",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Stream",
+	"type" : "normal" }

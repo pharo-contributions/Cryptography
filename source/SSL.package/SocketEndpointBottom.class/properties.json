@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "DuplexProtocolStackBottomCap",
 	"category" : "SSL-Stack-Sockets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"socket",
-		"serverProcess"
-	],
+		"serverProcess" ],
 	"name" : "SocketEndpointBottom",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "DuplexProtocolStackBottomCap",
+	"type" : "normal" }

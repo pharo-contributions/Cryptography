@@ -1,12 +1,10 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "Object",
 	"category" : "LayeredProtocol-Endpoints",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"Registry"
-	],
+		"Registry" ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"portNumber",
 		"socketClass",
@@ -14,8 +12,9 @@
 		"priority",
 		"handlerBlock",
 		"lastError",
-		"socketsToDestroy"
-	],
+		"socketsToDestroy" ],
 	"name" : "ConnectionHandler",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

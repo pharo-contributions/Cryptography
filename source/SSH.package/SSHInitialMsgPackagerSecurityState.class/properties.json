@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHMsgPackagerSecurityState",
 	"category" : "SSH-State",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHInitialMsgPackagerSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHMsgPackagerSecurityState",
+	"type" : "normal" }

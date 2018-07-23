@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSH-Security",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"compressionAlgorithm",
 		"bulkCipherAlgorithm",
@@ -20,8 +20,9 @@
 		"hostPrivateKey",
 		"sessionIdentifier",
 		"exchangeHash",
-		"secretKey"
-	],
+		"secretKey" ],
 	"name" : "SSHSecurityParameters",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

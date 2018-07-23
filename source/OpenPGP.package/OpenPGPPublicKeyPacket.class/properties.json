@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "hmm 3/25/2002 22:22",
-	"super" : "OpenPGPPacket",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/25/2002 22:22",
 	"instvars" : [
 		"creationTime",
 		"validDays",
@@ -12,8 +12,9 @@
 		"algorithmSpecificData",
 		"fingerprint",
 		"userIDString",
-		"photo"
-	],
+		"photo" ],
 	"name" : "OpenPGPPublicKeyPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPacket",
+	"type" : "normal" }
