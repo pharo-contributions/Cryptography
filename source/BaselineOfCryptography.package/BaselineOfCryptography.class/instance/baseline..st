@@ -4,4 +4,8 @@ baseline: spec
         
 	spec for: #common do: [
 		spec package: 'Cryptography'.
+		
+		spec
+			group: 'default' with: #('all');
+			group: 'all' with: #('Cryptography')
 	].
