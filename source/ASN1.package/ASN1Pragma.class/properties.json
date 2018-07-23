@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ASN1-DefinitionModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pragma",
+		"asn1name",
+		"systemClass",
+		"method"
+	],
+	"name" : "ASN1Pragma",
+	"type" : "normal"
+}

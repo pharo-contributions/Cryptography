@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"secretId",
+		"secretValue"
+	],
+	"name" : "Pkcs12SecretBag",
+	"type" : "normal"
+}

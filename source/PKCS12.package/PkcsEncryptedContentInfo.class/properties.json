@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contentType",
+		"contentEncryptionAlgorithm",
+		"encryptedContent"
+	],
+	"name" : "PkcsEncryptedContentInfo",
+	"type" : "normal"
+}

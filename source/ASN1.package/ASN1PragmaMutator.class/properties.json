@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1Pragma",
+	"category" : "ASN1-DefinitionModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classOfMutatorArgument"
+	],
+	"name" : "ASN1PragmaMutator",
+	"type" : "normal"
+}

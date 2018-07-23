@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "X509",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"notBefore",
+		"notAfter"
+	],
+	"name" : "X509Validity",
+	"type" : "normal"
+}

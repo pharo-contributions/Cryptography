@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ASN1-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"testSlot1",
+		"testSlot2"
+	],
+	"name" : "ASN1TestModel",
+	"type" : "normal"
+}

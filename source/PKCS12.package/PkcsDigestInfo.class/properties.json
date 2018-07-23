@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"digestAlgorithm",
+		"digest"
+	],
+	"name" : "PkcsDigestInfo",
+	"type" : "normal"
+}

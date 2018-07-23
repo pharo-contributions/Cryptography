@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ASN1",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"TagToTypeDispatchTable"
+	],
+	"instvars" : [
+		"stream",
+		"currentTag"
+	],
+	"name" : "ASN1Stream",
+	"type" : "normal"
+}

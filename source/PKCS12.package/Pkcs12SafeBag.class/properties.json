@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bagId",
+		"bagValue",
+		"bagAttributes"
+	],
+	"name" : "Pkcs12SafeBag",
+	"type" : "normal"
+}
