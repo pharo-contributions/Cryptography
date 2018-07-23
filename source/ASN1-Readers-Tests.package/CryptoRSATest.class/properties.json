@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "ASN1-Readers-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"privateKey",
+		"publicKey"
+	],
+	"name" : "CryptoRSATest",
+	"type" : "normal"
+}

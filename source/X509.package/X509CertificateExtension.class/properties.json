@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "X509-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"extnId",
+		"extnCritical",
+		"extnValue",
+		"decodedExtension"
+	],
+	"name" : "X509CertificateExtension",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1OctetsType",
+	"category" : "ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASN1BitStringType",
+	"type" : "normal"
+}

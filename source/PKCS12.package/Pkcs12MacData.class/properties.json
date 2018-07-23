@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mac",
+		"macSalt",
+		"iterations"
+	],
+	"name" : "Pkcs12MacData",
+	"type" : "normal"
+}

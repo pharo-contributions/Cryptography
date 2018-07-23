@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ASN1-Readers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"bytes",
+		"decryptedBytes",
+		"iv",
+		"password"
+	],
+	"name" : "DSAPrivateKeyFileReader",
+	"type" : "normal"
+}
