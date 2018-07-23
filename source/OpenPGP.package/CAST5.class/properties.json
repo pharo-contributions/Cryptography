@@ -1,9 +1,7 @@
 {
-	"commentStamp" : "hmm 3/26/2002 18:20",
-	"super" : "FeistelCipher",
 	"category" : "OpenPGP-Algorithms",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
 		"EBitSelectionTable",
 		"S1",
@@ -14,11 +12,12 @@
 		"S6",
 		"S7",
 		"S8",
-		"SBoxes"
-	],
+		"SBoxes" ],
+	"commentStamp" : "hmm 3/26/2002 18:20",
 	"instvars" : [
-		"shortKey"
-	],
+		"shortKey" ],
 	"name" : "CAST5",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "FeistelCipher",
+	"type" : "normal" }

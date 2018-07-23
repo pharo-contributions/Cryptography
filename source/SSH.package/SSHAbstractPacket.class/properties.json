@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSH-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"packetLength",
 		"paddingLength",
 		"payload",
-		"padding"
-	],
+		"padding" ],
 	"name" : "SSHAbstractPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

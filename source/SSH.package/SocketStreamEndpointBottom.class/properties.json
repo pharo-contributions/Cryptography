@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "DuplexProtocolStackBottomCap",
 	"category" : "SSH-Stack-Sockets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"socketStream",
-		"serverProcess"
-	],
+		"serverProcess" ],
 	"name" : "SocketStreamEndpointBottom",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "DuplexProtocolStackBottomCap",
+	"type" : "normal" }

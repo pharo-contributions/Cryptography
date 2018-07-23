@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"newOnConnection:" : " 7/23/2018 10:01:39" },
+	"instance" : {
+		"cipherState" : " 7/23/2018 10:01:39",
+		"cipherState:" : " 7/23/2018 10:01:39",
+		"compressionState" : " 7/23/2018 10:01:39",
+		"compressionState:" : " 7/23/2018 10:01:39",
+		"connection" : " 7/23/2018 10:01:39",
+		"connection:" : " 7/23/2018 10:01:39",
+		"incrementSequenceNumber" : " 7/23/2018 10:01:39",
+		"initialize" : " 7/23/2018 10:01:39",
+		"macState" : " 7/23/2018 10:01:39",
+		"macState:" : " 7/23/2018 10:01:39",
+		"packagerState" : " 7/23/2018 10:01:39",
+		"packagerState:" : " 7/23/2018 10:01:39",
+		"sequenceNumber" : " 7/23/2018 10:01:39",
+		"sequenceNumber:" : " 7/23/2018 10:01:39" } }

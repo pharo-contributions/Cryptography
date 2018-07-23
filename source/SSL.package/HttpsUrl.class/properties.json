@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "rww 10/1/2006 10:04",
-	"super" : "HierarchicalUrl",
 	"category" : "SSL-Connections",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "rww 10/1/2006 10:04",
+	"instvars" : [
+		 ],
 	"name" : "HttpsUrl",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "HierarchicalUrl",
+	"type" : "normal" }

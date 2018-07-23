@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLMACSecurityState",
 	"category" : "SSL-MAC",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"hMAC"
-	],
+		"hMAC" ],
 	"name" : "TLS10MD5MACSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLMACSecurityState",
+	"type" : "normal" }

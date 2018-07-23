@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHBinaryMessage",
 	"category" : "SSH-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHRequestFailureMessage",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHBinaryMessage",
+	"type" : "normal" }

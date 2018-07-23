@@ -1,15 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "ProtocolEndpoint",
 	"category" : "LayeredProtocol-Endpoints",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"InstanceList"
-	],
+		"InstanceList" ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"socket"
-	],
+		"socket" ],
 	"name" : "NetworkEndpoint",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "ProtocolEndpoint",
+	"type" : "normal" }

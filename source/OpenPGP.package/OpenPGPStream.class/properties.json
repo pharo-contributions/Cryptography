@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "Stream",
 	"category" : "OpenPGP-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"stream"
-	],
+		"stream" ],
 	"name" : "OpenPGPStream",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Stream",
+	"type" : "normal" }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLCipherSecurityState",
 	"category" : "SSL-Encryption",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"rc4"
-	],
+		"rc4" ],
 	"name" : "SSLRC4CipherSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLCipherSecurityState",
+	"type" : "normal" }

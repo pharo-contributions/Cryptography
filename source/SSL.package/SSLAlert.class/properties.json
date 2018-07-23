@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLMessage",
 	"category" : "SSL-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"level",
-		"descriptionCode"
-	],
+		"descriptionCode" ],
 	"name" : "SSLAlert",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLMessage",
+	"type" : "normal" }

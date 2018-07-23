@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "OpenPGPSignatureData",
 	"category" : "OpenPGP-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"hashedSubpacketData",
-		"unhashedSubpacketData"
-	],
+		"unhashedSubpacketData" ],
 	"name" : "OpenPGPSignatureV4Data",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPSignatureData",
+	"type" : "normal" }

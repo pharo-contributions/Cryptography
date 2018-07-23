@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHHandshakeSender",
 	"category" : "SSH-Msg Senders",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHSendKeyInit",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHHandshakeSender",
+	"type" : "normal" }

@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"basicNewOnPipe:" : " 7/23/2018 10:01:39",
+		"newConnection:port:" : " 7/23/2018 10:01:39",
+		"newOnSocket:" : " 7/23/2018 10:01:39",
+		"newOnSocket:publicKey:privateKey:" : " 7/23/2018 10:01:39",
+		"testForSigHash" : " 7/23/2018 10:01:39" },
+	"instance" : {
+		"answerClient" : " 7/23/2018 10:01:39",
+		"callServer" : " 7/23/2018 10:01:39",
+		"close" : " 7/23/2018 10:01:39",
+		"connPipe" : " 7/23/2018 10:01:39",
+		"connPipe:" : " 7/23/2018 10:01:39",
+		"pendingWriteData" : " 7/23/2018 10:01:39",
+		"pendingWriteData:" : " 7/23/2018 10:01:39",
+		"publicKey:privateKey:" : " 7/23/2018 10:01:39",
+		"start" : " 7/23/2018 10:01:39",
+		"state" : " 7/23/2018 10:01:39",
+		"state:" : " 7/23/2018 10:01:39",
+		"switchToClosed" : " 7/23/2018 10:01:39" } }

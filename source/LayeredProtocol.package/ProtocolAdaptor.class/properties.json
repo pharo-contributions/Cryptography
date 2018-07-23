@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "ProtocolLayer",
 	"category" : "LayeredProtocol-Abstract",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"upBlock",
 		"downBlock",
 		"flushBlock",
-		"noteBlock"
-	],
+		"noteBlock" ],
 	"name" : "ProtocolAdaptor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "ProtocolLayer",
+	"type" : "normal" }

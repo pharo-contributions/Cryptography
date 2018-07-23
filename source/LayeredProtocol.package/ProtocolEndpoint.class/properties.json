@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "ProtocolLayer",
 	"category" : "LayeredProtocol-Endpoints",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"serverProcess"
-	],
+		"serverProcess" ],
 	"name" : "ProtocolEndpoint",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "ProtocolLayer",
+	"type" : "normal" }

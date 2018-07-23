@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHCipherSecurityState",
 	"category" : "SSH-State",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"tripleDes",
 		"readKey",
 		"writeKey",
 		"ivReadKey",
-		"ivWriteKey"
-	],
+		"ivWriteKey" ],
 	"name" : "SSHTripleDesCBCCipherSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHCipherSecurityState",
+	"type" : "normal" }

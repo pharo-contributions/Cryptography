@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSL-Handshake Msgs",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"preMasterSecret"
-	],
+		"preMasterSecret" ],
 	"name" : "EncryptedPreMasterSecret",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

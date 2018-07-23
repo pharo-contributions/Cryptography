@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHMACSecurityState",
 	"category" : "SSH-State",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHNullMACSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHMACSecurityState",
+	"type" : "normal" }

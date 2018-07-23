@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "hmm 3/26/2002 19:13",
-	"super" : "BlockCipher",
 	"category" : "OpenPGP-Algorithms",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/26/2002 19:13",
 	"instvars" : [
-		"k"
-	],
+		"k" ],
 	"name" : "FeistelCipher",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BlockCipher",
+	"type" : "normal" }

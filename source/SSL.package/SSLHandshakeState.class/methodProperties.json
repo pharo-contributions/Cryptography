@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"newOnMachine:" : " 7/23/2018 10:01:29" },
+	"instance" : {
+		"addMsgSenderClass:" : " 7/23/2018 10:01:29",
+		"addStateClass:" : " 7/23/2018 10:01:29",
+		"connection" : " 7/23/2018 10:01:29",
+		"initializeOnMachine:" : " 7/23/2018 10:01:29",
+		"machine" : " 7/23/2018 10:01:29",
+		"process:" : " 7/23/2018 10:01:29",
+		"release" : " 7/23/2018 10:01:29",
+		"securityCoord" : " 7/23/2018 10:01:29",
+		"securityParams" : " 7/23/2018 10:01:29",
+		"sendAlertCode:" : " 7/23/2018 10:01:29",
+		"sendHelloRequest" : " 7/23/2018 10:01:29",
+		"sendInitialMessages" : " 7/23/2018 10:01:29" } }

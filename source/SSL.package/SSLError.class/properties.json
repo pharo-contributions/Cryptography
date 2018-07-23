@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "Error",
 	"category" : "SSL-Records",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"code"
-	],
+		"code" ],
 	"name" : "SSLError",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }
