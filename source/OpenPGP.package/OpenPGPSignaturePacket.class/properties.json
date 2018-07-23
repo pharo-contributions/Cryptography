@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "OpenPGPPacket",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"signatureType",
 		"publicKeyAlgorithm",
@@ -14,8 +14,9 @@
 		"creationTime",
 		"signer",
 		"hashedSubpacketData",
-		"unhashedSubpacketData"
-	],
+		"unhashedSubpacketData" ],
 	"name" : "OpenPGPSignaturePacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPacket",
+	"type" : "normal" }

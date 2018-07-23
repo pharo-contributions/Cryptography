@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHAsciiMessage",
 	"category" : "SSH-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"identification"
-	],
+		"identification" ],
 	"name" : "SSHIdentificationMessage",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHAsciiMessage",
+	"type" : "normal" }

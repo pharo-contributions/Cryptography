@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "hmm 3/26/2002 17:45",
-	"super" : "OpenPGPPublicKeyPacket",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/26/2002 17:45",
 	"instvars" : [
 		"stringToKeyUsage",
 		"stringToKeySpecifier",
 		"encryptionAlgorithm",
 		"initialVector",
 		"mpis",
-		"checksum"
-	],
+		"checksum" ],
 	"name" : "OpenPGPSecretKeyPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPublicKeyPacket",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHTransportHandshakeState",
 	"category" : "SSH-Transport Handshake",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHInitialState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHTransportHandshakeState",
+	"type" : "normal" }

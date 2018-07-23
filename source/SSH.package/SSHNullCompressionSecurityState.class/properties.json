@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHCompressionSecurityState",
 	"category" : "SSH-State",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSHNullCompressionSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHCompressionSecurityState",
+	"type" : "normal" }

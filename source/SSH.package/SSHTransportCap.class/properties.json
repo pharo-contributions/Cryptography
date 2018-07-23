@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "DuplexProtocolStackTopCap",
 	"category" : "SSH-Connections",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"connection",
 		"handshakeStateMachine",
 		"securityCoordinator",
 		"readState",
-		"writeState"
-	],
+		"writeState" ],
 	"name" : "SSHTransportCap",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "DuplexProtocolStackTopCap",
+	"type" : "normal" }

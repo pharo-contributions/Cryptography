@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "hmm 3/26/2002 18:24",
-	"super" : "Object",
 	"category" : "OpenPGP-Algorithms",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/26/2002 18:24",
 	"instvars" : [
 		"cipher",
 		"iv",
 		"shiftData",
-		"shiftIndex"
-	],
+		"shiftIndex" ],
 	"name" : "CFBEncryption",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

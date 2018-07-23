@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"newOnConnection:" : " 7/23/2018 10:01:39" },
+	"instance" : {
+		"addMsgSenderClass:" : " 7/23/2018 10:01:39",
+		"addStateClass:" : " 7/23/2018 10:01:39",
+		"answerClient" : " 7/23/2018 10:01:39",
+		"callServer" : " 7/23/2018 10:01:39",
+		"connection" : " 7/23/2018 10:01:39",
+		"initializeOnConnection:" : " 7/23/2018 10:01:39",
+		"isEncrypted" : " 7/23/2018 10:01:39",
+		"messageSenders" : " 7/23/2018 10:01:39",
+		"pendingStates" : " 7/23/2018 10:01:39",
+		"process:" : " 7/23/2018 10:01:39",
+		"securityCoord" : " 7/23/2018 10:01:39",
+		"securityParams" : " 7/23/2018 10:01:39",
+		"sendMessages" : " 7/23/2018 10:01:39",
+		"sendMsg:" : " 7/23/2018 10:01:39",
+		"state" : " 7/23/2018 10:01:39",
+		"transitionToNextState" : " 7/23/2018 10:01:39" } }

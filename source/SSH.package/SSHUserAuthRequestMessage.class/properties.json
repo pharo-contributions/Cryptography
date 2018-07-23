@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHBinaryMessage",
 	"category" : "SSH-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"userName",
 		"serviceName",
 		"methodName",
-		"subMsg"
-	],
+		"subMsg" ],
 	"name" : "SSHUserAuthRequestMessage",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHBinaryMessage",
+	"type" : "normal" }

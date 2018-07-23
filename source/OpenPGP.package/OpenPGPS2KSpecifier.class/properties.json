@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "hmm 3/25/2002 22:27",
-	"super" : "Object",
 	"category" : "OpenPGP-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/25/2002 22:27",
 	"instvars" : [
 		"type",
 		"hashAlgorithm",
 		"salt",
-		"count"
-	],
+		"count" ],
 	"name" : "OpenPGPS2KSpecifier",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"basicReceive:" : " 7/23/2018 10:01:39",
+		"basicSend:" : " 7/23/2018 10:01:39",
+		"close" : " 7/23/2018 10:01:39",
+		"makeClient" : " 7/23/2018 10:01:39",
+		"makeServer" : " 7/23/2018 10:01:39",
+		"processChannelClose:" : " 7/23/2018 10:01:39",
+		"processChannelData:" : " 7/23/2018 10:01:39",
+		"processChannelEOF:" : " 7/23/2018 10:01:39",
+		"processChannelOpen:" : " 7/23/2018 10:01:39",
+		"processChannelOpenConfirmation:" : " 7/23/2018 10:01:39",
+		"processChannelRequest:" : " 7/23/2018 10:01:39",
+		"processChannelWindowAdjust:" : " 7/23/2018 10:01:39",
+		"receive:" : " 7/23/2018 10:01:39",
+		"send:" : " 7/23/2018 10:01:39",
+		"sendDataMsg:" : " 7/23/2018 10:01:39",
+		"socket" : " 7/23/2018 10:01:39",
+		"socket:" : " 7/23/2018 10:01:39",
+		"switchToClosed" : " 7/23/2018 10:01:39",
+		"transportCap" : " 7/23/2018 10:01:39",
+		"transportCap:" : " 7/23/2018 10:01:39" } }

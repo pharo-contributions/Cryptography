@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "Object",
 	"category" : "LayeredProtocol-Abstract",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"session",
 		"up",
-		"down"
-	],
+		"down" ],
 	"name" : "ProtocolLayer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

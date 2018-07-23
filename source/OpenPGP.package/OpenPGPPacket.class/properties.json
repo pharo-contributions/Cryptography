@@ -1,20 +1,19 @@
 {
-	"commentStamp" : "hmm 4/6/2002 12:34",
-	"super" : "Object",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"TagTypes"
-	],
+		"TagTypes" ],
+	"commentStamp" : "hmm 4/6/2002 12:34",
 	"instvars" : [
 		"header",
 		"version",
 		"data",
 		"trust",
 		"owner",
-		"ownedPackets"
-	],
+		"ownedPackets" ],
 	"name" : "OpenPGPPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

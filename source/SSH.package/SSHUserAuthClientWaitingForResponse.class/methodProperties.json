@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"processUserAuthFailure:" : " 7/23/2018 10:01:39",
+		"processUserAuthSuccess:" : " 7/23/2018 10:01:39",
+		"sendInitialMessages" : " 7/23/2018 10:01:39",
+		"sendKeyboardInteractiveUserAuthRequest" : " 7/23/2018 10:01:39",
+		"sendPasswordUserAuthRequest" : " 7/23/2018 10:01:39",
+		"switchToConnectionPipe" : " 7/23/2018 10:01:39" } }

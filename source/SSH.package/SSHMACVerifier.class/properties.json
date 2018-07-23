@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "HalfDuplexProtocol",
 	"category" : "SSH-Stack-Protocols",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"macState"
-	],
+		"macState" ],
 	"name" : "SSHMACVerifier",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "HalfDuplexProtocol",
+	"type" : "normal" }
