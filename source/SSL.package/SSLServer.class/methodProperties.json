@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addConnection:" : " 7/23/2018 10:01:29",
+		"certificateStore" : " 7/23/2018 10:01:29",
+		"certificateStore:" : " 7/23/2018 10:01:29",
+		"connections" : " 7/23/2018 10:01:29",
+		"connections:" : " 7/23/2018 10:01:29",
+		"handler" : " 7/23/2018 10:01:29",
+		"handler:" : " 7/23/2018 10:01:29",
+		"initialize" : " 7/23/2018 10:01:29",
+		"listener" : " 7/23/2018 10:01:29",
+		"listener:" : " 7/23/2018 10:01:29",
+		"loadDSACertificateFile:privateKeyFile:" : " 7/23/2018 10:01:29",
+		"loadRSACertificateFile:pkcs12PrivateKeyFile:" : " 7/23/2018 10:01:29",
+		"loadRSACertificateFile:privateKeyFile:" : " 7/23/2018 10:01:29",
+		"printOn:" : " 7/23/2018 10:01:29",
+		"removeConnection:" : " 7/23/2018 10:01:29",
+		"serveSocket:" : " 7/23/2018 10:01:29",
+		"startAtPort:" : " 7/23/2018 10:01:29",
+		"stop" : " 7/23/2018 10:01:29" } }

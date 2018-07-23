@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLCipher",
 	"category" : "SSL-Records",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSLStreamCipher",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLCipher",
+	"type" : "normal" }

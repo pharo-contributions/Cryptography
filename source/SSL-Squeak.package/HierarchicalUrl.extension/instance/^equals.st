@@ -1,4 +1,4 @@
-*ssl
+*ssl-squeak
 = anotherUrl
 
 	^ self schemeName = anotherUrl schemeName 

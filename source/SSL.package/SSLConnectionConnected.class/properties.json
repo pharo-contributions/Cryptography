@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLConnectionState",
 	"category" : "SSL-Connections",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSLConnectionConnected",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLConnectionState",
+	"type" : "normal" }

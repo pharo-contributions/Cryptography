@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLSendError",
 	"category" : "SSL-Connections",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSLConnectionClosedError",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLSendError",
+	"type" : "normal" }

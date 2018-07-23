@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLCipherSecurityState",
 	"category" : "SSL-Encryption",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"tripleDes"
-	],
+		"tripleDes" ],
 	"name" : "TLS11TripleDesCipherSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLCipherSecurityState",
+	"type" : "normal" }
