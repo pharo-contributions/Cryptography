@@ -1,0 +1,10 @@
+SmalltalkCISpec {
+  #loading : [
+      SCIMetacelloLoadSpec {
+          #baseline : 'Cryptography',
+          #directory : 'source',
+          #load : [ 'all' ],
+          #platforms : [ #pharo ]
+      }
+  ]
+}
