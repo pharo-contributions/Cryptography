@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLSecurityCoordinator",
 	"category" : "SSL-Security",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSL30SecurityCoordinator",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLSecurityCoordinator",
+	"type" : "normal" }

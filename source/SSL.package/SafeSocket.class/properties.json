@@ -1,15 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "Socket",
 	"category" : "SSL-Stack-Sockets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"InstanceList"
-	],
+		"InstanceList" ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"hostName"
-	],
+		"hostName" ],
 	"name" : "SafeSocket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Socket",
+	"type" : "normal" }

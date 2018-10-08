@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "OpenPGPPacket",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "OpenPGPUserIDPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPacket",
+	"type" : "normal" }

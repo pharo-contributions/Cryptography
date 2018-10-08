@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1Value",
+	"category" : "ASN1-DefinitionModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fieldName",
+		"tagIndex",
+		"tagType",
+		"explicitFieldDefinition",
+		"implicitFieldDefinition",
+		"defaultValue",
+		"isExplicit",
+		"isOptional"
+	],
+	"name" : "ASN1FieldDefinition",
+	"type" : "normal"
+}

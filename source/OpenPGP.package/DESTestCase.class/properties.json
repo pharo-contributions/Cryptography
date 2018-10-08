@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "hmm 3/26/2002 19:18",
-	"super" : "TestCase",
 	"category" : "OpenPGP-Algorithms",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/26/2002 19:18",
+	"instvars" : [
+		 ],
 	"name" : "DESTestCase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

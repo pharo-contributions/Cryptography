@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLMessage",
 	"category" : "SSL-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"msgType",
 		"length",
-		"body"
-	],
+		"body" ],
 	"name" : "SSLHandshake",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLMessage",
+	"type" : "normal" }

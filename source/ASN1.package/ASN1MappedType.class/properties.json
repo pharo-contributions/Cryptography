@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1StructuredType",
+	"category" : "ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mapping"
+	],
+	"name" : "ASN1MappedType",
+	"type" : "normal"
+}

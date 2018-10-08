@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "X509-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"accessMethod",
+		"accessLocation"
+	],
+	"name" : "X509AccessDescription",
+	"type" : "normal"
+}

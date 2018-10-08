@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1BasicType",
+	"category" : "ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"definedBy",
+		"typeMap",
+		"defaultType"
+	],
+	"name" : "ASN1AnyDefinedByType",
+	"type" : "normal"
+}

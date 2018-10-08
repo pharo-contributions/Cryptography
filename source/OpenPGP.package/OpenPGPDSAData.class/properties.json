@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "hmm 3/25/2002 21:34",
-	"super" : "OpenPGPPublicKeyAlgorithmData",
 	"category" : "OpenPGP-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "hmm 3/25/2002 21:34",
+	"instvars" : [
+		 ],
 	"name" : "OpenPGPDSAData",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPublicKeyAlgorithmData",
+	"type" : "normal" }

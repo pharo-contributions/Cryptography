@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSL-Security",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"protocolCap",
-		"keyExchangeProcessor"
-	],
+		"keyExchangeProcessor" ],
 	"name" : "SSLSecurityCoordinator",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

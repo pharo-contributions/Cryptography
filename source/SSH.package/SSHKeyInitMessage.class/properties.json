@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHBinaryMessage",
 	"category" : "SSH-Messages",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"cookie",
 		"keyExchangeAlgorithms",
@@ -17,8 +17,9 @@
 		"compressionAlgorithmsServerToClient",
 		"languagesClientToServer",
 		"languagesServerToClient",
-		"firstKeyExchangePacketFollows"
-	],
+		"firstKeyExchangePacketFollows" ],
 	"name" : "SSHKeyInitMessage",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHBinaryMessage",
+	"type" : "normal" }

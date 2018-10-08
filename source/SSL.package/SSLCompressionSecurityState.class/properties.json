@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "SSLStageSecurityState",
 	"category" : "SSL-State",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "SSLCompressionSecurityState",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSLStageSecurityState",
+	"type" : "normal" }

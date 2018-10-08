@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1Pragma",
+	"category" : "ASN1-DefinitionModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASN1PragmaAccessor",
+	"type" : "normal"
+}

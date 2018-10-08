@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "OpenPGPPacket",
 	"category" : "OpenPGP-Packets",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"algorithm",
 		"s2kSpecifier",
-		"sessionKey"
-	],
+		"sessionKey" ],
 	"name" : "OpenPGPSymmetricKeyEncryptedSessionKeyPacket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "OpenPGPPacket",
+	"type" : "normal" }

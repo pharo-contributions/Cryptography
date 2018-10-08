@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASN1WrapperType",
+	"category" : "ASN1-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASN1WrapperPrimitiveType",
+	"type" : "normal"
+}

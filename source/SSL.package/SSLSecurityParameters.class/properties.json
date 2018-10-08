@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSL-Security",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"connectionEnd",
 		"cipherSuite",
@@ -13,8 +13,9 @@
 		"masterSecret",
 		"clientRandom",
 		"serverRandom",
-		"requiresClientCertificate"
-	],
+		"requiresClientCertificate" ],
 	"name" : "SSLSecurityParameters",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

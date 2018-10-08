@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"newOnMachine:" : " 7/23/2018 10:01:39" },
+	"instance" : {
+		"addMsgSenderClass:" : " 7/23/2018 10:01:39",
+		"addStateClass:" : " 7/23/2018 10:01:39",
+		"connection" : " 7/23/2018 10:01:39",
+		"initializeOnMachine:" : " 7/23/2018 10:01:39",
+		"isEncrypted" : " 7/23/2018 10:01:39",
+		"machine" : " 7/23/2018 10:01:39",
+		"securityCoord" : " 7/23/2018 10:01:39",
+		"securityParams" : " 7/23/2018 10:01:39",
+		"sendInitialMessages" : " 7/23/2018 10:01:39" } }

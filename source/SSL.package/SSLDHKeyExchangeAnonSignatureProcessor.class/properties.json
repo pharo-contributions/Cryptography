@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
 	"category" : "SSL-Security",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"diffieHellman",
-		"yServer"
-	],
+		"yServer" ],
 	"name" : "SSLDHKeyExchangeAnonSignatureProcessor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "HalfDuplexProtocol",
 	"category" : "SSL-Stack-Protocols",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"cipherState"
-	],
+		"cipherState" ],
 	"name" : "SSLDecryptor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "HalfDuplexProtocol",
+	"type" : "normal" }

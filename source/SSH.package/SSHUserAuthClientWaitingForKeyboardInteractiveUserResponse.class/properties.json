@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "SSHUserAuthHandshakeState",
 	"category" : "SSH-UserAuth Handshake",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"infoRequest",
 		"infoResponse",
 		"promptNumber",
-		"responseData"
-	],
+		"responseData" ],
 	"name" : "SSHUserAuthClientWaitingForKeyboardInteractiveUserResponse",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "SSHUserAuthHandshakeState",
+	"type" : "normal" }

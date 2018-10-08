@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PKCS12",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"certId",
+		"certValue"
+	],
+	"name" : "Pkcs12CertBag",
+	"type" : "normal"
+}

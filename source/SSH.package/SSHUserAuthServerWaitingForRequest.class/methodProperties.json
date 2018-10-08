@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"processUserAuthHostBasedRequest:" : " 7/23/2018 10:01:39",
+		"processUserAuthNoneRequest:" : " 7/23/2018 10:01:39",
+		"processUserAuthPasswordRequest:" : " 7/23/2018 10:01:39",
+		"processUserAuthPublicKeyRequest:" : " 7/23/2018 10:01:39",
+		"processUserAuthRequest:" : " 7/23/2018 10:01:39",
+		"switchToConnectionPipe" : " 7/23/2018 10:01:39" } }

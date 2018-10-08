@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "rww 10/1/2006 10:04",
-	"super" : "Object",
 	"category" : "SSL-Connections",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "rww 10/1/2006 10:04",
 	"instvars" : [
 		"conn",
 		"headers",
-		"responseCode"
-	],
+		"responseCode" ],
 	"name" : "HttpsSocket",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
