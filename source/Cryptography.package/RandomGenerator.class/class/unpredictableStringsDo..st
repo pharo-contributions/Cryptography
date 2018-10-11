@@ -12,7 +12,7 @@ unpredictableStringsDo: aBlock
 			value: Time now asString ;
 			value: Display extent asString.
 		100 timesRepeat: [ aBlock value: UUID new ].
-		#(platformName imagePath lastUpdateString systemInformationString shortImageName datedVersion lastQuitLogPosition licenseStringTemplate)  collect:
+		#(imagePath lastUpdateString systemInformationString shortImageName datedVersion lastQuitLogPosition licenseStringTemplate)  collect:
 			[ : each |
 			aBlock value: (SmalltalkImage current perform: each) asByteArray ] ].
 	aBlock 
