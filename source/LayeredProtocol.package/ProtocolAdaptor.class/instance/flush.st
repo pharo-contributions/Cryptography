@@ -1,4 +1,0 @@
-protocol
-flush
-
-	flushBlock value

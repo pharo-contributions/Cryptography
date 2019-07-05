@@ -1,3 +1,0 @@
-accessing
-numMPIs
-	^2

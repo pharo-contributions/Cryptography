@@ -1,3 +1,0 @@
-accessing
-ownedPackets
-	^ownedPackets ifNil: [#()]

@@ -1,4 +1,0 @@
-accessing
-tag
-
-	^ self subclassResponsibility

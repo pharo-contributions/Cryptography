@@ -1,3 +1,0 @@
-accessing
-keySize
-	^ self subclassResponsibility

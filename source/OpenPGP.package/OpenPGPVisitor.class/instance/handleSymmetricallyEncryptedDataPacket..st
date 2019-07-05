@@ -1,3 +1,0 @@
-visitor
-handleSymmetricallyEncryptedDataPacket: anOpenPGPSymmetricallyEncryptedDataPacket
-	"do nothing"

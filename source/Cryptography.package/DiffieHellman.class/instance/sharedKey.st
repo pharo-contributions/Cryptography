@@ -1,3 +1,0 @@
-protocol
-sharedKey
-	^ sharedKey

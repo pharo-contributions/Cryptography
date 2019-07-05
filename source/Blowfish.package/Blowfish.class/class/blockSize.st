@@ -1,3 +1,0 @@
-defaults
-blockSize
-	^8

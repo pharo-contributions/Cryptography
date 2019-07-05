@@ -1,3 +1,0 @@
-defaults
-defaultRounds
-^self minRounds

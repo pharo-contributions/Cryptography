@@ -1,4 +1,0 @@
-private
-removeUp
-
-	^self removeFirst

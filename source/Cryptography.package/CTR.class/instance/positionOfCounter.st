@@ -1,3 +1,0 @@
-private
-positionOfCounter
-	^ 1

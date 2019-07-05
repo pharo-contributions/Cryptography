@@ -1,3 +1,0 @@
-modes
-ecb
-	^ self

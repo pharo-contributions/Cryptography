@@ -1,3 +1,0 @@
-accessing
-hashBytes
-	^20

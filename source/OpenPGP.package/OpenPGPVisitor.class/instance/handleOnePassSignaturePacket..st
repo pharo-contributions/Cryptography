@@ -1,3 +1,0 @@
-visitor
-handleOnePassSignaturePacket: anOpenPGPOnePassSignaturePacket
-	"do nothing"

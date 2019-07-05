@@ -1,3 +1,0 @@
-accessing
-publicKey
-	self subclassResponsibility

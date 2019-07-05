@@ -1,4 +1,0 @@
-inquires
-InstanceID
-	
-	^nil 
