@@ -1,4 +1,0 @@
-accessing
-messageName
-
-	self subclassResponsibility.

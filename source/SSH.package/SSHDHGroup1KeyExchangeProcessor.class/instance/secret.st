@@ -1,4 +1,0 @@
-accessing
-secret
-
-	^ diffieHellman sharedKey

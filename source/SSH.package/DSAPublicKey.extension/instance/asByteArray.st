@@ -1,3 +1,0 @@
-*ssh
-asByteArray
-	self shouldBeImplemented

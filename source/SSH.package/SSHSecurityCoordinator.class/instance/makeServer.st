@@ -1,4 +1,0 @@
-accessing
-makeServer
-
-	isClient := false.

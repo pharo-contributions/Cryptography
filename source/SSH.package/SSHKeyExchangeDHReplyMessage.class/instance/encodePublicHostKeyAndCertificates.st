@@ -1,4 +1,0 @@
-process
-encodePublicHostKeyAndCertificates
-
-	self publicHostKeyAndCertificates: self publicHostKeyAndCertificates asSshByteArray.

@@ -1,4 +1,0 @@
-process
-processDHInit: aSSHKeyExchangeDHInitMessage 
-
-	^ false

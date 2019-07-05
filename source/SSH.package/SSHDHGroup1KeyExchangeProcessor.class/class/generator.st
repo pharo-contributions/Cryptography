@@ -1,4 +1,0 @@
-accessing
-generator
-
-	^ 2.
