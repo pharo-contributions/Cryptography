@@ -1,3 +1,0 @@
-verifying
-putSignatureDataOnHashStream: aStream
-	self subclassResponsibility

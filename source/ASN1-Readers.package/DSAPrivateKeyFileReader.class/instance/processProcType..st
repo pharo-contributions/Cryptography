@@ -1,2 +1,0 @@
-initialization
-processProcType: data

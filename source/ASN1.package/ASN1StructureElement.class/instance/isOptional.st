@@ -1,4 +1,0 @@
-testing
-isOptional
-
-	^ self optional

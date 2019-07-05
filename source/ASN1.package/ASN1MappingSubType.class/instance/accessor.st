@@ -1,4 +1,0 @@
-accessing
-accessor
-
-	^self mappingSymbol

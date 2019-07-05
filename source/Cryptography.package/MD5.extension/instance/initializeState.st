@@ -1,4 +1,0 @@
-*Cryptography
-initializeState
-
-	self subclassResponsibility

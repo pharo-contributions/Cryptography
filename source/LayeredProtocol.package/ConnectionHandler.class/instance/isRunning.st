@@ -1,4 +1,0 @@
-queries
-isRunning
-
-	^process ~~ nil

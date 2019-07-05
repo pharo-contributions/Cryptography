@@ -1,3 +1,0 @@
-visitor
-handleCompressedDataPacket: anOpenPGPCompressedDataPacket
-	"do nothing"

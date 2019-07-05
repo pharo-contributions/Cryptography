@@ -1,4 +1,0 @@
-encoding
-sizeOfObject: anObject
-
-	^ nil

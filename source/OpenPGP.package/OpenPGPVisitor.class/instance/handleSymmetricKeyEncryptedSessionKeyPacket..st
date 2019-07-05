@@ -1,3 +1,0 @@
-visitor
-handleSymmetricKeyEncryptedSessionKeyPacket: anOpenPGPSymmetricKeyEncryptedSessionKeyPacket
-	"do nothing"
