@@ -1,3 +1,0 @@
-algSymbols
-ALG_SID_HASH_REPLACE_OWF
-	^11

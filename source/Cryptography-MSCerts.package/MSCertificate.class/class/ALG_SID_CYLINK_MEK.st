@@ -1,3 +1,0 @@
-algSymbols
-ALG_SID_CYLINK_MEK
-	^12

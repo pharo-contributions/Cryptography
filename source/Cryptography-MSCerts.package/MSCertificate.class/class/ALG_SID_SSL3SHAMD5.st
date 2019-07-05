@@ -1,3 +1,0 @@
-algSymbols
-ALG_SID_SSL3SHAMD5
-	^8

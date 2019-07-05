@@ -1,3 +1,0 @@
-*Cryptography-MSCerts
-isMSWideString
-	^false

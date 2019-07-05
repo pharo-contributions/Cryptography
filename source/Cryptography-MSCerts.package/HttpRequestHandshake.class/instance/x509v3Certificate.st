@@ -1,3 +1,0 @@
-accessing
-x509v3Certificate
-	^self httpsAdapter httpService certificate
