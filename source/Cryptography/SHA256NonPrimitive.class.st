@@ -1,7 +1,7 @@
 Class {
 	#name : #SHA256NonPrimitive,
 	#superclass : #SHA256,
-	#category : 'Cryptography-SHA256'
+	#category : #'Cryptography-SHA256'
 }
 
 { #category : #constants }

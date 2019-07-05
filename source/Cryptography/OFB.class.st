@@ -1,7 +1,7 @@
 Class {
 	#name : #OFB,
 	#superclass : #BlockCipherMode,
-	#category : 'Cryptography-Core'
+	#category : #'Cryptography-Core'
 }
 
 { #category : #private }

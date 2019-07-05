@@ -1,7 +1,7 @@
 Class {
 	#name : #MD5WithPrimitive,
 	#superclass : #MD5,
-	#category : 'Cryptography-MD5'
+	#category : #'Cryptography-MD5'
 }
 
 { #category : #'private-buffers' }

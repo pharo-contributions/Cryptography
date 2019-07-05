@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoDESTest,
 	#superclass : #TestCase,
-	#category : 'Cryptography-Tests'
+	#category : #'Cryptography-Tests'
 }
 
 { #category : #'as yet unclassified' }

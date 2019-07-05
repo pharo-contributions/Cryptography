@@ -1,13 +1,13 @@
 Class {
 	#name : #PBKDF2TestCase,
 	#superclass : #TestCase,
-	#category : 'PBKDF2-Tests'
+	#category : #'PBKDF2-Tests'
 }
 
 { #category : #'as yet unclassified' }
 PBKDF2TestCase >> assertDerivedKey: pbkdf2 iterations: iterations equals: aString [
 	| expected |
-	expected := ByteArray fromHexString: aString.
+	expected := ByteArray fromHexString: (self trim: aString).
 	self
 		assert:
 			(pbkdf2
@@ -100,4 +100,9 @@ PBKDF2TestCase >> testRfc3962_ExampleCOMpianist [
 		assertDerivedKey: pbkdf2
 			iterations: 50
 			equals: ' 6b 9c f2 6d 45 45 5a 43 a5 b8 bb 27 6a 40 3b 39     e7 fe 37 a0 c4 1e 02 c2 81 ff 30 69 e1 e9 4f 52'
+]
+
+{ #category : #'as yet unclassified' }
+PBKDF2TestCase >> trim: aString [
+	^ aString copyWithout: Character space
 ]

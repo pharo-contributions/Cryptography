@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoRandomTest,
 	#superclass : #TestCase,
-	#category : 'Cryptography-Tests'
+	#category : #'Cryptography-Tests'
 }
 
 { #category : #others }

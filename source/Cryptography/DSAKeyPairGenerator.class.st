@@ -9,7 +9,7 @@ Class {
 		'y',
 		'random'
 	],
-	#category : 'Cryptography-DSA'
+	#category : #'Cryptography-DSA'
 }
 
 { #category : #'as yet unclassified' }

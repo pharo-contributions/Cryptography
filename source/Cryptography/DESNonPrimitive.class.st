@@ -13,7 +13,7 @@ Class {
 		'PC2',
 		'SBoxes'
 	],
-	#category : 'Cryptography-DES'
+	#category : #'Cryptography-DES'
 }
 
 { #category : #'class initialization' }

@@ -5,7 +5,7 @@ Class {
 		'cipher',
 		'vector'
 	],
-	#category : 'Cryptography-Core'
+	#category : #'Cryptography-Core'
 }
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #CBC,
 	#superclass : #BlockCipherMode,
-	#category : 'Cryptography-Core'
+	#category : #'Cryptography-Core'
 }
 
 { #category : #accessing }

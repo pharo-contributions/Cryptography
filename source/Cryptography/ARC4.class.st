@@ -6,7 +6,7 @@ Class {
 		'i',
 		'j'
 	],
-	#category : 'Cryptography-RC4'
+	#category : #'Cryptography-RC4'
 }
 
 { #category : #accessing }

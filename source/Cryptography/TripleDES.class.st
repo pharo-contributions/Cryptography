@@ -6,7 +6,7 @@ Class {
 		'des2',
 		'des3'
 	],
-	#category : 'Cryptography-DES'
+	#category : #'Cryptography-DES'
 }
 
 { #category : #accessing }

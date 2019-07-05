@@ -10,7 +10,7 @@ Class {
 	#classInstVars : [
 		'default'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #default }

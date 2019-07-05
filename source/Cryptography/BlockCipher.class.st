@@ -4,7 +4,7 @@ Abstract class for blockmode ciphers (those which encrypt/decrypt more than 1 by
 Class {
 	#name : #BlockCipher,
 	#superclass : #Object,
-	#category : 'Cryptography-Core'
+	#category : #'Cryptography-Core'
 }
 
 { #category : #accessing }

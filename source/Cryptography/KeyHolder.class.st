@@ -36,7 +36,7 @@ Class {
 		'random',
 		'randomChangeProcess'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #LICENSE }

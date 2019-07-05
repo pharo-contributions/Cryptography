@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'picker'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #'initialize-release' }

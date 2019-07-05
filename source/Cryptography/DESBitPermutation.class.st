@@ -11,7 +11,7 @@ Class {
 		'ChunkBits',
 		'ChunkMask'
 	],
-	#category : 'Cryptography-DES'
+	#category : #'Cryptography-DES'
 }
 
 { #category : #'instance creation' }

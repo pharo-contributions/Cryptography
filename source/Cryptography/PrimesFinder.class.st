@@ -8,7 +8,7 @@ Class {
 		'wheel',
 		'candidate'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #'instance creation' }

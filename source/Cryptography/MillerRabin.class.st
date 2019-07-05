@@ -13,7 +13,7 @@ Class {
 		'k',
 		'n0'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #'primality testing' }

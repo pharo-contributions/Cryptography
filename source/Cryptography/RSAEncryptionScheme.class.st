@@ -26,7 +26,7 @@ Class {
 		'privateKey',
 		'encodingParameter'
 	],
-	#category : 'Cryptography-RSA'
+	#category : #'Cryptography-RSA'
 }
 
 { #category : #'instance creation' }

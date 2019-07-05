@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoRC4Test,
 	#superclass : #TestCase,
-	#category : 'Cryptography-Tests'
+	#category : #'Cryptography-Tests'
 }
 
 { #category : #'as yet unclassified' }

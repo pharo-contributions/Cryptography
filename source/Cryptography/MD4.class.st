@@ -9,7 +9,7 @@ Class {
 		'input',
 		'output'
 	],
-	#category : 'Cryptography-MD4'
+	#category : #'Cryptography-MD4'
 }
 
 { #category : #'instance creation' }

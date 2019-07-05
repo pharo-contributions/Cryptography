@@ -17,7 +17,7 @@ Class {
 		'counterBits',
 		'maximumCounterValue'
 	],
-	#category : 'Cryptography-Core'
+	#category : #'Cryptography-Core'
 }
 
 { #category : #accessing }

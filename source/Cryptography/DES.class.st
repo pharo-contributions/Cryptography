@@ -29,7 +29,7 @@ Class {
 		'encrypting',
 		'nonPrimitive'
 	],
-	#category : 'Cryptography-DES'
+	#category : #'Cryptography-DES'
 }
 
 { #category : #accessing }

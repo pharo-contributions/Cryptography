@@ -27,7 +27,7 @@ Class {
 		'T2',
 		'T3'
 	],
-	#category : 'Cryptography-Rijndael'
+	#category : #'Cryptography-Rijndael'
 }
 
 { #category : #accessing }

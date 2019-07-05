@@ -7,7 +7,7 @@ Class {
 		'g',
 		'x'
 	],
-	#category : 'Cryptography-DSA'
+	#category : #'Cryptography-DSA'
 }
 
 { #category : #'instance creation' }

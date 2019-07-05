@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'state'
 	],
-	#category : 'Cryptography-SHA256'
+	#category : #'Cryptography-SHA256'
 }
 
 { #category : #accessing }

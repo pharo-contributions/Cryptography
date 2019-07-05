@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'PITable'
 	],
-	#category : 'Cryptography-MD4'
+	#category : #'Cryptography-MD4'
 }
 
 { #category : #'as yet unclassified' }

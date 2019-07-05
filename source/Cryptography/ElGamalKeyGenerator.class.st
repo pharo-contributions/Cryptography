@@ -38,7 +38,7 @@ Class {
 		'alpha',
 		'a'
 	],
-	#category : 'Cryptography-ElGamal'
+	#category : #'Cryptography-ElGamal'
 }
 
 { #category : #'instance creation' }

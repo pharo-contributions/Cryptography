@@ -26,7 +26,7 @@ Class {
 		'r',
 		's'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #LICENSE }

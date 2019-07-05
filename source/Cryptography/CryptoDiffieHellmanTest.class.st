@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoDiffieHellmanTest,
 	#superclass : #TestCase,
-	#category : 'Cryptography-Tests'
+	#category : #'Cryptography-Tests'
 }
 
 { #category : #testing }

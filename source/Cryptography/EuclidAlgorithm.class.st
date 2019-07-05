@@ -8,7 +8,7 @@ Class {
 		'v',
 		'gcd'
 	],
-	#category : 'Cryptography-RSA'
+	#category : #'Cryptography-RSA'
 }
 
 { #category : #'as yet unclassified' }

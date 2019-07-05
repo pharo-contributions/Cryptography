@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'key'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #LICENSE }

@@ -9,7 +9,7 @@ Class {
 		'residues',
 		'satisfied'
 	],
-	#category : 'Cryptography-RandomAndPrime'
+	#category : #'Cryptography-RandomAndPrime'
 }
 
 { #category : #precomputed }

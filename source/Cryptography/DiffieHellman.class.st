@@ -35,7 +35,7 @@ Class {
 		'secret',
 		'sharedKey'
 	],
-	#category : 'Cryptography-ElGamal'
+	#category : #'Cryptography-ElGamal'
 }
 
 { #category : #'instance creation' }

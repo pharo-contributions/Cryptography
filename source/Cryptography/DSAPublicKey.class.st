@@ -7,7 +7,7 @@ Class {
 		'g',
 		'y'
 	],
-	#category : 'Cryptography-DSA'
+	#category : #'Cryptography-DSA'
 }
 
 { #category : #examples }

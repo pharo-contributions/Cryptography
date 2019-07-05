@@ -33,7 +33,7 @@ Class {
 		'generator',
 		'generatorRaisedToA'
 	],
-	#category : 'Cryptography-ElGamal'
+	#category : #'Cryptography-ElGamal'
 }
 
 { #category : #'instance creation' }

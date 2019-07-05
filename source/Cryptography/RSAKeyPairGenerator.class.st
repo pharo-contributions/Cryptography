@@ -13,7 +13,7 @@ Class {
 		'dQ',
 		'qInv'
 	],
-	#category : 'Cryptography-RSA'
+	#category : #'Cryptography-RSA'
 }
 
 { #category : #'instance creation' }
