@@ -1,4 +1,0 @@
-cipher types
-streamCipherType
-
-	^ #stream

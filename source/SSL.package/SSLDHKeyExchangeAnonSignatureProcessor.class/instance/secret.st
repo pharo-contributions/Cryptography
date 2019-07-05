@@ -1,4 +1,0 @@
-process
-secret
-
-	^ diffieHellman sharedKey

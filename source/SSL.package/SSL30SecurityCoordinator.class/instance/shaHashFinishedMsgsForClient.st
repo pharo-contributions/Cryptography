@@ -1,4 +1,0 @@
-hashing
-shaHashFinishedMsgsForClient
-
-	^ self shaHashFinishedMsgsWithSenderValue: 16r434C4E54 asByteArray

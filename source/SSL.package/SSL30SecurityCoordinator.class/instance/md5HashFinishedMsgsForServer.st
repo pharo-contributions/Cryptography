@@ -1,4 +1,0 @@
-hashing
-md5HashFinishedMsgsForServer
-
-	^ self md5HashFinishedMsgsWithSenderValue: 16r53525652 asByteArray

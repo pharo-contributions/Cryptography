@@ -1,4 +1,0 @@
-queries
-isServerHelloDone
-
-	^ false.

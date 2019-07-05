@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"computeHash:" : " 7/23/2018 10:01:29",
-		"generateMAC:" : " 7/23/2018 10:01:29",
-		"macGenerator" : " 7/23/2018 10:01:29",
-		"macVerifier" : " 7/23/2018 10:01:29",
-		"verifyMAC:" : " 7/23/2018 10:01:29" } }

@@ -1,4 +1,0 @@
-accessing
-signatureAlgorithm
-
-	^ #'RSA'

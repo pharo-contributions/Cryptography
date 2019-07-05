@@ -1,4 +1,0 @@
-process
-preMasterSecretClass
-
-	^ EncryptedPreMasterSecret

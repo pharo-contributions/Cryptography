@@ -1,4 +1,0 @@
-accessing
-macAlgorithm
-
-	^ #'MD5'

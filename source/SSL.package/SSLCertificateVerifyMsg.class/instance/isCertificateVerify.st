@@ -1,4 +1,0 @@
-queries
-isCertificateVerify
-
-	^ true

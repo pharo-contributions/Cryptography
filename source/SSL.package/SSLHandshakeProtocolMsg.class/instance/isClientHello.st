@@ -1,4 +1,0 @@
-queries
-isClientHello
-
-	^ false.

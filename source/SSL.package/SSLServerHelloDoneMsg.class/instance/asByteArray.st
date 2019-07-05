@@ -1,4 +1,0 @@
-converting
-asByteArray
-
-	^ ByteArray new

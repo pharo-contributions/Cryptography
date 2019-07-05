@@ -1,2 +1,0 @@
-process
-processCertificateVerifyMsg: msg

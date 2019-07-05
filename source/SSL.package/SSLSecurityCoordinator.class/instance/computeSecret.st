@@ -1,4 +1,0 @@
-secret
-computeSecret
-
-	self subclassResponsibility

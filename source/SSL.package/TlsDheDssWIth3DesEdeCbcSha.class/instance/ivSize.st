@@ -1,4 +1,0 @@
-accessing
-ivSize
-
-	^ 8

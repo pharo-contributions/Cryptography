@@ -1,4 +1,0 @@
-secret
-generateKeyBlock
-
-	self subclassResponsibility

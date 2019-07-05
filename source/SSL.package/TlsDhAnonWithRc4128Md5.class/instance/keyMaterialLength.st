@@ -1,4 +1,0 @@
-accessing
-keyMaterialLength
-
-	^ 16

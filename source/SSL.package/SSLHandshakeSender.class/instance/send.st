@@ -1,4 +1,0 @@
-process
-send
-
-	^ self subclassResponsibility.
