@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 PBKDF2TestCase >> assertDerivedKey: pbkdf2 iterations: iterations equals: aString [
 	| expected |
-	expected := ByteArray fromHexString: (self trim: aString).
+	expected := ByteArray readHexFrom: (self trim: aString).
 	self
 		assert:
 			(pbkdf2
