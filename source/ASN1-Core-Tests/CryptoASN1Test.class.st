@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoASN1Test,
 	#superclass : #TestCase,
-	#category : 'ASN1-Tests'
+	#category : #'ASN1-Core-Tests'
 }
 
 { #category : #'tests - base' }

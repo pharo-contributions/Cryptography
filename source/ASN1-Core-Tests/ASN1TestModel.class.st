@@ -5,7 +5,7 @@ Class {
 		'testSlot1',
 		'testSlot2'
 	],
-	#category : 'ASN1-Tests'
+	#category : #'ASN1-Core-Tests'
 }
 
 { #category : #accessing }
