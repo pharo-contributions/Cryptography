@@ -96,6 +96,7 @@ CTR >> incrementNonce [
 
 { #category : #'initialization-release' }
 CTR >> initialize [
+
 	super initialize.
 	self counterBits: 32
 ]

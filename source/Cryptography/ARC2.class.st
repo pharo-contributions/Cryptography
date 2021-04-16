@@ -919,6 +919,7 @@ ARC2 >> key [
 
 { #category : #key }
 ARC2 >> key: aByteArray [
+
 	self keyHolder: (KeyHolder holdKey: aByteArray)
 ]
 
@@ -1005,7 +1006,7 @@ ARC2 >> mixUp: a64BitWord withKeys: expandedKeys [
 	aR do: [:a16BitWord |
 		result := result, (a16BitWord asByteArrayOfSize: 2)
 	].
-	^result.
+	^result
 	
 ]
 
@@ -1036,7 +1037,7 @@ ARC2 >> rMash: a64BitWord withKeys: expandedKeys [
 	aR do: [:a16BitWord |
 		result := result, (a16BitWord asByteArrayOfSize: 2)
 	].
-	^result.
+	^result
 	
 
 
@@ -1078,12 +1079,12 @@ ARC2 >> rMixUp: a64BitWord withKeys: expandedKeys [
 	aR do: [:a16BitWord |
 		result := result, (a16BitWord asByteArrayOfSize: 2)
 	].
-	^result.
+	^result
 	
 ]
 
 { #category : #key }
 ARC2 >> setKeySize [
 	self T8: (self T1+7) // 8.
-	self TM: (255 \\ (2 raisedTo: (8 + self T1 - (8 * self T8)))).
+	self TM: (255 \\ (2 raisedTo: (8 + self T1 - (8 * self T8))))
 ]
