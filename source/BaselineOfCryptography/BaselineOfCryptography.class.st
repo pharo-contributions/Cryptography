@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfCryptography,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfCryptography'
+	#category : #BaselineOfCryptography
 }
 
 { #category : #baselines }
@@ -11,13 +11,13 @@ BaselineOfCryptography >> baseline: spec [
 	spec for: #common do: [
 		spec package: 'Cryptography'.
 		spec 
-			package: 'ASN1' with: [ spec requires: #(#'Cryptography' ) ];
-			package: 'ASN1-Tests' with: [ spec requires: #(#'ASN1' ) ];
-			package: 'ASN1-Readers' with: [ spec requires: #(#'Cryptography' #'ASN1') ];
+			package: 'ASN1-Core' with: [ spec requires: #(#'Cryptography' ) ];
+			package: 'ASN1-Tests' with: [ spec requires: #(#'ASN1-Core' ) ];
+			package: 'ASN1-Readers' with: [ spec requires: #(#'Cryptography' #'ASN1-Core') ];
 			package: 'ASN1-Readers-Tests' with: [ spec requires: #(#'ASN1-Readers') ];
-			package: 'PKCS12' with: [ spec requires: #(#'Cryptography' #'ASN1') ];
+			package: 'PKCS12' with: [ spec requires: #(#'Cryptography' #'ASN1-Core') ];
 			package: 'PKCS12-Tests' with: [ spec requires: #(#'PKCS12') ];
-			package: 'X509' with: [ spec requires: #(#'Cryptography' #'ASN1' ) ];
+			package: 'X509' with: [ spec requires: #(#'Cryptography' #'ASN1-Core' ) ];
 			package: 'X509-Tests' with: [ spec requires: #(#'X509' ) ];
 			package: 'PBKDF2' with: [ spec requires: #(#'Cryptography') ];
 			package: 'PBKDF2-Tests' with: [ spec requires: #(#'PBKDF2' )  ];
