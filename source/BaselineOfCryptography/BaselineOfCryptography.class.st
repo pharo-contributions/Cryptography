@@ -37,8 +37,8 @@ BaselineOfCryptography >> baseline: spec [
 			
 			"Other"
 			package: 'Blowfish' with: [ spec requires: #(#'Cryptography-Core') ];
-			package: 'OpenPGP' with: [ spec requires: #(#'Cryptography') ];
-			package: 'LayeredProtocol' with: [ spec requires: #(#'Cryptography') ].
+			package: 'OpenPGP' with: [ spec requires: #(#'Cryptography-Core') ];
+			package: 'LayeredProtocol' with: [ spec requires: #(#'Cryptography-Core') ].
 		
 		spec
 			group: 'core' with: #('Cryptography-Core');
