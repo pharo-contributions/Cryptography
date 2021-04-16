@@ -111,7 +111,7 @@ ByteArray >> uint: bits at: anInteger [
 	1 to: bytes do:
 		[ :digitPosition |
 		answer
-			digitAt: digitPosition
+			byteAt: digitPosition
 			put: (self at: digitPosition + anInteger - 1) ].
 	^answer normalize
 ]
@@ -125,7 +125,7 @@ ByteArray >> uint: bits at: position put: anInteger [
 			[ :pos |
 			self
 				at: pos
-				put: (anInteger digitAt: pos-position+1) ].
+				put: (anInteger byteAt: pos-position+1) ].
 	^ anInteger
 ]
 
