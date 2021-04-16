@@ -36,6 +36,7 @@ SHA256WithPrimitive >> finalHash [
 { #category : #private }
 SHA256WithPrimitive >> initialize [
 
+	super initialize.
 	state := ByteArray new: 32.
 	self primInitializeState: state
 ]

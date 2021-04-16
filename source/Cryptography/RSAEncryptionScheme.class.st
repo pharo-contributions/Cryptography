@@ -119,6 +119,8 @@ RSAEncryptionScheme >> encrypt: aByteArray [
 
 { #category : #initialization }
 RSAEncryptionScheme >> initialize [
+	
+	super initialize.
 	rand := Random new.
 	hash := SHA1 new.
 	hashLen := 20

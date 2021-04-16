@@ -126,6 +126,8 @@ MD4 >> hashStream: aStream [
 
 { #category : #initialization }
 MD4 >> initialize [
+	
+	super initialize.
 	a := 16r67452301.
 	b := 16rEFCDAB89.
 	c := 16r98BADCFE.

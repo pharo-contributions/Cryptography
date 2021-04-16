@@ -112,6 +112,8 @@ KeyHolder >> encryptKey: pKey [
 
 { #category : #'initialize-release' }
 KeyHolder >> initialize [
+	
+	super initialize.
 	self random: (SecureRandom picker nextBytesNonZero: 32)
 ]
 

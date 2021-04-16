@@ -893,7 +893,9 @@ ARC2 >> expandedKey [
 
 { #category : #'initialize-release' }
 ARC2 >> initialize [
-	self j: 0.
+
+	super initialize.
+	self j: 0
 ]
 
 { #category : #accessing }

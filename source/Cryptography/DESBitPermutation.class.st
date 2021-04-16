@@ -58,6 +58,8 @@ DESBitPermutation class >> initialize [
 
 { #category : #'initialize-release' }
 DESBitPermutation >> initialize [
+	
+	super initialize.
 	tables := #()
 ]
 

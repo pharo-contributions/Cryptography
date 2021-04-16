@@ -113,6 +113,7 @@ SHA256NonPrimitive >> finalHash [
 SHA256NonPrimitive >> initialize [
 	"Initialize totalA through totalH to their seed values."
 
+	super initialize.
 	totalA := ThirtyTwoBitRegister new load: self class h0.
 	totalB := ThirtyTwoBitRegister new load: self class h1.
 	totalC := ThirtyTwoBitRegister new load: self class h2.
