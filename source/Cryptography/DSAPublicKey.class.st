@@ -1,3 +1,6 @@
+"
+Digital Signature Algorithm - the public key
+"
 Class {
 	#name : #DSAPublicKey,
 	#superclass : #Object,

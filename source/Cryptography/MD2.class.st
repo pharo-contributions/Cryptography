@@ -1,3 +1,6 @@
+"
+Message-Digest Algorithm 2
+"
 Class {
 	#name : #MD2,
 	#superclass : #HashFunction,
@@ -7,16 +10,18 @@ Class {
 	#category : #'Cryptography-MD4'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 MD2 class >> initialize [
 
 	PITable := OrderedCollection new.
-	self initializeFirstHalfPITable.
-	self initializeSecondHalfPITable.
+	
+	self 
+		initializeFirstHalfPITable;
+		initializeSecondHalfPITable
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'private - initialization' }
 MD2 class >> initializeFirstHalfPITable [
 
 	PITable addAll: {
@@ -33,7 +38,7 @@ MD2 class >> initializeFirstHalfPITable [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'private - initialization' }
 MD2 class >> initializeSecondHalfPITable [
 
 	PITable addAll: {
@@ -50,14 +55,14 @@ MD2 class >> initializeSecondHalfPITable [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 MD2 class >> oidString [
 
 	^ '1.2.840.113549.2.2'.
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 MD2 class >> piTable [
 
 	^ PITable

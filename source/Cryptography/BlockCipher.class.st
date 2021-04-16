@@ -12,6 +12,12 @@ BlockCipher class >> blockSize [
 	^ self subclassResponsibility
 ]
 
+{ #category : #testing }
+BlockCipher class >> isAbstract [
+
+	^ self == BlockCipher
+]
+
 { #category : #'instance creation' }
 BlockCipher class >> key: aByteArray [
 	^ self new key: aByteArray

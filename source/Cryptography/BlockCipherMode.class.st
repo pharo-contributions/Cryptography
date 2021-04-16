@@ -16,6 +16,12 @@ BlockCipherMode class >> blockSize [
 	^ self shouldNotImplement
 ]
 
+{ #category : #testing }
+BlockCipherMode class >> isAbstract [
+
+	^self == BlockCipherMode 
+]
+
 { #category : #'*cryptography-tests' }
 BlockCipherMode class >> key: aByteArray [
 	Warning signal: 'you do NOT want to use this method in a real program because we use a hard-coded nonce.  You should take care of your own nonce.'.
@@ -30,7 +36,10 @@ BlockCipherMode class >> keySize [
 
 { #category : #'instance creation' }
 BlockCipherMode class >> on: aCipher [
-	^ self new setCipher: aCipher
+
+	^ (self new) 
+		setCipher: aCipher;
+		yourself
 ]
 
 { #category : #accessing }

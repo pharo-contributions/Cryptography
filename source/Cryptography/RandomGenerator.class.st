@@ -1,3 +1,6 @@
+"
+Abstract superclass for random generators
+"
 Class {
 	#name : #RandomGenerator,
 	#superclass : #Object,
@@ -7,7 +10,7 @@ Class {
 	#category : #'Cryptography-RandomAndPrime'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #utilities }
 RandomGenerator class >> destroyPickers [
 	self withAllSubclassesDo: 
 		[ : each | 
@@ -17,16 +20,7 @@ RandomGenerator class >> destroyPickers [
 			put: nil ]
 ]
 
-{ #category : #create }
-RandomGenerator class >> fromUser [
-	"Ask the user to type a long random string and use the result to seed the secure random number generator."
-
-	| string |
-	string := FillInTheBlank request: 'Enter a long random string to seed the random generator.'.
-	^ self key: string
-]
-
-{ #category : #'initialize-release' }
+{ #category : #'instance creation' }
 RandomGenerator class >> generateKey [
 	| unguessableBytes prior |
 	prior := UUID new shuffled asInteger.
@@ -49,13 +43,19 @@ RandomGenerator class >> generateKey [
 	^ SHA256 new hashMessage: unguessableBytes
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'class initialization' }
 RandomGenerator class >> initialize [
-	super initialize.
+
 	Smalltalk
 		addToStartUpList: self ;
 		addToShutDownList: self.
 	self startUp
+]
+
+{ #category : #testing }
+RandomGenerator class >> isAbstract [ 
+
+	^ self == RandomGenerator
 ]
 
 { #category : #create }
@@ -68,19 +68,19 @@ RandomGenerator class >> picker [
 	^ picker ifNil: [ picker := self withGeneratedKey ]
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'startup - shutdown' }
 RandomGenerator class >> shutDown [
 	super shutDown.
 	self destroyPickers
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'startup - shutdown' }
 RandomGenerator class >> startUp [
 	super startUp.
 	self destroyPickers
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #utilities }
 RandomGenerator class >> unpredictableStringsDo: aBlock [
 	"Enumerate sources of information from my environment that should be generally hard to guess."
 	| time |
@@ -110,7 +110,7 @@ RandomGenerator class >> withGeneratedKey [
 	^ self key: self generateKey
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #cleanup }
 RandomGenerator >> destroy [
 	self subclassResponsibility 
 ]

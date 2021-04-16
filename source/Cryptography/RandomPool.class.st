@@ -1,3 +1,6 @@
+"
+A random pool of numbers
+"
 Class {
 	#name : #RandomPool,
 	#superclass : #Stream,
@@ -15,7 +18,8 @@ Class {
 
 { #category : #default }
 RandomPool class >> default [
-	^ default ifNil: [default := self new: 4096]
+
+	^ default ifNil: [ default := self new: 4096 ]
 ]
 
 { #category : #'intance creation' }
@@ -28,12 +32,12 @@ RandomPool class >> new: anInteger [
 	^ self basicNew initializePoolSize: anInteger
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> atEnd [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 RandomPool >> grabRandomBitsFromSoundInput: bitCount [
 	"Grab the given number of random bits of 'noise' from a sound input source. Typically, one would use a microphone or line input as the sound source, although many sound cards have enough thermal noise that you get random low-order sample bits even with no microphone connected. Only the least signficant bit of the samples is used. Since not all sound cards support 16-bits of sample resolution, we use the lowest bit that changes."
 
@@ -65,7 +69,7 @@ RandomPool >> grabRandomBitsFromSoundInput: bitCount [
 	self nextPutAll: randomBits
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 RandomPool >> initializePoolSize: anInteger [
 	key := ByteArray new: TripleDES keySize.
 	pool := ByteArray new: anInteger // TripleDES blockSize + 1 * TripleDES blockSize.
@@ -75,7 +79,7 @@ RandomPool >> initializePoolSize: anInteger [
 	self stir
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> next [
 	outputStream atEnd
 		ifTrue: [self stir.
@@ -83,7 +87,7 @@ RandomPool >> next [
 	^ outputStream next
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> next: anInteger [
 	| answer |
 	answer := ByteArray new: anInteger.
@@ -91,7 +95,7 @@ RandomPool >> next: anInteger [
 	^ answer
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> nextPut: aByte [
 	| keyIndex |
 	inputIndex = pool size ifTrue: [self stir].
@@ -102,13 +106,13 @@ RandomPool >> nextPut: aByte [
 	^ aByte
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> nextPutAll: aCollection [
 	aCollection do: [ :each | self nextPut: each].
 	^ aCollection
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 RandomPool >> stir [
 	| cipher block |
 	cipher := (TripleDES key: key) cbc.

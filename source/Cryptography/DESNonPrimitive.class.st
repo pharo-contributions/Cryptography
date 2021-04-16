@@ -32,7 +32,7 @@ DESNonPrimitive class >> initSBox: index from: anArray [
 
 { #category : #'class initialization' }
 DESNonPrimitive class >> initialize [
-	"DESNonPrimitive initialize"
+
 	DESBitPermutation initialize.
 	PC1 := DESBitPermutation fromDESBitIndexes: #(
 		57	49	41	33	25	17	9

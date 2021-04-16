@@ -1,3 +1,6 @@
+"
+A unique instance ID of the Smalltalk image. Image need to be saved to stay persistent
+"
 Class {
 	#name : #SmalltalkImageInstanceID,
 	#superclass : #Object,
@@ -6,12 +9,6 @@ Class {
 	],
 	#category : #'Cryptography-RandomAndPrime'
 }
-
-{ #category : #inquires }
-SmalltalkImageInstanceID class >> InstanceID [
-	
-	^nil 
-]
 
 { #category : #LICENSE }
 SmalltalkImageInstanceID class >> LICENSE [
@@ -28,33 +25,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 { #category : #'class initialization' }
 SmalltalkImageInstanceID class >> initialize [
-	super initialize.
+
 	Smalltalk 
 		addToStartUpList: self ;
 		addToShutDownList: self.
 	self startUp
 ]
 
-{ #category : #inquires }
+{ #category : #accessing }
 SmalltalkImageInstanceID class >> instanceID [
-	
-	^InstanceID ifNil: [
-		Transcript show: thisContext sender.
-		thisContext sender receiver = self ifTrue: [
-			InstanceID := UUID new.
-		] ifFalse: [
-			InstanceID := nil
-		].
-		InstanceID].
+
+	^ InstanceID ifNil: [ 
+		  InstanceID := thisContext sender receiver = self
+			                ifTrue: [ UUID new ]
+			                ifFalse: [ nil ].
+		  InstanceID ]
 ]
 
-{ #category : #'class initialization' }
+{ #category : #'startup - shutdown' }
 SmalltalkImageInstanceID class >> shutDown [
 	super shutDown.
 	InstanceID := nil.
 ]
 
-{ #category : #'class initialization' }
+{ #category : #'startup - shutdown' }
 SmalltalkImageInstanceID class >> startUp [
 	super startUp.
 	InstanceID := nil.

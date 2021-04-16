@@ -1,3 +1,6 @@
+"
+Digital Signature Algorithm - the private key
+"
 Class {
 	#name : #DSAPrivateKey,
 	#superclass : #Object,

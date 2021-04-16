@@ -1,3 +1,6 @@
+"
+SHA256 version without using a VM plugin
+"
 Class {
 	#name : #SHA256NonPrimitive,
 	#superclass : #SHA256,

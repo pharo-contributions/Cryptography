@@ -11,6 +11,16 @@ Class {
 	#category : #'Cryptography-RandomAndPrime'
 }
 
+{ #category : #example }
+Fortuna class >> fromUser [
+	"Ask the user to type a long random string and use the result to seed the secure random number generator."
+	<script: 'self fromUser inspect'>
+
+	| string |
+	string := UIManager default request: 'Enter a long random string to seed the random generator.'.
+	^ self key: string
+]
+
 { #category : #'instance creation' }
 Fortuna class >> key: aByteArray [
 	^ self new 

@@ -1,3 +1,6 @@
+"
+Message-Digest Algorithm 4
+"
 Class {
 	#name : #MD4,
 	#superclass : #HashFunction,

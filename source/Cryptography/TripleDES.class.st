@@ -1,3 +1,6 @@
+"
+Triple DES (3DES or TDES), officially the Triple Data Encryption Algorithm (TDEA or Triple DEA), is a symmetric-key block cipher,
+"
 Class {
 	#name : #TripleDES,
 	#superclass : #BlockCipher,

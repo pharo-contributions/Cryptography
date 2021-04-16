@@ -1,3 +1,6 @@
+"
+Advanced Encryption Standard (AES)
+"
 Class {
 	#name : #Rijndael,
 	#superclass : #BlockCipher,

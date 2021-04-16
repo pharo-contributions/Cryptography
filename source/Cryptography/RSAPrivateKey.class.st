@@ -1,3 +1,6 @@
+"
+An RSA private key
+"
 Class {
 	#name : #RSAPrivateKey,
 	#superclass : #Object,

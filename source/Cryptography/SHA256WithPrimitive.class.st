@@ -1,3 +1,6 @@
+"
+SHA256 using the primitive VM plugin ""SHA256Plugin""
+"
 Class {
 	#name : #SHA256WithPrimitive,
 	#superclass : #SHA256,
@@ -17,9 +20,8 @@ SHA256WithPrimitive class >> hashSize [
 	^ 32
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 SHA256WithPrimitive class >> isPluginAvailable [
-
 	<primitive: 'primitivePluginAvailable' module: 'SHA256Plugin'>
 	^false
 ]
