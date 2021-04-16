@@ -28,7 +28,7 @@ BaselineOfCryptography >> baseline: spec [
 		spec
 			group: 'core' with: #('Cryptography');
 			group: 'default' with: #('legacy');
-			group: 'legacy' with: #('Cryptography' 'ASN1-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' );
+			group: 'legacy' with: #('Cryptography' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' );
 			group: 'all' with: #('Cryptography' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' 'PBKDF2-Tests' 'Blowfish' 'OpenPGP' 'LayeredProtocol')
 	]. 
 ]
