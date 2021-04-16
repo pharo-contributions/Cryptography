@@ -9,7 +9,7 @@ Class {
 	#classVars : [
 		'Modules'
 	],
-	#category : #'ASN1-Core-ASN1-Core'
+	#category : #'ASN1-Core-Base'
 }
 
 { #category : #'class initialization' }
