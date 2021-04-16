@@ -201,33 +201,36 @@ CryptoASN1Test >> testConstructedUniversalString [
 CryptoASN1Test >> testDefinedAnyDefinedByType [
 
 	| bytes obj newBytes type |
-	((ASN1Module name: #test) sequence: #TestSequence mapping: ASN1TestModel)
+	((ASN1Module name: #test)
+		 sequence: #TestSequence
+		 mapping: ASN1TestModel)
 		add: #testSlot1 type: #ASN1ObjectIdentifierType;
 		add: #testSlot2 type: #TestAnyDefinedBy;
 		yourself.
-	((ASN1Module name: #test) any: #TestAnyDefinedBy definedBy: #testSlot1)
+	((ASN1Module name: #test)
+		 any: #TestAnyDefinedBy
+		 definedBy: #testSlot1)
 		at: (ASN1ObjectId fromString: '1.1') put: #ASN1BooleanType;
 		at: (ASN1ObjectId fromString: '1.2') put: #ASN1IntegerType;
 		yourself.
 
 	type := (ASN1Module name: #test) find: #TestSequence.
 
-	bytes := #(48 6 6 1 41 1 1 255).
+	bytes := #( 48 6 6 1 41 1 1 255 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = (ASN1ObjectId fromString: '1.1')).
-	self assert: (obj testSlot2 = true).
+	self assert: obj testSlot1 equals: (ASN1ObjectId fromString: '1.1').
+	self assert: obj testSlot2 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes.
 
-	bytes := #(48 7 6 1 42 2 2 3 21).
+	bytes := #( 48 7 6 1 42 2 2 3 21 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = (ASN1ObjectId fromString: '1.2')).
-	self assert: (obj testSlot2 = 789).
+	self assert: obj testSlot1 equals: (ASN1ObjectId fromString: '1.2').
+	self assert: obj testSlot2 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
