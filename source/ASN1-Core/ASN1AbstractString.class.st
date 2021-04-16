@@ -15,6 +15,12 @@ ASN1AbstractString class >> fromString: aString [
 		yourself
 ]
 
+{ #category : #testing }
+ASN1AbstractString class >> isAbstract [
+
+	^ self == ASN1AbstractString
+]
+
 { #category : #printing }
 ASN1AbstractString >> , aString [
 
