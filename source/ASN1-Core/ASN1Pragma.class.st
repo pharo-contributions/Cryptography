@@ -30,6 +30,12 @@ ASN1Pragma class >> fromPragma: aPragma [
 	^aClass fromPragma: aPragma
 ]
 
+{ #category : #testing }
+ASN1Pragma class >> isAbstract [
+
+	^ self == ASN1Pragma
+]
+
 { #category : #'instance creation' }
 ASN1Pragma class >> isAccessorPragma: aPragma [
 	^aPragma keyword = #asn1FieldAccessor:
