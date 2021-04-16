@@ -25,7 +25,7 @@ ASN1FieldDefinition class >> forField: aFieldName onDefinition: aDefinitionStrin
 			- 1.
 	noCommentsString := String new.
 	definitionContents linesDo: [:aLine |
-		((aLine indexOfSubCollection: '--') > 0	or: [aLine withBlanksTrimmed isEmpty])
+		((aLine indexOfSubCollection: '--') > 0	or: [aLine withBlanksCondensed isEmpty])
 		ifFalse: [noCommentsString := noCommentsString, aLine].
 	].
 	fieldInfo := (noCommentsString explode: $,)

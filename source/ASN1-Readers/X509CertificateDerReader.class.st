@@ -1,3 +1,6 @@
+"
+Reader for X509 DER certfificates
+"
 Class {
 	#name : #X509CertificateDerReader,
 	#superclass : #Object,
@@ -12,7 +15,7 @@ X509CertificateDerReader class >> fromDerBytes: bytes [
 
 	^ self new 
 		derBytes: bytes;
-		yourself.
+		yourself
 
 ]
 
@@ -23,10 +26,7 @@ X509CertificateDerReader class >> fromFile: filename [
 	"(X509CertificateDerReader fromFile: '/Users/slosher/Desktop/squeak/certificates/class3cacert.crt') asCertificate"
 	"(X509CertificateDerReader fromFile: '/Users/slosher/Desktop/squeak/certificates/class1cacert.crt') asCertificate"
 
-	| fs data |
-	fs := StandardFileStream fileNamed: filename.
-	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data
+	^ self new initializeFromFileContents: filename asFileReference contents
 
 ]
 
@@ -44,7 +44,7 @@ X509CertificateDerReader >> derBytes: anObject [
 	derBytes := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'private - initialization' }
 X509CertificateDerReader >> initializeFromFileContents: data [
 
 	| i j theData |

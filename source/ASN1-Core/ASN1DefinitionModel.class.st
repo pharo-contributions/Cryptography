@@ -224,7 +224,7 @@ ASN1DefinitionModel >> parseASN1ClassName [
 	aDefString := self asn1DefinitionString ifNil: [ ^ nil ].
 	classSepIndex := aDefString indexOfSubCollection: '::='.
 	classSepIndex = 0 ifTrue: [ ^ nil ].
-	^ (aDefString copyFrom: 1 to: classSepIndex - 1) withBlanksTrimmed
+	^ (aDefString copyFrom: 1 to: classSepIndex - 1) withBlanksCondensed
 ]
 
 { #category : #'services parsing' }
@@ -246,7 +246,7 @@ ASN1DefinitionModel >> parseFieldNames [
 	aString := self asn1DefinitionString.
 	result := OrderedCollection new.
 	(aString copyFrom: (aString indexOf: ${) + 1 to: (aString indexOf: $}) - 1) linesDo: [:aLine |
-		(((aLine indexOfSubCollection: '--') > 0) or: [aLine withBlanksTrimmed isEmpty])ifFalse: [
+		(((aLine indexOfSubCollection: '--') > 0) or: [aLine withBlanksCondensed isEmpty])ifFalse: [
 			result add: aLine substrings first
 		].
 	].
@@ -261,7 +261,7 @@ ASN1DefinitionModel >> parseRootObjectType [
 	aString := self asn1DefinitionString.
 	aType := (aString copyFrom: (aString indexOfSubCollection: '::=')
 					+ 4 to: (aString indexOf: ${)
-					- 1) withBlanksTrimmed.
+					- 1) withBlanksCondensed.
 	^aType isEmpty
 		ifTrue: [self subject]
 		ifFalse: [aType = 'SEQUENCE'

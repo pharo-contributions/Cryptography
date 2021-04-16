@@ -1,3 +1,6 @@
+"
+Reader for RSA private key files
+"
 Class {
 	#name : #RSAPrivateKeyFileReader,
 	#superclass : #Object,
@@ -150,7 +153,7 @@ RSAPrivateKeyFileReader >> processDEKInfo: data [
 	| stream algorithm |
 	stream := data readStream.
 	stream upTo: $:.
-	algorithm := (stream upTo: $,) withBlanksTrimmed.
+	algorithm := (stream upTo: $,) withBlanksCondensed.
 	self iv: (Integer readFrom: stream base: 16) asByteArray.
 
 ]

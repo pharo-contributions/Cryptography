@@ -1,3 +1,6 @@
+"
+Reader for RSA public key files
+"
 Class {
 	#name : #RSAPublicKeyFileReader,
 	#superclass : #Object,
@@ -12,10 +15,7 @@ RSAPublicKeyFileReader class >> fromFile: filename [
 	"(RSAPrivateKeyFileReader fromFile: '/usr/local/ssl/private/CA.key')"
 	"(RSAPrivateKeyFileReader fromFile: '/Users/slosher/Desktop/squeak/certificates/rsa.key')"
 
-	| fs data |
-	fs := StandardFileStream fileNamed: filename.
-	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data
+	^ self new initializeFromFileContents: filename asFileReference contents
 
 ]
 
@@ -49,7 +49,7 @@ RSAPublicKeyFileReader >> bytes: anObject [
 	bytes := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'private - initialization' }
 RSAPublicKeyFileReader >> initializeFromFileContents: data [
 
 	| i j theData |
