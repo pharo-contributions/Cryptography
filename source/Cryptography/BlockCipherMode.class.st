@@ -1,3 +1,6 @@
+"
+Common superclass for Cipher modes
+"
 Class {
 	#name : #BlockCipherMode,
 	#superclass : #BlockCipher,

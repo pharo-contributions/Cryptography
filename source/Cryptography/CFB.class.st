@@ -1,3 +1,6 @@
+"
+Cipher Feedback Mode 
+"
 Class {
 	#name : #CFB,
 	#superclass : #BlockCipherMode,

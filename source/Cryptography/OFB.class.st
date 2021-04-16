@@ -1,3 +1,6 @@
+"
+Output Feedback Mode
+"
 Class {
 	#name : #OFB,
 	#superclass : #BlockCipherMode,

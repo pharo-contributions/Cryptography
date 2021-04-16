@@ -1,3 +1,6 @@
+"
+Cipher Block Chaining Mode
+"
 Class {
 	#name : #CBC,
 	#superclass : #BlockCipherMode,
