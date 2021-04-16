@@ -74,6 +74,7 @@ ASN1StructureElement >> hasDefaultOrIsOptional [
 { #category : #initialization }
 ASN1StructureElement >> initialize [
 
+	super initialize.
 	self optional: false
 ]
 
