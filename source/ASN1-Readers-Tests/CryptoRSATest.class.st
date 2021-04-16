@@ -5,7 +5,7 @@ Class {
 		'privateKey',
 		'publicKey'
 	],
-	#category : 'ASN1-Readers-Tests'
+	#category : #'ASN1-Readers-Tests'
 }
 
 { #category : #RSA }
@@ -13,9 +13,7 @@ CryptoRSATest >> derKeys [
 
 	| key64 |
 	key64 := self encodedBase64Keys.
-
-	^(Base64MimeConverter mimeDecodeToBytes:  key64 readStream ) contents.
-
+	^key64 base64Decoded
 ]
 
 { #category : #RSA }
