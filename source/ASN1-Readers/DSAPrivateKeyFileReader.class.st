@@ -10,7 +10,7 @@ Class {
 	#category : #'ASN1-Readers-DSA'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 DSAPrivateKeyFileReader class >> fromFile: filename [
 	"(DSAPrivateKeyFileReader fromFile: '/usr/local/ssl/private/dsa.key')"
 	"(DSAPrivateKeyFileReader fromFile: '/Users/slosher/Desktop/squeak/certificates/dsa.key')"
@@ -67,8 +67,7 @@ DSAPrivateKeyFileReader >> bytes: anObject [
 DSAPrivateKeyFileReader >> decrypt [
 
 	| cipher key block encryptedStream decryptedStream |
-	self password isNil 
-		ifTrue: [self password: (FillInTheBlank requestPassword: 'Enter your password')].
+	self password ifNil: [self password: (UIManager default requestPassword: 'Enter your password')].
 	key := OpenSSLKeyDerivationFunction new 
 		derivedKeyFromPassword: self password 
 		salt: self iv 
@@ -105,11 +104,11 @@ DSAPrivateKeyFileReader >> initializeFromFileContents: data [
 	i := data indexOfSubCollection: '--BEGIN ' startingAt: 1.
 	i = 0 ifTrue: [self bytes: data asByteArray. ^ self].
 	i := data indexOfSubCollection: 'KEY--' startingAt: i.
-	i := data findAnySubStr: String crlf startingAt: i.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	i := data findAnySubstring: String crlf startingAt: i.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 	self processProcType: (data copyFrom: i + 1 to: j).
 	i := j.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 	self processDEKInfo: (data copyFrom: i + 1 to: j).
 	i := j.
 	j := data indexOfSubCollection: '--END ' startingAt: i.

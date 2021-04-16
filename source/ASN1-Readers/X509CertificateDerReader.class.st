@@ -54,7 +54,7 @@ X509CertificateDerReader >> initializeFromFileContents: data [
 		ifFalse: [
 			i := data indexOfSubCollection: 'CERTIFICATE--' startingAt: i.
 			j := data indexOfSubCollection: '--END ' startingAt: i.
-			i := data findAnySubStr: String crlf startingAt: i.
+			i := data findAnySubstring: String crlf startingAt: i.
 			theData := (data copyFrom: i to: j)
 				reject: [:c | (c = $-) or: [c isSeparator]]].
 	theData := (Base64MimeConverter mimeDecodeToBytes: theData readStream) contents.
