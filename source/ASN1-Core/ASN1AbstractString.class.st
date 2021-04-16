@@ -52,15 +52,13 @@ ASN1AbstractString >> hash [
 { #category : #'initialize-release' }
 ASN1AbstractString >> initialize [
 
-	self string: ''.
-
+	self string: ''
 ]
 
 { #category : #printing }
 ASN1AbstractString >> printOn: aStream [
 
-	self string printOn: aStream.
- 
+	self string printOn: aStream
 ]
 
 { #category : #accessing }

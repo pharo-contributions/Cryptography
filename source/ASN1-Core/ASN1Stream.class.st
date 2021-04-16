@@ -65,14 +65,14 @@ ASN1Stream class >> initializeTagToTypeDispatchTable [
 { #category : #'instance creation' }
 ASN1Stream class >> new [
 
-	^ self onStream: (ByteArray new: 100) writeStream.
+	^ self onStream: (ByteArray new: 100) writeStream
 
 ]
 
 { #category : #'instance creation' }
 ASN1Stream class >> onBytes: bytes [
 
-	^ self onStream: bytes readStream.
+	^ self onStream: bytes readStream
 
 ]
 
@@ -81,16 +81,16 @@ ASN1Stream class >> onStream: aStream [
 
 	^ super new
 		stream: aStream;
-		yourself.
+		yourself
 
 ]
 
 { #category : #'class initialization' }
 ASN1Stream class >> tagToTypeDispatchTable [
 
-	TagToTypeDispatchTable isNil ifTrue: [self initializeTagToTypeDispatchTable].
+	TagToTypeDispatchTable isNil ifTrue: [ 
+		self initializeTagToTypeDispatchTable ].
 	^ TagToTypeDispatchTable
-
 ]
 
 { #category : #'stream - api' }
@@ -128,19 +128,18 @@ ASN1Stream >> decode [
 	tagClass := tag bitAnd: 2r11000000.
 	isConstructed := (tag bitAnd: 2r00100000) > 0.
 	tagClass > 0
-		ifTrue: [isConstructed
-			ifTrue: [type := ASN1WrapperConstructedType new]
-			ifFalse: [type := ASN1WrapperPrimitiveType new]]
-		ifFalse: [type := self class tagToTypeDispatchTable at: numericTag].
-	^ self decodeWithType: type.
-
+		ifTrue: [ 
+			isConstructed
+				ifTrue: [ type := ASN1WrapperConstructedType new ]
+				ifFalse: [ type := ASN1WrapperPrimitiveType new ] ]
+		ifFalse: [ type := self class tagToTypeDispatchTable at: numericTag ].
+	^ self decodeWithType: type
 ]
 
 { #category : #decoding }
 ASN1Stream >> decodeWithType: type [
 
-	^ type decodeWithDERStream: self.
-
+	^ type decodeWithDERStream: self
 ]
 
 { #category : #encoding }
@@ -152,12 +151,12 @@ ASN1Stream >> encode: anObject [
 	tagClass := tag bitAnd: 2r11000000.
 	isConstructed := (tag bitAnd: 2r00100000) > 0.
 	tagClass > 0
-		ifTrue: [isConstructed
-			ifTrue: [type := ASN1WrapperConstructedType new]
-			ifFalse: [type := ASN1WrapperPrimitiveType new]]
-		ifFalse: [type := self class tagToTypeDispatchTable at: numericTag].
-	^ self encode: anObject withType: type.
-
+		ifTrue: [ 
+			isConstructed
+				ifTrue: [ type := ASN1WrapperConstructedType new ]
+				ifFalse: [ type := ASN1WrapperPrimitiveType new ] ]
+		ifFalse: [ type := self class tagToTypeDispatchTable at: numericTag ].
+	^ self encode: anObject withType: type
 ]
 
 { #category : #encoding }
@@ -165,7 +164,6 @@ ASN1Stream >> encode: anObject withType: type [
 
 	type encode: anObject withDERStream: self.
 	^ self contents
-
 ]
 
 { #category : #'stream - api' }
@@ -191,16 +189,14 @@ ASN1Stream >> nextLength [
 
 	| tag val |
 	tag := self stream next.
-	tag = 2r10000000 
-		ifTrue: [^ -1].
-	((tag bitAnd: 2r10000000) > 0)
-		ifTrue: [
+	tag = 2r10000000 ifTrue: [ ^ -1 ].
+	(tag bitAnd: 2r10000000) > 0
+		ifTrue: [ 
 			val := 0.
-			(tag bitClear: 2r10000000) timesRepeat: [
-				val := (val bitShift: 8) + self stream next].
-			^ val]
-		ifFalse: [^ tag].
-
+			(tag bitClear: 2r10000000) timesRepeat: [ 
+				val := (val bitShift: 8) + self stream next ].
+			^ val ]
+		ifFalse: [ ^ tag ]
 ]
 
 { #category : #'stream - api' }
@@ -218,21 +214,19 @@ ASN1Stream >> nextPutAll: bytes [
 { #category : #'stream - api' }
 ASN1Stream >> nextPutLength: size [
 
-	size <= 127 
-		ifTrue: [self nextPut: size]
-		ifFalse: [
-			self nextPut: ((size bytesCount) bitOr: 16r80).
-			size bytesCount to: 1 by: -1 do: [:digitIndex |
-				self nextPut: (size byteAt: digitIndex)]]
-
+	size <= 127
+		ifTrue: [ self nextPut: size ]
+		ifFalse: [ 
+			self nextPut: (size bytesCount bitOr: 16r80).
+			size bytesCount to: 1 by: -1 do: [ :digitIndex | 
+			self nextPut: (size byteAt: digitIndex) ] ]
 ]
 
 { #category : #'stream - api' }
 ASN1Stream >> nextPutTag: tag [
 	"It's not clear how to encode a tag whose numerical value is greater than 30"
 
-	self nextPut: tag.
-
+	self nextPut: tag
 ]
 
 { #category : #'stream - api' }
@@ -240,14 +234,12 @@ ASN1Stream >> nextTag [
 
 	| tag octet |
 	tag := self stream next.
-	((tag bitAnd: 2r00011111) == 2r00011111)
-		ifTrue: [
-			tag := 0.
-			[
-				octet := self stream next.
-				tag := (tag bitShift: 7) bitOr: (octet bitClear: 2r10000000).
-				(octet bitAnd: 2r10000000) > 0] 
-					whileTrue].
+	(tag bitAnd: 2r00011111) == 2r00011111 ifTrue: [ 
+		tag := 0.
+		[ 
+		octet := self stream next.
+		tag := (tag bitShift: 7) bitOr: (octet bitClear: 2r10000000).
+		(octet bitAnd: 2r10000000) > 0 ] whileTrue ].
 	self currentTag: tag.
 	^ tag
 ]
@@ -257,7 +249,7 @@ ASN1Stream >> peekTag [
 
 	| start |
 	start := self position.
-	^[self nextTag] ensure: [self position: start]
+	^ [ self nextTag ] ensure: [ self position: start ]
 ]
 
 { #category : #'stream - api' }

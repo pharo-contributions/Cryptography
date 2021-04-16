@@ -25,9 +25,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 { #category : #'instance creation' }
 ASN1Pragma class >> fromPragma: aPragma [
+
 	| aClass |
-	aClass := (self isAccessorPragma: aPragma) ifTrue: [ASN1PragmaAccessor] ifFalse: [ASN1PragmaMutator].
-	^aClass fromPragma: aPragma
+	aClass := (self isAccessorPragma: aPragma)
+		          ifTrue: [ ASN1PragmaAccessor ]
+		          ifFalse: [ ASN1PragmaMutator ].
+	^ aClass fromPragma: aPragma
 ]
 
 { #category : #testing }
@@ -38,7 +41,8 @@ ASN1Pragma class >> isAbstract [
 
 { #category : #'instance creation' }
 ASN1Pragma class >> isAccessorPragma: aPragma [
-	^aPragma keyword = #asn1FieldAccessor:
+
+	^ aPragma keyword = #asn1FieldAccessor:
 ]
 
 { #category : #accessing }

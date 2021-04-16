@@ -19,7 +19,8 @@ ASN1ObjectId class >> fromString: oidString [
 
 { #category : #'private - parsing' }
 ASN1ObjectId >> = anotherOid [
-	^anotherOid class = self class and: [self oid = anotherOid oid]
+
+	^ anotherOid class = self class and: [ self oid = anotherOid oid ]
 ]
 
 { #category : #'private - parsing' }
@@ -44,7 +45,7 @@ ASN1ObjectId >> asByteArray [
 				bytes := lengthStream contents reversed.
 				dataStream 
 					nextPutAll: bytes ]].
-	^ dataStream contents.
+	^ dataStream contents
 
 ]
 
@@ -96,7 +97,7 @@ ASN1ObjectId >> initializeDescription [
 ASN1ObjectId >> oid [
 	"Answer the receiver's instance variable oid."
 
-	^oid
+	^ oid
 ]
 
 { #category : #accessing }

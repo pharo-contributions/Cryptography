@@ -3,8 +3,7 @@ Extension { #name : #Integer }
 { #category : #'*ASN1-Core' }
 Integer >> asAsn1Bytes [
 
-	^ ASN1Stream encode: self.
-
+	^ ASN1Stream encode: self
 ]
 
 { #category : #'*ASN1-Core' }

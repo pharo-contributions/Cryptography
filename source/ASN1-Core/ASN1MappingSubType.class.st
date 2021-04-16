@@ -78,8 +78,7 @@ ASN1MappingSubType >> mapping: aClass mappingSymbol: aSymbol type: aType [
 
 	self mapping: aClass.
 	self mappingSymbol: aSymbol.
-	self parent: aType.
-
+	self parent: aType
 ]
 
 { #category : #accessing }
@@ -105,5 +104,5 @@ ASN1MappingSubType >> matchesTag: anInteger [
 { #category : #accessing }
 ASN1MappingSubType >> mutator [
 
-	^(self mappingSymbol copyWith: $:) asSymbol
+	^ (self mappingSymbol copyWith: $:) asSymbol
 ]

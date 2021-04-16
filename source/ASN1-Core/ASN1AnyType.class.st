@@ -7,24 +7,21 @@ Class {
 { #category : #decoding }
 ASN1AnyType >> decodeWithDERStream: derStream [
 
-	^ derStream decode.
-
+	^ derStream decode
 ]
 
 { #category : #encoding }
 ASN1AnyType >> encode: anObject withDERStream: derStream [
 
-	derStream encode: anObject.
-
+	derStream encode: anObject
 ]
 
 { #category : #testing }
 ASN1AnyType >> isTypeFor: anObject [
 
 	^ (ASN1Stream tagToTypeDispatchTable
-		detect: [:eachType | eachType isTypeFor: anObject]
-		ifNone: [nil]) notNil
-
+		   detect: [ :eachType | eachType isTypeFor: anObject ]
+		   ifNone: [ nil ]) notNil
 ]
 
 { #category : #testing }

@@ -53,7 +53,9 @@ ASN1DefinitionModel class >> on: aClassWithASN1Definitions [
 ASN1DefinitionModel >> asn1ClassName [
 	"Answer the value of asn1ClassName"
 
-	^ asn1ClassName ifNil: [asn1ClassName := self parseASN1ClassName. asn1ClassName]
+	^ asn1ClassName ifNil: [ 
+		  asn1ClassName := self parseASN1ClassName.
+		  asn1ClassName ]
 ]
 
 { #category : #accessing }
@@ -67,7 +69,9 @@ ASN1DefinitionModel >> asn1ClassName: anObject [
 ASN1DefinitionModel >> asn1DefinitionString [
 	"Answer the value of asn1DefinitionString"
 
-	^ asn1DefinitionString ifNil: [asn1DefinitionString := self parseASN1DefinitionString. asn1DefinitionString]
+	^ asn1DefinitionString ifNil: [ 
+		  asn1DefinitionString := self parseASN1DefinitionString.
+		  asn1DefinitionString ]
 ]
 
 { #category : #accessing }
@@ -79,15 +83,13 @@ ASN1DefinitionModel >> asn1DefinitionString: anObject [
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> createObjectsAndPushFields [
-	self resultObject ifNil: 
-		[self setRootObject].
-	self currentObject ifNil: 
-		[self setCurrentObject].
-	self currentField isNil 
-		ifTrue: [self setCurrentField]
-		ifFalse: [self pushNextField].
-	self setCurrentMutator.
-	
+
+	self resultObject ifNil: [ self setRootObject ].
+	self currentObject ifNil: [ self setCurrentObject ].
+	self currentField isNil
+		ifTrue: [ self setCurrentField ]
+		ifFalse: [ self pushNextField ].
+	self setCurrentMutator
 ]
 
 { #category : #accessing }
@@ -150,7 +152,7 @@ ASN1DefinitionModel >> currentObject: anObject [
 ASN1DefinitionModel >> fieldStack [
 	"Answer the value of fieldStack"
 
-	^ fieldStack ifNil: [fieldStack := Stack new].
+	^ fieldStack ifNil: [ fieldStack := Stack new ]
 ]
 
 { #category : #accessing }
@@ -164,7 +166,9 @@ ASN1DefinitionModel >> fieldStack: anObject [
 ASN1DefinitionModel >> fields [
 	"Answer the value of fields"
 
-	^ fields ifNil: [fields := self parseFieldNames. fields].
+	^ fields ifNil: [ 
+		  fields := self parseFieldNames.
+		  fields ]
 ]
 
 { #category : #accessing }
@@ -176,7 +180,7 @@ ASN1DefinitionModel >> fields: anObject [
 
 { #category : #'services pragma' }
 ASN1DefinitionModel >> getPragmaAccessors [
-	"return the pragmas defined on this class.  These values are usually put in the accessor of the ivar, but could be in other regular methods if it is appropriate.  The form of the pragma is <asn1FieldAccessor: 'put the name of the field from the left hand side of the asn1Definition here'>.  
+	"Return the pragmas defined on this class.  These values are usually put in the accessor of the ivar, but could be in other regular methods if it is appropriate.  The form of the pragma is <asn1FieldAccessor: 'put the name of the field from the left hand side of the asn1Definition here'>.  
 	for example if you have an ivar named: #title that has a definition 
 		MyASN1Object ::= Sequence {
 			asn1Title	DisplayableString
@@ -188,13 +192,14 @@ ASN1DefinitionModel >> getPragmaAccessors [
 			^title
 		
 	Every field definition in the asn1Defintion string must have a corresponding pragma"
-	
-	^(Pragma allNamed: #asn1FieldAccessor: in: self subject) collect: [:aPragma | ASN1PragmaAccessor fromPragma: aPragma].
+
+	^ (Pragma allNamed: #asn1FieldAccessor: in: self subject) collect: [ 
+		  :aPragma | ASN1PragmaAccessor fromPragma: aPragma ]
 ]
 
 { #category : #'services pragma' }
 ASN1DefinitionModel >> getPragmaMutators [
-	"return the pragmas defined on this class.  These values are usually put in the mutator of the ivar, but could be in other regular methods if it is appropriate.  The form of the pragma is <asn1FieldMutator: 'put the name of the field from the right hand side of the asn1Definition here' class: #ClassOfMutatorArgument>.    Use symbol for class because of monticello loading problems.
+	"Return the pragmas defined on this class.  These values are usually put in the mutator of the ivar, but could be in other regular methods if it is appropriate.  The form of the pragma is <asn1FieldMutator: 'put the name of the field from the right hand side of the asn1Definition here' class: #ClassOfMutatorArgument>.    Use symbol for class because of monticello loading problems.
 	for example if you have an ivar named: #title that has a definition 
 		MyASN1Object ::= Sequence {
 			asn1Title	DisplayableString
@@ -206,30 +211,33 @@ ASN1DefinitionModel >> getPragmaMutators [
 			title := aTitle.
 		
 	Every field definition in the asn1Defintion string must have a corresponding pragma"
-	
-	^(Pragma allNamed: #asn1FieldMutator:class: in: self subject) collect: [:aPragma | ASN1PragmaMutator fromPragma: aPragma].
+
+	^ (Pragma allNamed: #asn1FieldMutator:class: in: self subject) 
+		  collect: [ :aPragma | ASN1PragmaMutator fromPragma: aPragma ]
 ]
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> parseASN1ClassName [
-	"return the ans1definition argument string"
+	"Return the ans1definition argument string"
+
 	| aDefString classSepIndex |
-	aDefString := self asn1DefinitionString ifNil: [^nil].
+	aDefString := self asn1DefinitionString ifNil: [ ^ nil ].
 	classSepIndex := aDefString indexOfSubCollection: '::='.
-	classSepIndex = 0 ifTrue: [^nil].
-	^(aDefString copyFrom: 1 to: classSepIndex - 1) withBlanksTrimmed.
+	classSepIndex = 0 ifTrue: [ ^ nil ].
+	^ (aDefString copyFrom: 1 to: classSepIndex - 1) withBlanksTrimmed
 ]
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> parseASN1DefinitionString [
-	"return the ans1definition argument string"
+	"Return the ans1definition argument string"
+
 	| aPragma aCollection |
-	aCollection := Pragma allNamed: #asn1Definition: in: self subject class.
-	^ aCollection isEmpty
-		ifFalse: [aPragma := aCollection first.
-			aPragma arguments
-				at: 1
-				ifAbsent: []]
+	aCollection := Pragma
+		               allNamed: #asn1Definition:
+		               in: self subject class.
+	^ aCollection isEmpty ifFalse: [ 
+		  aPragma := aCollection first.
+		  aPragma arguments at: 1 ifAbsent: [ ]]
 ]
 
 { #category : #'services parsing' }
@@ -277,15 +285,17 @@ ASN1DefinitionModel >> resultObject: anObject [
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> setCurrentObject [
-	self currentObject: self subject new.
+
+	self currentObject: self subject new
 ]
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> setRootObject [
+
 	self resultObject: self parseRootObjectType new.
 	self resultObject isCollection
-		ifTrue: [self currentObject: self subject new]
-		ifFalse: [self currentObject: self resultObject]
+		ifTrue: [ self currentObject: self subject new ]
+		ifFalse: [ self currentObject: self resultObject ]
 ]
 
 { #category : #accessing }
@@ -304,12 +314,13 @@ ASN1DefinitionModel >> subject: anObject [
 
 { #category : #'services verifying' }
 ASN1DefinitionModel >> verifyFieldAccessorsAndMutators [
-	"check to see that the ans1 definition is represented by all the appropriate accessor and mutator definitions"
+	"Check to see that the ASN1 definition is represented by all the appropriate accessor and mutator definitions"
+
 	| myAccessors myMutators |
 	myAccessors := self getPragmaAccessors.
 	myMutators := self getPragmaMutators.
-	^self parseFieldNames allSatisfy: [:aField |
-		(myAccessors anySatisfy: [:anAccessor | anAccessor asn1name = aField]) and: [
-			(myMutators anySatisfy: [:aMutator | aMutator asn1name = aField])]].
-		
+	^ self parseFieldNames allSatisfy: [ :aField | 
+		  (myAccessors anySatisfy: [ :anAccessor | 
+			   anAccessor asn1name = aField ]) and: [ 
+			  myMutators anySatisfy: [ :aMutator | aMutator asn1name = aField ] ] ]
 ]

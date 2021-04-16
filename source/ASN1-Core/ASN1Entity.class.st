@@ -32,18 +32,16 @@ ASN1Entity class >> name: aSymbol in: aModule [
 ASN1Entity >> explicitSubType [
 
 	^ (ASN1ExplicitSubType name: nil)
-		parent: self;
-		yourself.
-
+		  parent: self;
+		  yourself
 ]
 
 { #category : #'subtype utilities' }
 ASN1Entity >> implicitSubType [
 
 	^ (ASN1ImplicitSubType name: nil)
-		parent: self;
-		yourself.
-
+		  parent: self;
+		  yourself
 ]
 
 { #category : #accessing }
@@ -78,8 +76,9 @@ ASN1Entity >> name: anObject [
 ASN1Entity >> typeFrom: typeSpec [
 
 	^ self module
-		ifNil: [typeSpec isBehavior
-			ifTrue: [typeSpec new]
-			ifFalse: [typeSpec]]
-		ifNotNil: [self module typeFrom: typeSpec]
+		  ifNil: [ 
+			  typeSpec isBehavior
+				  ifTrue: [ typeSpec new ]
+				  ifFalse: [ typeSpec ] ]
+		  ifNotNil: [ self module typeFrom: typeSpec ]
 ]

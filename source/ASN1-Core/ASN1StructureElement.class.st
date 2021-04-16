@@ -12,24 +12,23 @@ Class {
 ASN1StructureElement >> decode: aTarget withDERStream: derStream [
 
 	| tag val |
-	derStream atEnd ifTrue: [
-		self hasDefault ifTrue: [^self value: self default into: aTarget].
-		self isOptional ifTrue: [^self].
-		^ self error: 'missing element'].
+	derStream atEnd ifTrue: [ 
+		self hasDefault ifTrue: [ ^ self value: self default into: aTarget ].
+		self isOptional ifTrue: [ ^ self ].
+		^ self error: 'missing element' ].
 	tag := derStream peekTag.
 	(self matchesTag: tag)
-		ifTrue: [
-			val := type 
-				decodeWithDERStream: derStream 
-				owner: aTarget 
-				ownerType: self owner.
+		ifTrue: [ 
+			val := type
+				       decodeWithDERStream: derStream
+				       owner: aTarget
+				       ownerType: self owner.
 			self value: val into: aTarget.
 			^ val ]
-		ifFalse: [
-			self hasDefault ifTrue: [^self value: self default into: aTarget].
-			self isOptional ifTrue: [^self].
-			^ self error: 'missing element'].
-
+		ifFalse: [ 
+			self hasDefault ifTrue: [ ^ self value: self default into: aTarget ].
+			self isOptional ifTrue: [ ^ self ].
+			^ self error: 'missing element' ]
 ]
 
 { #category : #accessing }
@@ -51,16 +50,13 @@ ASN1StructureElement >> encode: anObject withDERStream: derStream [
 
 	| val |
 	val := self valueFrom: anObject.
-	(val == nil and: [self isOptional])
-		ifTrue: [^self].
-	(self hasDefault and: [self default = val])
-		ifTrue: [^self].
-	self type 
-		encode: val 
+	(val == nil and: [ self isOptional ]) ifTrue: [ ^ self ].
+	(self hasDefault and: [ self default = val ]) ifTrue: [ ^ self ].
+	self type
+		encode: val
 		withDERStream: derStream
-		owner: anObject 
-		ownerType: self owner.
-
+		owner: anObject
+		ownerType: self owner
 ]
 
 { #category : #testing }
@@ -78,7 +74,7 @@ ASN1StructureElement >> hasDefaultOrIsOptional [
 { #category : #'initialize-release' }
 ASN1StructureElement >> initialize [
 
-	self optional: false.
+	self optional: false
 ]
 
 { #category : #testing }

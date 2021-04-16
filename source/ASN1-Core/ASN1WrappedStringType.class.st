@@ -15,8 +15,7 @@ ASN1WrappedStringType >> decodeValueWithDERStream: derStream length: length [
 
 	| string |
 	string := (derStream next: length) asByteArray asString.
-	^ self wrapperClass fromString: string.
-
+	^ self wrapperClass fromString: string
 ]
 
 { #category : #encoding }
@@ -34,6 +33,5 @@ ASN1WrappedStringType >> octetsClass [
 { #category : #encoding }
 ASN1WrappedStringType >> sizeOfObject: anObject [
 
-	^ anObject string size.
-
+	^ anObject string size
 ]

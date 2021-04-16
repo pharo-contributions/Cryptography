@@ -15,7 +15,7 @@ Class {
 { #category : #'class initialization' }
 ASN1Module class >> initialize [
 
-	Modules := Dictionary new.
+	Modules := Dictionary new
 
 ]
 
@@ -37,7 +37,7 @@ ASN1Module class >> name: aSymbol [
 				name: aSymbol;
 				yourself.
 			self modules at: mod name put: mod.
-			mod].
+			mod]
 
 ]
 
@@ -45,72 +45,69 @@ ASN1Module class >> name: aSymbol [
 ASN1Module >> add: aType [
 
 	| old |
-	old := self definitions at: aType name ifAbsent: [nil].
+	old := self definitions at: aType name ifAbsent: [ nil ].
 	aType module: self.
-	old ifNotNil: [old becomeForward: aType].
-	^self definitions at: aType name put: aType.
-
+	old ifNotNil: [ old becomeForward: aType ].
+	^ self definitions at: aType name put: aType
 ]
 
 { #category : #accessing }
 ASN1Module >> addImport: aModule [
 
-	(self imports includes: aModule)
-		ifFalse: [self imports add: aModule].
-
+	(self imports includes: aModule) ifFalse: [ 
+		self imports add: aModule ]
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> any: aSymbol [
 
-	^ASN1AnyType name: aSymbol in: self
+	^ ASN1AnyType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> any: aSymbol definedBy: slotSymbol [
 
 	^ (ASN1AnyDefinedByType name: aSymbol in: self)
-		definedBy: slotSymbol;
-		yourself.
-
+		  definedBy: slotSymbol;
+		  yourself
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> assign: aSymbol from: otherSymbol [
 
 	^ (ASN1AssignmentSubType name: aSymbol in: self)
-		parent: otherSymbol;
-		yourself
+		  parent: otherSymbol;
+		  yourself
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> bitString: aSymbol [
 
-	^ASN1BitStringType name: aSymbol in: self
+	^ ASN1BitStringType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> bmpString: aSymbol [
 
-	^ASN1BMPStringType name: aSymbol in: self
+	^ ASN1BMPStringType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> boolean: aSymbol [
 
-	^ASN1BooleanType name: aSymbol in: self
+	^ ASN1BooleanType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> byteArray: aSymbol [
 
-	^ASN1ByteArrayType name: aSymbol in: self
+	^ ASN1ByteArrayType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> choice: aSymbol [
 
-	^ASN1ChoiceType name: aSymbol in: self
+	^ ASN1ChoiceType name: aSymbol in: self
 ]
 
 { #category : #accessing }
@@ -138,10 +135,9 @@ ASN1Module >> enumerated: aSymbol [
 ASN1Module >> explicit: aSymbol type: type tag: tag [
 
 	^ (ASN1ExplicitSubType name: aSymbol in: self)
-		parent: type;
-		tag: tag;
-		yourself
-
+		  parent: type;
+		  tag: tag;
+		  yourself
 ]
 
 { #category : #services }
@@ -154,31 +150,28 @@ ASN1Module >> find: aSymbol [
 
 	| type |
 	type := self primitiveTypeFind: aSymbol.
-	type notNil ifTrue: [^ type].
+	type notNil ifTrue: [ ^ type ].
 	type := self localFind: aSymbol.
-	type notNil ifTrue: [^ type].
-	self imports 
-		do: [:eachImportModule |
-			type := eachImportModule localFind: aSymbol.
-			type notNil ifTrue: [^ type]].
-	^ ASN1TypeReference name: aSymbol in: self.
-
+	type notNil ifTrue: [ ^ type ].
+	self imports do: [ :eachImportModule | 
+		type := eachImportModule localFind: aSymbol.
+		type notNil ifTrue: [ ^ type ] ].
+	^ ASN1TypeReference name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> ia5String: aSymbol [
 
-	^ASN1IA5StringType name: aSymbol in: self
+	^ ASN1IA5StringType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> implicit: aSymbol type: type tag: tag [
 
 	^ (ASN1ImplicitSubType name: aSymbol in: self)
-		parent: type;
-		tag: tag;
-		yourself
-
+		  parent: type;
+		  tag: tag;
+		  yourself
 ]
 
 { #category : #accessing }
@@ -199,8 +192,7 @@ ASN1Module >> imports: anObject [
 ASN1Module >> initialize [
 
 	self definitions: Dictionary new.
-	self imports: OrderedCollection new.
-
+	self imports: OrderedCollection new
 ]
 
 { #category : #'definitions - mapped' }
@@ -212,10 +204,7 @@ ASN1Module >> integer: aSymbol [
 { #category : #services }
 ASN1Module >> localFind: aSymbol [
 
-	^ self definitions
-		at: aSymbol
-		ifAbsent: [^ nil].
-
+	^ self definitions at: aSymbol ifAbsent: [ ^ nil ]
 ]
 
 { #category : #'definitions - mapped' }
@@ -241,28 +230,27 @@ ASN1Module >> name: anObject [
 { #category : #'definitions - mapped' }
 ASN1Module >> null: aSymbol [
 
-	^ASN1NullType name: aSymbol in: self
+	^ ASN1NullType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> objectIdentifier: aSymbol [
 
-	^ASN1ObjectIdentifierType name: aSymbol in: self
+	^ ASN1ObjectIdentifierType name: aSymbol in: self
 ]
 
 { #category : #services }
 ASN1Module >> primitiveTypeFind: aSymbol [
 
 	^ (ASN1Type allSubclasses
-		detect: [:class | class name asSymbol = aSymbol]
-		ifNone: [^ nil]) new
-
+		   detect: [ :class | class name asSymbol = aSymbol ]
+		   ifNone: [ ^ nil ]) new
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> printableString: aSymbol [
 
-	^ASN1PrintableStringType name: aSymbol in: self
+	^ ASN1PrintableStringType name: aSymbol in: self
 ]
 
 { #category : #services }
@@ -270,43 +258,43 @@ ASN1Module >> remove: aType [
 
 	self definitions removeKey: aType name.
 	aType module: nil.
-	^aType
+	^ aType
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> sequence: aSymbol [
 
-	^ASN1SequenceType name: aSymbol in: self
+	^ ASN1SequenceType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> sequence: aSymbol mapping: mappingClass [
 
 	^ (ASN1MappedSequenceType name: aSymbol in: self)
-		mapping: mappingClass;
-		yourself
+		  mapping: mappingClass;
+		  yourself
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> sequence: aSymbol of: typeSpec [
 
 	^ (ASN1SequenceOfType name: aSymbol in: self)
-		elementType: typeSpec;
-		yourself
+		  elementType: typeSpec;
+		  yourself
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> set: aSymbol [
 
-	^ASN1SetType name: aSymbol in: self
+	^ ASN1SetType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> set: aSymbol mapping: mappingClass [
 
 	^ (ASN1MappedSetType name: aSymbol in: self)
-		mapping: mappingClass;
-		yourself
+		  mapping: mappingClass;
+		  yourself
 ]
 
 { #category : #'definitions - mapped' }
@@ -320,31 +308,31 @@ ASN1Module >> set: aSymbol of: typeSpec [
 { #category : #'definitions - mapped' }
 ASN1Module >> teletextString: aSymbol [
 
-	^ASN1TeletexStringType name: aSymbol in: self
+	^ ASN1TeletexStringType name: aSymbol in: self
 ]
 
 { #category : #services }
 ASN1Module >> typeFrom: aTypeSpec [
 
-	(aTypeSpec isKindOf: ASN1Type) ifTrue: [^ aTypeSpec].
-	aTypeSpec isBehavior ifTrue: [^ aTypeSpec new].
-	^self find: aTypeSpec
+	(aTypeSpec isKindOf: ASN1Type) ifTrue: [ ^ aTypeSpec ].
+	aTypeSpec isBehavior ifTrue: [ ^ aTypeSpec new ].
+	^ self find: aTypeSpec
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> universalString: aSymbol [
 
-	^ASN1UniversalStringType name: aSymbol in: self
+	^ ASN1UniversalStringType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> utcTime: aSymbol [
 
-	^ASN1UTCTimeType name: aSymbol in: self
+	^ ASN1UTCTimeType name: aSymbol in: self
 ]
 
 { #category : #'definitions - mapped' }
 ASN1Module >> utf8String: aSymbol [
 
-	^ASN1StringType name: aSymbol in: self
+	^ ASN1StringType name: aSymbol in: self
 ]

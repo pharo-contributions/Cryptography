@@ -12,16 +12,14 @@ ASN1BitStringType >> decodeValueWithDERStream: derStream length: length [
 	bitString bitsPadding: derStream next.
 	bitString bytes: (derStream next: length - 1).
 	^ bitString
-
 ]
 
 { #category : #encoding }
 ASN1BitStringType >> encodeValue: anObject withDERStream: derStream [
 
-	derStream 
+	derStream
 		nextPut: anObject bitsPadding;
-		nextPutAll: anObject bytes asByteArray.
-
+		nextPutAll: anObject bytes asByteArray
 ]
 
 { #category : #testing }

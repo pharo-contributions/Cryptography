@@ -12,54 +12,50 @@ Class {
 { #category : #private }
 ASN1ChoiceElement >> addedTo: aType [
 
-	owner := aType.
-
+	owner := aType
 ]
 
 { #category : #decoding }
 ASN1ChoiceElement >> decodeWithDERStream: derStream [
 
 	| tag |
-	derStream atEnd ifTrue: [^ self error: 'missing element'].
+	derStream atEnd ifTrue: [ ^ self error: 'missing element' ].
 	tag := derStream peekTag.
 	(self matchesTag: tag)
-		ifTrue: [^ type decodeWithDERStream: derStream]
-		ifFalse: [^ self error: 'bad choice'].
-
+		ifTrue: [ ^ type decodeWithDERStream: derStream ]
+		ifFalse: [ ^ self error: 'bad choice' ]
 ]
 
 { #category : #encoding }
 ASN1ChoiceElement >> encode: anObject withDERStream: derStream [
 
-	self type encode: anObject withDERStream: derStream.
+	self type encode: anObject withDERStream: derStream
 ]
 
 { #category : #'subtype utilities' }
 ASN1ChoiceElement >> explicitTag: integer [
 
 	self type: self type explicitSubType.
-	^ self type tag: integer.
-
+	^ self type tag: integer
 ]
 
 { #category : #'subtype utilities' }
 ASN1ChoiceElement >> implicitTag: integer [
 
 	self type: self type implicitSubType.
-	^ self type tag: integer.
-
+	^ self type tag: integer
 ]
 
 { #category : #testing }
 ASN1ChoiceElement >> isTypeFor: anObject [
 
-	^self type isTypeFor: anObject
+	^ self type isTypeFor: anObject
 ]
 
 { #category : #testing }
 ASN1ChoiceElement >> matchesTag: anInteger [
 
-	^self type matchesTag: anInteger
+	^ self type matchesTag: anInteger
 ]
 
 { #category : #accessing }

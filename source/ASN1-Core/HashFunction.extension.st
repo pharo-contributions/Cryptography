@@ -9,22 +9,21 @@ HashFunction class >> digestInfoAsn1DerEncodingFromMessage: msg [
 { #category : #'*ASN1-Core' }
 HashFunction class >> digestInfoFromMessage: msg [
 
-	^ (OrderedCollection 
-		with: (OrderedCollection with: self oid with: nil)
-		with: (self hashMessage: msg))
-
+	^ OrderedCollection
+		  with: (OrderedCollection with: self oid with: nil)
+		  with: (self hashMessage: msg)
 ]
 
 { #category : #'*ASN1-Core' }
-HashFunction class >> doubleHashMessage: aStringOrByteArray [ 
+HashFunction class >> doubleHashMessage: aStringOrByteArray [
+
 	^ self new doubleHashMessage: aStringOrByteArray
 ]
 
 { #category : #'*ASN1-Core' }
 HashFunction class >> oid [
 
-	^ ASN1ObjectId fromString: self oidString.
-
+	^ ASN1ObjectId fromString: self oidString
 ]
 
 { #category : #'*ASN1-Core' }

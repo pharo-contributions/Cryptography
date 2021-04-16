@@ -28,11 +28,14 @@ ASN1OctetsType >> decodeValueIndefiniteLengthWithDERStream: derStream [
 
 	| octets value |
 	octets := self octetsClass new.
-	[derStream peekTag = 0
-		ifTrue: [value := ASN1EndOfIndefiniteLengthType new decodeWithDERStream: derStream]
-		ifFalse: [value := self decodeWithDERStream: derStream].
-	value isKindOf: ASN1EndOfIndefiniteLengthMarker] whileFalse: [
-		octets := octets, value].
+	[ 
+	derStream peekTag = 0
+		ifTrue: [ 
+			value := ASN1EndOfIndefiniteLengthType new decodeWithDERStream:
+				         derStream ]
+		ifFalse: [ value := self decodeWithDERStream: derStream ].
+	value isKindOf: ASN1EndOfIndefiniteLengthMarker ] whileFalse: [ 
+		octets := octets , value ].
 	^ octets
 ]
 
@@ -42,16 +45,18 @@ ASN1OctetsType >> decodeWithDERStream: derStream [
 	| tag numericTag object |
 	tag := derStream peekTag.
 	numericTag := tag bitAnd: 2r00011111.
-	numericTag = (self asn1Tag bitAnd: 2r00011111)
-		ifFalse: [self error: 'asn1 decoder: bad tag'].
+	numericTag = (self asn1Tag bitAnd: 2r00011111) ifFalse: [ 
+		self error: 'asn1 decoder: bad tag' ].
 	derStream nextTag.
 	(tag bitAnd: 2r00100000) > 0
-		ifTrue: [object := self 
-			decodeConstructedValueWithDERStream: derStream 
-			length: derStream nextLength]
-		ifFalse: [object := self 
-			decodeValueWithDERStream: derStream 
-			length: derStream nextLength].
+		ifTrue: [ 
+			object := self
+				          decodeConstructedValueWithDERStream: derStream
+				          length: derStream nextLength ]
+		ifFalse: [ 
+			object := self
+				          decodeValueWithDERStream: derStream
+				          length: derStream nextLength ].
 	^ object
 ]
 

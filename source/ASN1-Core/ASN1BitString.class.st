@@ -12,9 +12,8 @@ Class {
 ASN1BitString class >> fromByteArray: bytes [
 
 	^ self new
-		bytes: bytes;
-		yourself.
-
+		  bytes: bytes;
+		  yourself
 ]
 
 { #category : #'initialize-release' }

@@ -25,19 +25,17 @@ ASN1StructuredType >> add: aSymbol type: type [
 { #category : #'accessing - element construction' }
 ASN1StructuredType >> add: aSymbol type: type explicitTag: integer [
 
-	^(self add: aSymbol type: type)
-		explicitTag: integer;
-		yourself.
-
+	^ (self add: aSymbol type: type)
+		  explicitTag: integer;
+		  yourself
 ]
 
 { #category : #'accessing - element construction' }
 ASN1StructuredType >> add: aSymbol type: type implicitTag: integer [
 
-	^(self add: aSymbol type: type)
-		implicitTag: integer;
-		yourself.
-
+	^ (self add: aSymbol type: type)
+		  implicitTag: integer;
+		  yourself
 ]
 
 { #category : #private }
@@ -45,16 +43,15 @@ ASN1StructuredType >> addElement: element [
 
 	self elements addLast: element.
 	element addedTo: self.
-	^element
+	^ element
 ]
 
 { #category : #accessing }
 ASN1StructuredType >> elementWithSymbol: aSymbol [
 
 	^ self elements
-		detect: [:each | each symbol == aSymbol]
-		ifNone: [self error: 'no element specified in structured type'].
-
+		  detect: [ :each | each symbol == aSymbol ]
+		  ifNone: [ self error: 'no element specified in structured type' ]
 ]
 
 { #category : #accessing }
@@ -81,8 +78,7 @@ ASN1StructuredType >> hasElements [
 ASN1StructuredType >> initialize [
 
 	super initialize.
-	self elements: (OrderedCollection new: 5).
-
+	self elements: (OrderedCollection new: 5)
 ]
 
 { #category : #private }

@@ -7,15 +7,13 @@ Class {
 { #category : #decoding }
 ASN1AssignmentSubType >> decodeWithDERStream: derStream [
 
-	^ self parent decodeWithDERStream: derStream.
-
+	^ self parent decodeWithDERStream: derStream
 ]
 
 { #category : #encoding }
 ASN1AssignmentSubType >> encode: anObject withDERStream: derStream [
 
-	^ self parent encode: anObject withDERStream: derStream.
-
+	^ self parent encode: anObject withDERStream: derStream
 ]
 
 { #category : #testing }

@@ -13,10 +13,9 @@ ASN1BooleanType >> decodeValueWithDERStream: derStream length: length [
 { #category : #encoding }
 ASN1BooleanType >> encodeValue: anObject withDERStream: derStream [
 
-	anObject 
-		ifTrue: [derStream nextPut: 255]
-		ifFalse: [derStream nextPut: 0].
-
+	anObject
+		ifTrue: [ derStream nextPut: 255 ]
+		ifFalse: [ derStream nextPut: 0 ]
 ]
 
 { #category : #testing }

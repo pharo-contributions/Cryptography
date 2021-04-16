@@ -7,8 +7,7 @@ Class {
 { #category : #decoding }
 ASN1StringType >> decodeValueWithDERStream: derStream length: length [
 
-	^(derStream next: length) asByteArray asString.
-
+	^ (derStream next: length) asByteArray asString
 ]
 
 { #category : #encoding }
@@ -32,8 +31,7 @@ ASN1StringType >> octetsClass [
 { #category : #encoding }
 ASN1StringType >> sizeOfObject: anObject [
 
-	^ anObject size.
-
+	^ anObject size
 ]
 
 { #category : #accessing }

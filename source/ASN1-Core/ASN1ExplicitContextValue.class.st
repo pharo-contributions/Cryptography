@@ -34,8 +34,8 @@ ASN1ExplicitContextValue >> asn1Tag [
 { #category : #printing }
 ASN1ExplicitContextValue >> printOn: aStream [
 
-	aStream nextPutAll: '[', self tagIndex asString, ']', (self tagValue printString).
-
+	aStream nextPutAll:
+		'[' , self tagIndex asString , ']' , self tagValue printString
 ]
 
 { #category : #accessing }

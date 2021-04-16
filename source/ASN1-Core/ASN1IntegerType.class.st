@@ -9,12 +9,11 @@ ASN1IntegerType >> decodeValueWithDERStream: derStream length: length [
 
 	| integer |
 	integer := Integer new: length neg: false.
-	length to: 1 by: -1 do: [:index |
-		integer byteAt: index put: derStream next].
+	length to: 1 by: -1 do: [ :index | 
+	integer byteAt: index put: derStream next ].
 	((integer byteAt: length) allMask: 16r80)
-		ifTrue: [^integer twosComplement negated normalize]
-		ifFalse: [^integer normalize].
-
+		ifTrue: [ ^ integer twosComplement negated normalize ]
+		ifFalse: [ ^ integer normalize ]
 ]
 
 { #category : #encoding }
@@ -23,16 +22,14 @@ ASN1IntegerType >> encodeValue: anObject withDERStream: derStream [
 	| integer |
 	integer := anObject.
 	integer positive
-		ifTrue: [
-			(integer lastDigit allMask: 16r80) 
-				ifTrue: [derStream nextPut: 0]]
-		ifFalse: [
+		ifTrue: [ 
+		(integer lastDigit allMask: 16r80) ifTrue: [ derStream nextPut: 0 ] ]
+		ifFalse: [ 
 			integer := integer negated twosComplement.
-			(integer lastDigit noMask: 16r80)
-				ifTrue: [derStream nextPut: 16rFF]].
-	integer bytesCount to: 1 by: -1 do: [:digitIndex |
-		derStream nextPut: (integer byteAt: digitIndex)].
-
+			(integer lastDigit noMask: 16r80) ifTrue: [ 
+				derStream nextPut: 16rFF ] ].
+	integer bytesCount to: 1 by: -1 do: [ :digitIndex | 
+	derStream nextPut: (integer byteAt: digitIndex) ]
 ]
 
 { #category : #testing }

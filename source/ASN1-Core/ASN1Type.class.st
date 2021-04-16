@@ -27,20 +27,17 @@ ASN1Type >> decodeWithDERStream: derStream [
 
 	| tag |
 	tag := derStream nextTag.
-	(self matchesTag: tag)
-		ifFalse: [self error: 'asn1 decoder: bad tag'].
-	^ self 
-		decodeValueWithDERStream: derStream 
-		length: derStream nextLength.
-	
-
+	(self matchesTag: tag) ifFalse: [ 
+		self error: 'asn1 decoder: bad tag' ].
+	^ self
+		  decodeValueWithDERStream: derStream
+		  length: derStream nextLength
 ]
 
 { #category : #decoding }
 ASN1Type >> decodeWithDERStream: derStream owner: owner ownerType: ownerType [
 
-	^ self decodeWithDERStream: derStream.
-
+	^ self decodeWithDERStream: derStream
 ]
 
 { #category : #encoding }
@@ -52,7 +49,6 @@ ASN1Type >> encode: anObject withDERStream: derStream [
 	derStream nextPutLength: size.
 	self encodeValue: anObject withDERStream: derStream.
 	^ derStream
-
 ]
 
 { #category : #encoding }

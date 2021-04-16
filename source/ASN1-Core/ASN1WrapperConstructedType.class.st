@@ -12,15 +12,14 @@ ASN1WrapperConstructedType >> decodeValueIndefiniteLengthWithDERStream: derStrea
 	contextValue tagIndex: (derStream currentTag bitAnd: 2r00011111).
 	contextValue tagIsPrimitive: false.
 	sequence := OrderedCollection new.
-	[derStream peekTag = 0
-		ifTrue: [value := ASN1EndOfIndefiniteLengthType new decodeWithDERStream: derStream]
-		ifFalse: [value := derStream decode].
-	value isKindOf: ASN1EndOfIndefiniteLengthMarker] 
-		whileFalse: [sequence add: value].
+	[ 
+	derStream peekTag = 0
+		ifTrue: [ value := ASN1EndOfIndefiniteLengthType new decodeWithDERStream: derStream ]
+		ifFalse: [ value := derStream decode ].
+	value isKindOf: ASN1EndOfIndefiniteLengthMarker ] whileFalse: [ 
+		sequence add: value ].
 	contextValue tagValue: sequence.
-	^contextValue
-	
-
+	^ contextValue
 ]
 
 { #category : #decoding }
@@ -45,10 +44,7 @@ ASN1WrapperConstructedType >> decodeValueWithDERStream: derStream length: length
 { #category : #encoding }
 ASN1WrapperConstructedType >> encodeValue: anObject withDERStream: derStream [
 
-	anObject tagValue do: [:each |
-		derStream encode: each].
-	
-
+	anObject tagValue do: [ :each | derStream encode: each ]
 ]
 
 { #category : #encoding }
