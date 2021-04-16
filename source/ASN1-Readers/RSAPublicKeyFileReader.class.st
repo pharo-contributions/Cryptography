@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'bytes'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-RSA'
 }
 
 { #category : #'instance creation' }

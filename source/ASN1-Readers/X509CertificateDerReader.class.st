@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'derBytes'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-X509'
 }
 
 { #category : #'instance creation' }

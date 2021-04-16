@@ -7,7 +7,7 @@ Class {
 		'iv',
 		'password'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-DSA'
 }
 
 { #category : #'as yet unclassified' }

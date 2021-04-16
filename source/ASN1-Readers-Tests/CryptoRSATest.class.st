@@ -5,10 +5,10 @@ Class {
 		'privateKey',
 		'publicKey'
 	],
-	#category : #'ASN1-Readers-Tests'
+	#category : #'ASN1-Readers-Tests-Base'
 }
 
-{ #category : #RSA }
+{ #category : #'private - RSA' }
 CryptoRSATest >> derKeys [
 
 	| key64 |
@@ -16,7 +16,7 @@ CryptoRSATest >> derKeys [
 	^ key64 base64Decoded
 ]
 
-{ #category : #RSA }
+{ #category : #'private - RSA' }
 CryptoRSATest >> encodedBase64Keys [
 
 	^ 'MIICXgIBAAKBgQDkI45GM6mYLlbxrKozE6bXWMoxvtVuIWOIF1KcGLED+4Gipriw
@@ -57,7 +57,6 @@ CryptoRSATest >> setUp [
 
 	| reader |
 	super setUp.
-
 	reader := RSAPrivateKeyFileReader new.
 	reader decryptedBytes: self derKeys.
 	privateKey := reader asPrivateKey.

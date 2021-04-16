@@ -1,7 +1,7 @@
 Class {
 	#name : #OpenSSLKeyDerivationFunction,
 	#superclass : #Object,
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-OpenSSL'
 }
 
 { #category : #'as yet unclassified' }
