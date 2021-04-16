@@ -1,6 +1,6 @@
 Extension { #name : #BlockCipherMode }
 
-{ #category : #'*cryptography-tests' }
+{ #category : #'*Cryptography-Core-Tests' }
 BlockCipherMode class >> key: aByteArray [
 	Warning signal: 'you do NOT want to use this method in a real program because we use a hard-coded nonce.  You should take care of your own nonce.'.
 	^ (self on: (Rijndael new keySize: aByteArray size; key: aByteArray))
