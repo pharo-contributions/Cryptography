@@ -7,7 +7,7 @@ Class {
 	#category : #'Cryptography-Core-Tests-ElGamal'
 }
 
-{ #category : #ElGamal }
+{ #category : #accessing }
 CryptoElGamalTest >> elGamalGeneratorOfSize: bits [
 	^ elGamalGenerators 
 		at: bits
@@ -16,21 +16,21 @@ CryptoElGamalTest >> elGamalGeneratorOfSize: bits [
 			ElGamalKeyGenerator new generateKeysOfSize: bits ]
 ]
 
-{ #category : #ElGamal }
+{ #category : #'accessing - data' }
 CryptoElGamalTest >> elGamalSizes [
-"	^#(384 512 768 1024 2048 )"
+	" ^#( 384 512 768 1024 2048 ) "
 
-	^#(64 512 )
+	^ #( 64 512 )
 ]
 
-{ #category : #initialize }
+{ #category : #initialization }
 CryptoElGamalTest >> initialize [
 	super initialize.
 	self
 		initializeElGamalGenerators 
 ]
 
-{ #category : #ElGamal }
+{ #category : #'private - initialization' }
 CryptoElGamalTest >> initializeElGamalGenerators [
 	elGamalGenerators := Dictionary new
 
@@ -52,18 +52,19 @@ CryptoElGamalTest >> initializeElGamalGenerators [
 	yourself
 ]
 
-{ #category : #ElGamal }
+{ #category : #'private - utilities' }
 CryptoElGamalTest >> performElGamalEncryption: bits [
+
 	| elgamal pub priv c element |
 	elgamal := self elGamalGeneratorOfSize: bits.
 	pub := elgamal publicKey.
 	priv := elgamal privateKey.
-	element := (SecureRandom picker nextBits: bits).
+	element := SecureRandom picker nextBits: bits.
 	c := pub encryptElement: element.
-	self assert: (priv decryptElement: c) = element
+	self assert: (priv decryptElement: c) equals: element
 ]
 
-{ #category : #ElGamal }
+{ #category : #'private - utilities' }
 CryptoElGamalTest >> performElGamalSignature: bits [
 	| elgamal pub priv signature message |
 	elgamal := self elGamalGeneratorOfSize: bits.
@@ -74,12 +75,12 @@ CryptoElGamalTest >> performElGamalSignature: bits [
 	self assert: (pub verifySignature: signature onMessage: message)
 ]
 
-{ #category : #ElGamal }
+{ #category : #tests }
 CryptoElGamalTest >> testElGamalEncryption [
 	self elGamalSizes do: [:eachBits | self performElGamalEncryption: eachBits]
 ]
 
-{ #category : #ElGamal }
+{ #category : #tests }
 CryptoElGamalTest >> testElGamalSignature [
 	self elGamalSizes do: [:eachBits | self performElGamalSignature: eachBits]
 ]

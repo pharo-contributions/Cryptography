@@ -4,7 +4,7 @@ Class {
 	#category : #'Cryptography-Core-Tests-Rijndael'
 }
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> runBlockCipherModeTest: cipherModeSelector [
 	| key encipherer decipherer startMsg |
 	key := #(190 219 189 251 27 38 8 9 135 25 167 8 238 107 29 251 136 65 107 0 37 215 45 130 84 87 13 206 8 55 74 82) asByteArray.
@@ -27,7 +27,7 @@ CryptoRijndaelTest >> runBlockCipherModeTest: cipherModeSelector [
 		self assert: block = originalBlock ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'private - utilities' }
 CryptoRijndaelTest >> runEncryptDecrypt: blockCipherClass [
 	| msg key1 key2 enc1 enc2 dec1 dec2 ct2 ct1 |
 	enc1 := blockCipherClass key: (key1 := SecureRandom picker nextBytes: 16).
@@ -44,7 +44,7 @@ CryptoRijndaelTest >> runEncryptDecrypt: blockCipherClass [
 	self assert: (dec1 decrypt: ct1) = msg
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 CryptoRijndaelTest >> testByteArrayPadding [
 	| paddedHello fullBlockPad needsFullPad |
 	paddedHello := #(104 101 108 108 111 11 11 11 11 11 11 11 11 11 11 11 ) asByteArray.
@@ -62,22 +62,22 @@ CryptoRijndaelTest >> testByteArrayPadding [
 	self assert: needsFullPad unpaddedSize equals: 16
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testCBC [
 	self runBlockCipherModeTest: #cbc
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testCFB [
 	self runBlockCipherModeTest: #cfb
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testCTR [
 	self runBlockCipherModeTest: #ctr
 ]
 
-{ #category : #others }
+{ #category : #'tests - others' }
 CryptoRijndaelTest >> testEncryptDecrypt [
 	BlockCipherMode allSubclasses asArray do:
 		[ : each |
@@ -86,12 +86,12 @@ CryptoRijndaelTest >> testEncryptDecrypt [
 			do: [ : warn | warn resume ] ]
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testOFB [
 	self runBlockCipherModeTest: #ofb
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testRijndael [
 	| rijndael vector |
 	rijndael := Rijndael new keySize: 16; key: (0 to: 15) asByteArray.
@@ -118,7 +118,7 @@ CryptoRijndaelTest >> testRijndael [
 	self assert: vector hex = '000102030405060708090a0b0c0d0e0f'
 ]
 
-{ #category : #'block ciphers' }
+{ #category : #'tests - block ciphers' }
 CryptoRijndaelTest >> testRijndael128128 [
 	| key vector cipher |
 	key := #(16r2B 16r7E 16r15 16r16 16r28 16rAE 16rD2 16rA6 16rAB 16rF7 16r15 16r88 16r09 16rCF 16r4F 16r3C) asByteArray.

@@ -4,7 +4,7 @@ Class {
 	#category : #'Cryptography-Core-Tests-RC2'
 }
 
-{ #category : #testing }
+{ #category : #'private - utilities' }
 CryptoRC2Test >> genericARC2TestKey: key effectiveKeyLength: aLength plaintext: plainText ciphertext: ciphertext [
 
 	| vector rc2 |
@@ -18,7 +18,7 @@ CryptoRC2Test >> genericARC2TestKey: key effectiveKeyLength: aLength plaintext: 
 	rc2 destroy
 ]
 
-{ #category : #testing }
+{ #category : #tests }
 CryptoRC2Test >> testARC2 [
 	" All quantities are given in hexadecimal notation.
 

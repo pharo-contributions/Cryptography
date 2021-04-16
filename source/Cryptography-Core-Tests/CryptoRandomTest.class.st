@@ -4,7 +4,7 @@ Class {
 	#category : #'Cryptography-Core-Tests-RandomAndPrime'
 }
 
-{ #category : #others }
+{ #category : #tests }
 CryptoRandomTest >> testRandomGenerators [
 
 	| random randomBytes |

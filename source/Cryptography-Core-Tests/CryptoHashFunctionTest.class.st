@@ -4,7 +4,7 @@ Class {
 	#category : #'Cryptography-Core-Tests-MD5'
 }
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testHMAC [
 
 	self
@@ -25,7 +25,7 @@ CryptoHashFunctionTest >> testHMAC [
 		equals: 16r56BE34521D144C88DBB8C733F0E8B3F6
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testHMACSHA1 [
 
 	self
@@ -38,7 +38,7 @@ CryptoHashFunctionTest >> testHMACSHA1 [
 				asByteArray
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testLargeSHA1 [
 
 	"Here is the third example from the specification document (FIPS PUB 180-1). This example may take several minutes."
@@ -49,7 +49,7 @@ CryptoHashFunctionTest >> testLargeSHA1 [
 		equals: 16r34AA973CD4C4DAA4F61EEB2BDBAD27316534016F
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testMD2 [
 	self assert: (MD2 hashMessage: '') asInteger = 16r8350E5A3E24C153DF2275C9F80692773.
 	self assert: (MD2 hashMessage: 'a') asInteger = 16r32EC01EC4A6DAC72C0AB96FB34C0B5D1.
@@ -60,7 +60,7 @@ CryptoHashFunctionTest >> testMD2 [
 	self assert: (MD2 hashMessage: '12345678901234567890123456789012345678901234567890123456789012345678901234567890') asInteger = 16rD5976F79D83D3A0DC9806C3C66F3EFD8.
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testMD4 [
 
 	self
@@ -70,7 +70,7 @@ CryptoHashFunctionTest >> testMD4 [
 				asByteArray
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testMD5 [
 
 	self
@@ -100,7 +100,7 @@ CryptoHashFunctionTest >> testMD5 [
 		equals: 16r57EDF4A22BE3C955AC49DA2E2107B67A
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testMD5Implementations [
 
 	"Check if the two implementations give the same results. Do nothing if the plugin is not available"
@@ -116,7 +116,7 @@ CryptoHashFunctionTest >> testMD5Implementations [
 		data := data , 'Squeak' ]
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testSHA1 [
 
 	self
@@ -129,7 +129,7 @@ CryptoHashFunctionTest >> testSHA1 [
 		equals: 16r84983E441C3BD26EBAAE4AA1F95129E5E54670F1
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testSHA256 [
 
 	"these tests come from http://csrc.nist.gov/publications/fips/fips180-2/fips180-2withchangenotice.pdf"
@@ -152,7 +152,7 @@ CryptoHashFunctionTest >> testSHA256 [
 			16rCDC76E5C9914FB9281A1C7E284D73E67F1809A48A497200E046D39CCC7112CD0 ]
 ]
 
-{ #category : #'hash algorithms' }
+{ #category : #'tests - hash algorithms' }
 CryptoHashFunctionTest >> testSHA256Implementations [
 
 	"Check if the two implementations give the same results. Do nothing if the plugin is not available"
