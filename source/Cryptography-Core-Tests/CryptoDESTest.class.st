@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoDESTest,
 	#superclass : #TestCase,
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-DES'
 }
 
 { #category : #accessing }

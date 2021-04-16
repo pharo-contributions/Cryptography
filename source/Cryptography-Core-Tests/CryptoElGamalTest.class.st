@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'elGamalGenerators'
 	],
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-ElGamal'
 }
 
 { #category : #ElGamal }

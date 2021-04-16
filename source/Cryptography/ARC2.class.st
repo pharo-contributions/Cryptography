@@ -644,7 +644,7 @@ Class {
 	#classVars : [
 		'PITABLE'
 	],
-	#category : #'Cryptography-ARC2'
+	#category : #'Cryptography-RC2'
 }
 
 { #category : #LICENSE }

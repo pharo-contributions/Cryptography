@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoDSATest,
 	#superclass : #TestCase,
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-DSA'
 }
 
 { #category : #DSA }

@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoRC2Test,
 	#superclass : #TestCase,
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-RC2'
 }
 
 { #category : #testing }

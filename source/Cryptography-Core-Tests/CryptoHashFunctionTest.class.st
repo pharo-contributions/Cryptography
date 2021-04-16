@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoHashFunctionTest,
 	#superclass : #TestCase,
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-MD5'
 }
 
 { #category : #'hash algorithms' }

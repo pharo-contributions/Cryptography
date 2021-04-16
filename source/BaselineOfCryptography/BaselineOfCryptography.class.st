@@ -12,7 +12,10 @@ BaselineOfCryptography >> baseline: spec [
 	<baseline>
         
 	spec for: #common do: [
-		spec package: 'Cryptography'.
+		spec 
+			package: 'Cryptography';
+			package: 'Cryptography-Core-Tests' with: [ spec requires: #(#'Cryptography' ) ].
+			
 		spec 
 			"ASN1"
 			package: 'ASN1-Core' with: [ spec requires: #(#'Cryptography' ) ];
@@ -40,7 +43,7 @@ BaselineOfCryptography >> baseline: spec [
 		spec
 			group: 'core' with: #('Cryptography');
 			group: 'default' with: #('legacy');
-			group: 'legacy' with: #('Cryptography' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' );
-			group: 'all' with: #('Cryptography' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' 'PBKDF2-Tests' 'Blowfish' 'OpenPGP' 'LayeredProtocol')
-	]. 
+			group: 'legacy' with: #('Cryptography' 'Cryptography-Core-Tests' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' );
+			group: 'all' with: #('Cryptography' 'Cryptography-Core-Tests' 'ASN1-Core-Tests' 'ASN1-Readers-Tests' 'PKCS12-Tests' 'X509-Tests' 'PBKDF2-Tests' 'Blowfish' 'OpenPGP' 'LayeredProtocol')
+ ]. 
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #CryptoRijndaelTest,
 	#superclass : #TestCase,
-	#category : #'Cryptography-Tests'
+	#category : #'Cryptography-Core-Tests-Rijndael'
 }
 
 { #category : #'block ciphers' }
