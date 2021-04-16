@@ -49,17 +49,17 @@ CryptoRijndaelTest >> testByteArrayPadding [
 	| paddedHello fullBlockPad needsFullPad |
 	paddedHello := #(104 101 108 108 111 11 11 11 11 11 11 11 11 11 11 11 ) asByteArray.
 	self assert: paddedHello isProperlyPadded.
-	self assert: ('hello' asByteArray padToMultipleOf: 16) = paddedHello.
-	self assert: paddedHello unpaddedSize = 'hello' size.
+	self assert: ('hello' asByteArray padToMultipleOf: 16) equals: paddedHello.
+	self assert: paddedHello unpaddedSize equals: 'hello' size.
 
 	fullBlockPad := #(16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16) asByteArray.
 	self assert: fullBlockPad asByteArray isProperlyPadded.
 
 	needsFullPad := '1234567890123456' asByteArray padToMultipleOf: 16.
-	self assert: needsFullPad size = 32.
-	self assert: (needsFullPad copyFrom: 17 to: 32) = fullBlockPad.
+	self assert: needsFullPad size equals: 32.
+	self assert: (needsFullPad copyFrom: 17 to: 32) equals: fullBlockPad.
 	self assert: needsFullPad isProperlyPadded.
-	self assert: needsFullPad unpaddedSize = 16
+	self assert: needsFullPad unpaddedSize equals: 16
 ]
 
 { #category : #'block ciphers' }
@@ -97,9 +97,9 @@ CryptoRijndaelTest >> testRijndael [
 	rijndael := Rijndael new keySize: 16; key: (0 to: 15) asByteArray.
 	vector := (0 to: 15) asByteArray.
 	rijndael encryptBlock: vector.
-	self assert: vector hex = '0a940bb5416ef045f1c39458c653ea5a'.
+	self assert: vector hex equals: '0a940bb5416ef045f1c39458c653ea5a'.
 	rijndael decryptBlock: vector.
-	self assert: vector hex = '000102030405060708090a0b0c0d0e0f'.
+	self assert: vector hex equals: '000102030405060708090a0b0c0d0e0f'.
 
 	rijndael := Rijndael new blockSize: 16; keySize: 24.
 	rijndael key: (0 to: 16r17) asByteArray.
@@ -126,7 +126,7 @@ CryptoRijndaelTest >> testRijndael128128 [
 
 	cipher := Rijndael new keySize: 16; key: key.
 	cipher encryptBlock: vector.
-	self assert: vector hex = '3925841d02dc09fbdc118597196a0b32'.
+	self assert: vector hex equals: '3925841d02dc09fbdc118597196a0b32'.
 	cipher decryptBlock: vector.
-	self assert: vector hex = '3243f6a8885a308d313198a2e0370734'
+	self assert: vector hex equals: '3243f6a8885a308d313198a2e0370734'
 ]

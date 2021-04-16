@@ -8,100 +8,102 @@ Class {
 CryptoASN1Test >> testBMPString [
 
 	| bytes obj newBytes testObj |
-	bytes := #(30 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 30 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
 CryptoASN1Test >> testBaseExplicitType [
 
 	| bytes obj newBytes type |
-	(ASN1Module name: #test) explicit: #TestExplicit type: #ASN1IntegerType tag: 0.
+	(ASN1Module name: #test)
+		explicit: #TestExplicit
+		type: #ASN1IntegerType
+		tag: 0.
 
 	type := (ASN1Module name: #test) find: #TestExplicit.
-	bytes := #(160 4 2 2 3 21).
+	bytes := #( 160 4 2 2 3 21 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
-	self assert: (obj = 789).
+	self assert: obj equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
 CryptoASN1Test >> testBaseImplicitConstructedType [
 
 	| bytes obj newBytes type |
-	(ASN1Module name: #test) implicit: #TestImplicit type: #ASN1SequenceType tag: 0.
+	(ASN1Module name: #test)
+		implicit: #TestImplicit
+		type: #ASN1SequenceType
+		tag: 0.
 
 	type := (ASN1Module name: #test) find: #TestImplicit.
-	bytes := #(160 4 2 2 3 21).
+	bytes := #( 160 4 2 2 3 21 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
-	self assert: (obj = (OrderedCollection with: 789)).
+	self assert: obj equals: (OrderedCollection with: 789).
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
 CryptoASN1Test >> testBaseImplicitPrimitiveType [
 
 	| bytes obj newBytes type |
-	(ASN1Module name: #test) implicit: #TestImplicit type: #ASN1IntegerType tag: 0.
+	(ASN1Module name: #test)
+		implicit: #TestImplicit
+		type: #ASN1IntegerType
+		tag: 0.
 
 	type := (ASN1Module name: #test) find: #TestImplicit.
-	bytes := #(128 2 3 21).
+	bytes := #( 128 2 3 21 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
-	self assert: (obj = 789).
+	self assert: obj equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testBitString [
 
 	| bytes obj newBytes testObj |
-	bytes := #(3 3 3 168 121).
-	testObj := ASN1BitString new 
-		bytes: #(168 121); 
-		bitsPadding: 3; 
-		yourself.
+	bytes := #( 3 3 3 168 121 ).
+	testObj := ASN1BitString new
+		           bytes: #( 168 121 );
+		           bitsPadding: 3;
+		           yourself.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testBoolean [
 
 	| bytes obj newBytes testObj |
-	bytes := #(1 1 255).
+	bytes := #( 1 1 255 ).
 	testObj := true.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testByteArray [
 
 	| bytes obj newBytes testObj |
-	bytes := #(4 5 3 21 55 43 76).
-	testObj := #(3 21 55 43 76) asByteArray.
+	bytes := #( 4 5 3 21 55 43 76 ).
+	testObj := #( 3 21 55 43 76 ) asByteArray.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - BER' }
@@ -241,16 +243,16 @@ CryptoASN1Test >> testDefinedAnyType [
 	bytes := #(48 3 1 1 255).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = true).
+	self assert: obj testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes.
 
 	bytes := #(48 4 2 2 3 21).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 789).
+	self assert: obj testSlot1 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -271,16 +273,16 @@ CryptoASN1Test >> testDefinedChoiceType [
 	bytes := #(48 3 1 1 255).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = true).
+	self assert: obj testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes.
 
 	bytes := #(48 4 2 2 3 21).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 789).
+	self assert: obj testSlot1 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes 
 
 ]
 
@@ -296,9 +298,9 @@ CryptoASN1Test >> testDefinedExplicitType [
 	bytes := #(48 6 160 4 2 2 3 21).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 789).
+	self assert: obj testSlot1 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -314,9 +316,9 @@ CryptoASN1Test >> testDefinedImplicitConstructedType [
 	bytes := #(48 6 160 4 2 2 3 21).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = (OrderedCollection with: 789)).
+	self assert: obj testSlot1 equals: (OrderedCollection with: 789).
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -332,10 +334,9 @@ CryptoASN1Test >> testDefinedImplicitPrimitiveType [
 	bytes := #(48 4 128 2 3 21).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 789).
+	self assert: obj testSlot1 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - mapped' }
@@ -343,16 +344,17 @@ CryptoASN1Test >> testDefinedMappedBMPStringType [
 
 	| bytes obj newBytes type |
 	((ASN1Module name: #test) mapped: #TestMapped)
-		mapping: ASN1TestModel mappingSymbol: #testSlot1 type: #ASN1BMPStringType.
+		mapping: ASN1TestModel
+		mappingSymbol: #testSlot1
+		type: #ASN1BMPStringType.
 	type := (ASN1Module name: #test) find: #TestMapped.
 
-	bytes := #(30 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 30 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 'hello world').
+	self assert: obj testSlot1 equals: 'hello world'.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - mapped' }
@@ -360,16 +362,17 @@ CryptoASN1Test >> testDefinedMappedBooleanType [
 
 	| bytes obj newBytes type |
 	((ASN1Module name: #test) mapped: #TestMapped)
-		mapping: ASN1TestModel mappingSymbol: #testSlot1 type: #ASN1BooleanType.
+		mapping: ASN1TestModel
+		mappingSymbol: #testSlot1
+		type: #ASN1BooleanType.
 	type := (ASN1Module name: #test) find: #TestMapped.
 
-	bytes := #(1 1 255).
+	bytes := #( 1 1 255 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = true).
+	self assert: obj testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - mapped' }
@@ -377,16 +380,17 @@ CryptoASN1Test >> testDefinedMappedIntegerType [
 
 	| bytes obj newBytes type |
 	((ASN1Module name: #test) mapped: #TestMapped)
-		mapping: ASN1TestModel mappingSymbol: #testSlot1 type: #ASN1IntegerType.
+		mapping: ASN1TestModel
+		mappingSymbol: #testSlot1
+		type: #ASN1IntegerType.
 	type := (ASN1Module name: #test) find: #TestMapped.
 
-	bytes := #(2 2 3 21).
+	bytes := #( 2 2 3 21 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 789).
+	self assert: obj testSlot1 equals: 789.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - mapped' }
@@ -394,19 +398,21 @@ CryptoASN1Test >> testDefinedMappedSequenceType [
 
 	| bytes obj newBytes type |
 	((ASN1Module name: #test) mapped: #TestMapped)
-		mapping: ASN1TestModel mappingSymbol: #testSlot1 type: #TestSequence.
-	((ASN1Module name: #test) sequence: #TestSequence mapping: ASN1TestModel)
-		add: #testSlot1 type: #ASN1BooleanType.
+		mapping: ASN1TestModel
+		mappingSymbol: #testSlot1
+		type: #TestSequence.
+	((ASN1Module name: #test)
+		 sequence: #TestSequence
+		 mapping: ASN1TestModel) add: #testSlot1 type: #ASN1BooleanType.
 	type := (ASN1Module name: #test) find: #TestMapped.
 
-	bytes := #(48 3 1 1 255).
+	bytes := #( 48 3 1 1 255 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
 	self assert: (obj testSlot1 isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 testSlot1 = true).
+	self assert: obj testSlot1 testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - mapped' }
@@ -414,16 +420,17 @@ CryptoASN1Test >> testDefinedMappedUTF8StringType [
 
 	| bytes obj newBytes type |
 	((ASN1Module name: #test) mapped: #TestMapped)
-		mapping: ASN1TestModel mappingSymbol: #testSlot1 type: #ASN1StringType.
+		mapping: ASN1TestModel
+		mappingSymbol: #testSlot1
+		type: #ASN1StringType.
 	type := (ASN1Module name: #test) find: #TestMapped.
 
-	bytes := #(12 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 12 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = 'hello world').
+	self assert: obj testSlot1 equals: 'hello world'.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
@@ -454,9 +461,9 @@ CryptoASN1Test >> testDefinedSequenceType [
 	bytes := #(48 3 1 1 255).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = true).
+	self assert: obj testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -472,10 +479,9 @@ CryptoASN1Test >> testDefinedSequenceTypeDefault [
 	bytes := #(48 0).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = false).
+	self assert: obj testSlot1 equals: false.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
@@ -491,7 +497,7 @@ CryptoASN1Test >> testDefinedSequenceTypeOptional [
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -507,9 +513,9 @@ CryptoASN1Test >> testDefinedSequenceTypeOptionalDefault [
 	bytes := #(48 0).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = false).
+	self assert: obj testSlot1 equals: false.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -525,9 +531,9 @@ CryptoASN1Test >> testDefinedSetType [
 	bytes := #(49 3 1 1 255).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: ASN1TestModel).
-	self assert: (obj testSlot1 = true).
+	self assert: obj testSlot1 equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -538,13 +544,12 @@ CryptoASN1Test >> testDefinedUnmappedSequenceType [
 	(ASN1Module name: #test) sequence: #TestSequence.
 
 	type := (ASN1Module name: #test) find: #TestSequence.
-	bytes := #(48 3 1 1 255).
+	bytes := #( 48 3 1 1 255 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: OrderedCollection).
-	self assert: (obj first = true).
+	self assert: obj first equals: true.
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - defined types' }
@@ -554,33 +559,30 @@ CryptoASN1Test >> testDefinedUnmappedSetType [
 	(ASN1Module name: #test) set: #TestSet.
 
 	type := (ASN1Module name: #test) find: #TestSet.
-	bytes := #(49 3 1 1 255).
+	bytes := #( 49 3 1 1 255 ).
 	obj := ASN1Stream decodeBytes: bytes withType: type.
 	self assert: (obj isKindOf: OrderedSet).
 	self assert: (obj includes: true).
 	newBytes := ASN1Stream encode: obj withType: type.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testEqualsChecksType [
 
-	self deny: (ASN1ObjectId fromString: '1.3.6.1.5.5.7.8.5') = Object new
-
+	self deny: (ASN1ObjectId fromString: '1.3.6.1.5.5.7.8.5') equals: Object new
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testIA5String [
 
 	| bytes obj newBytes testObj |
-	bytes := #(22 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 22 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - BER' }
@@ -602,13 +604,12 @@ CryptoASN1Test >> testIndefiniteLengthSequence [
 CryptoASN1Test >> testInteger [
 
 	| bytes obj newBytes testObj |
-	bytes := #(2 2 3 21).
+	bytes := #( 2 2 3 21 ).
 	testObj := 789.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
@@ -619,7 +620,7 @@ CryptoASN1Test >> testNull [
 	obj := ASN1Stream decodeBytes: bytes.
 	self assert: obj isNil.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes
 
 ]
 
@@ -627,88 +628,82 @@ CryptoASN1Test >> testNull [
 CryptoASN1Test >> testObjectIdentifier [
 
 	| bytes obj newBytes testObj |
-	bytes := #(6 8 43 6 1 5 5 7 8 5).
+	bytes := #( 6 8 43 6 1 5 5 7 8 5 ).
 	testObj := ASN1ObjectId new
-		oid: '1.3.6.1.5.5.7.8.5';
-		yourself.
+		           oid: '1.3.6.1.5.5.7.8.5';
+		           yourself.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testPrintableString [
 
 	| bytes obj newBytes testObj |
-	bytes := #(19 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 19 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testSequence [
 
 	| bytes obj newBytes testObj |
-	bytes := #(48 11 1 1 255 2 2 3 21 4 2 108 100).
+	bytes := #( 48 11 1 1 255 2 2 3 21 4 2 108 100 ).
 	testObj := OrderedCollection new
-		add: true;
-		add: 789;
-		add: #(108 100) asByteArray;
-		yourself.
+		           add: true;
+		           add: 789;
+		           add: #( 108 100 ) asByteArray;
+		           yourself.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testSet [
 
 	| bytes obj newBytes testObj |
-	bytes := #(49 11 1 1 255 4 2 108 100 2 2 3 21 ).
+	bytes := #( 49 11 1 1 255 4 2 108 100 2 2 3 21 ).
 	testObj := OrderedSet new
-		add: true;
-		add: #(108 100) asByteArray;
-		add: 789;
-		yourself.
+		           add: true;
+		           add: #( 108 100 ) asByteArray;
+		           add: 789;
+		           yourself.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testString [
 
 	| bytes obj newBytes testObj |
-	bytes := #(12 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 12 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray = newBytes
 ]
 
 { #category : #'tests - base' }
 CryptoASN1Test >> testTeletexString [
 
 	| bytes obj newBytes testObj |
-	bytes := #(20 11 104 101 108 108 111 32 119 111 114 108 100).
+	bytes := #( 20 11 104 101 108 108 111 32 119 111 114 108 100 ).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
 
 { #category : #'tests - base' }
@@ -720,7 +715,7 @@ CryptoASN1Test >> testUTCTime [
 	testObj := DateAndTime fromString: '2007-03-22T15:58:17+00:00'.	
 	self assert: obj rounded equals: testObj rounded.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
+	self assert: bytes asByteArray equals: newBytes 
 
 ]
 
@@ -731,8 +726,7 @@ CryptoASN1Test >> testUniversalString [
 	bytes := #(28 11 104 101 108 108 111 32 119 111 114 108 100).
 	testObj := 'hello world'.
 	obj := ASN1Stream decodeBytes: bytes.
-	self assert: (obj = testObj).
+	self assert: obj equals: testObj.
 	newBytes := ASN1Stream encode: obj.
-	self assert: (bytes asByteArray = newBytes).
-
+	self assert: bytes asByteArray equals: newBytes
 ]
