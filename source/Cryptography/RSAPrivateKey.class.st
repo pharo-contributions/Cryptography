@@ -101,7 +101,7 @@ RSAPrivateKey >> v15SignMessageHash: encodedMsg [
 
 	| int emLen |
 	
-	emLen := (p * q) digitLength -1.
+	emLen := (p * q) bytesCount -1.
 		
 	int := LargePositiveInteger basicNew: emLen.
 	" Our LargeIntegers are little endian, so we have to reverse the bytes"

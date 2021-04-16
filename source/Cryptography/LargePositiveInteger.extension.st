@@ -6,6 +6,6 @@ LargePositiveInteger >> destroy [
 	1 to: self size do:
 		[ : x |
 		self 
-			digitAt: x
+			byteAt: x
 			put: 0 ]
 ]

@@ -8,7 +8,7 @@ Class {
 	#classVars : [
 		'TagToTypeDispatchTable'
 	],
-	#category : 'ASN1'
+	#category : #ASN1
 }
 
 { #category : #decoding }
@@ -221,9 +221,9 @@ ASN1Stream >> nextPutLength: size [
 	size <= 127 
 		ifTrue: [self nextPut: size]
 		ifFalse: [
-			self nextPut: ((size digitLength) bitOr: 16r80).
-			size digitLength to: 1 by: -1 do: [:digitIndex |
-				self nextPut: (size digitAt: digitIndex)]]
+			self nextPut: ((size bytesCount) bitOr: 16r80).
+			size bytesCount to: 1 by: -1 do: [:digitIndex |
+				self nextPut: (size byteAt: digitIndex)]]
 
 ]
 

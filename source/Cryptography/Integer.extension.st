@@ -3,7 +3,7 @@ Extension { #name : #Integer }
 { #category : #'*cryptography-core' }
 Integer >> areAllBitsSet [
 
-	^self digitLength ~= (self + 1) digitLength
+	^self bytesCount ~= (self + 1) bytesCount
 ]
 
 { #category : #'*cryptography-core' }
@@ -70,12 +70,12 @@ Integer >> toEBase64String [
 { #category : #'*cryptography-core' }
 Integer >> twosComplement [
 	| complement digit length |
-	length := self digitLength + 1.
+	length := self bytesCount + 1.
 	complement := Integer new: length neg: false.
 	1 to: length-1 do: [:index |
-		digit := self digitAt: index.
+		digit := self byteAt: index.
 		digit := digit bitXor: 16rFF.	"flip bits without 2's complement logic in bitInvert"
-		complement digitAt: index put: digit].	
-	self areAllBitsSet ifTrue: [complement digitAt: length put: 16rFF].
+		complement byteAt: index put: digit].	
+	self areAllBitsSet ifTrue: [complement byteAt: length put: 16rFF].
 	^complement + 1
 ]
