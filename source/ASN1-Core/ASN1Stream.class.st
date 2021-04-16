@@ -8,7 +8,7 @@ Class {
 	#classVars : [
 		'TagToTypeDispatchTable'
 	],
-	#category : #'ASN1-Core-Base'
+	#category : #'ASN1-Core-Streaming'
 }
 
 { #category : #decoding }
