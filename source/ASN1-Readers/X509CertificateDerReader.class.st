@@ -26,7 +26,7 @@ X509CertificateDerReader class >> fromFile: filename [
 	| fs data |
 	fs := StandardFileStream fileNamed: filename.
 	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data.
+	^ self new initializeFromFileContents: data
 
 ]
 
