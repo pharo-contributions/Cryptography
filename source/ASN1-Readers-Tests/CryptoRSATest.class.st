@@ -13,7 +13,7 @@ CryptoRSATest >> derKeys [
 
 	| key64 |
 	key64 := self encodedBase64Keys.
-	^key64 base64Decoded
+	^ key64 base64Decoded
 ]
 
 { #category : #RSA }
@@ -35,41 +35,44 @@ jcosTQvBjrc//rCnb2Pgm8QRGeN/CXKc9kKoWNqUQSYchQ==
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDkI45GM6mYLlbxrKozE6bXWMox
 vtVuIWOIF1KcGLED+4GipriwNt0hkosuil513/CMjn9XBSZtaSsiIOLkXLZtbKYh
 ATtvODR1nD/dl0JpFH7BLcD9NGGRKOow0jg8fcPtXhLTy6Dsl7rfmVPJYuc4IlzZ
-ImTdErllmhzrTKT3YQIDAQAB'.
+ImTdErllmhzrTKT3YQIDAQAB'
 ]
 
 { #category : #tests }
 CryptoRSATest >> genericRSATest: bits [
+
 	| generator public private msg c |
 	generator := RSAKeyPairGenerator new bits: bits.
 	public := generator publicKey. "this may take a while"
 	private := generator privateKey.
 
 	msg := 1234567890987654321. "the plaintext"
-	
-c := public crypt: msg. "the ciphertext (print it and take a look)"
+
+	c := public crypt: msg. "the ciphertext (print it and take a look)"
 	self assert: (private crypt: c) = msg
 ]
 
 { #category : #running }
 CryptoRSATest >> setUp [
+
 	| reader |
 	super setUp.
-	
+
 	reader := RSAPrivateKeyFileReader new.
 	reader decryptedBytes: self derKeys.
 	privateKey := reader asPrivateKey.
-	publicKey := reader asPublicKey.
-	
+	publicKey := reader asPublicKey
 ]
 
 { #category : #tests }
 CryptoRSATest >> testRSA128 [
+
 	self genericRSATest: 128
 ]
 
 { #category : #tests }
 CryptoRSATest >> testRSA64 [
+
 	self genericRSATest: 64
 ]
 
@@ -77,9 +80,8 @@ CryptoRSATest >> testRSA64 [
 CryptoRSATest >> testRSASHASignVerification [
 
 	| signBytes |
-	
-	signBytes := privateKey v15SignMessage: 'hello'.  
-	
+	signBytes := privateKey v15SignMessage: 'hello'.
+
 	self assert: (publicKey v15Verify: signBytes isSignatureOf: 'hello')
 ]
 
