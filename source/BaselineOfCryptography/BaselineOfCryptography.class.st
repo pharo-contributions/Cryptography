@@ -1,3 +1,6 @@
+"
+Baseline for [https://github.com/pharo-contributions/Cryptography](https://github.com/pharo-contributions/Cryptography)
+"
 Class {
 	#name : #BaselineOfCryptography,
 	#superclass : #BaselineOf,
@@ -11,16 +14,25 @@ BaselineOfCryptography >> baseline: spec [
 	spec for: #common do: [
 		spec package: 'Cryptography'.
 		spec 
+			"ASN1"
 			package: 'ASN1-Core' with: [ spec requires: #(#'Cryptography' ) ];
 			package: 'ASN1-Core-Tests' with: [ spec requires: #(#'ASN1-Core' ) ];
 			package: 'ASN1-Readers' with: [ spec requires: #(#'Cryptography' #'ASN1-Core') ];
 			package: 'ASN1-Readers-Tests' with: [ spec requires: #(#'ASN1-Readers') ];
+			
+			"PKCS"
 			package: 'PKCS12' with: [ spec requires: #(#'Cryptography' #'ASN1-Core') ];
 			package: 'PKCS12-Tests' with: [ spec requires: #(#'PKCS12') ];
+
+			"X509"
 			package: 'X509' with: [ spec requires: #(#'Cryptography' #'ASN1-Core' ) ];
 			package: 'X509-Tests' with: [ spec requires: #(#'X509' ) ];
+			
+			"PBKDF2"
 			package: 'PBKDF2' with: [ spec requires: #(#'Cryptography') ];
 			package: 'PBKDF2-Tests' with: [ spec requires: #(#'PBKDF2' )  ];
+			
+			"Other"
 			package: 'Blowfish' with: [ spec requires: #(#'Cryptography') ];
 			package: 'OpenPGP' with: [ spec requires: #(#'Cryptography') ];
 			package: 'LayeredProtocol' with: [ spec requires: #(#'Cryptography') ].
