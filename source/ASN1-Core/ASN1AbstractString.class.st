@@ -49,7 +49,7 @@ ASN1AbstractString >> hash [
 	^ self asString hash
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1AbstractString >> initialize [
 
 	self string: ''

@@ -188,7 +188,7 @@ ASN1Module >> imports: anObject [
 	imports := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1Module >> initialize [
 
 	self definitions: Dictionary new.

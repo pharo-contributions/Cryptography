@@ -74,7 +74,7 @@ ASN1StructuredType >> hasElements [
 	^ self elements notEmpty
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1StructuredType >> initialize [
 
 	super initialize.

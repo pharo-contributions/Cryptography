@@ -16,7 +16,7 @@ ASN1BitString class >> fromByteArray: bytes [
 		  yourself
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1BitString >> , bitString [
 
 	^ self class new
@@ -67,7 +67,7 @@ ASN1BitString >> bytes: anObject [
 	bytes := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1BitString >> initialize [
 
 	self bitsPadding: 0.

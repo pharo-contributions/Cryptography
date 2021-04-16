@@ -71,7 +71,7 @@ ASN1StructureElement >> hasDefaultOrIsOptional [
 	^ self default notNil or: [ self optional ]
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1StructureElement >> initialize [
 
 	self optional: false

@@ -81,7 +81,7 @@ ASN1AnyDefinedByType >> encode: anObject withDERStream: derStream owner: owner o
 	^ type encode: anObject withDERStream: derStream
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ASN1AnyDefinedByType >> initialize [
 
 	self typeMap: Dictionary new

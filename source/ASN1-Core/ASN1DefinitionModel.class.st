@@ -218,7 +218,7 @@ ASN1DefinitionModel >> getPragmaMutators [
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> parseASN1ClassName [
-	"Return the ans1definition argument string"
+	"Return the ASN1 definition argument string"
 
 	| aDefString classSepIndex |
 	aDefString := self asn1DefinitionString ifNil: [ ^ nil ].
@@ -229,7 +229,7 @@ ASN1DefinitionModel >> parseASN1ClassName [
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> parseASN1DefinitionString [
-	"Return the ans1definition argument string"
+	"Return the ASN1 definition argument string"
 
 	| aPragma aCollection |
 	aCollection := Pragma
