@@ -242,15 +242,15 @@ ASN1DefinitionModel >> parseASN1DefinitionString [
 
 { #category : #'services parsing' }
 ASN1DefinitionModel >> parseFieldNames [
-	| aString fields |
+	| aString result |
 	aString := self asn1DefinitionString.
-	fields := OrderedCollection new.
+	result := OrderedCollection new.
 	(aString copyFrom: (aString indexOf: ${) + 1 to: (aString indexOf: $}) - 1) linesDo: [:aLine |
 		(((aLine indexOfSubCollection: '--') > 0) or: [aLine withBlanksTrimmed isEmpty])ifFalse: [
-			fields add: aLine subStrings first
+			result add: aLine substrings first
 		].
 	].
-	^fields
+	^result
 ]
 
 { #category : #'services parsing' }

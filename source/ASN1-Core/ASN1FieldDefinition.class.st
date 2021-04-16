@@ -29,7 +29,7 @@ ASN1FieldDefinition class >> forField: aFieldName onDefinition: aDefinitionStrin
 		ifFalse: [noCommentsString := noCommentsString, aLine].
 	].
 	fieldInfo := (noCommentsString explode: $,)
-		detect: [:aField | aField subStrings first = aFieldName] ifNone: [^nil].
+		detect: [:aField | aField substrings first = aFieldName] ifNone: [^nil].
 	^ self new parseFieldInfo: fieldInfo;
 		 yourself
 ]
@@ -142,7 +142,7 @@ ASN1FieldDefinition >> isOptional: anObject [
 ASN1FieldDefinition >> parseFieldInfo: fieldInfo [
 	"fill the current instance with fieldInformation"
 	| subStrings explodedString noTagIndexString |
-	subStrings := fieldInfo subStrings.
+	subStrings := fieldInfo substrings.
 	self fieldName: subStrings first.
 	noTagIndexString :=  (fieldInfo includes: $[) ifTrue: [
 		self tagIndex: (fieldInfo copyFrom: (fieldInfo indexOf: $[) + 1 to: (fieldInfo indexOf: $]) - 1).
@@ -150,7 +150,7 @@ ASN1FieldDefinition >> parseFieldInfo: fieldInfo [
 	] ifFalse: [
 		fieldInfo
 	].
-	explodedString := noTagIndexString subStrings asOrderedCollection.
+	explodedString := noTagIndexString substrings asOrderedCollection.
 	(explodedString includes: 'EXPLICIT') ifTrue: [
 		explodedString := explodedString remove: 'EXPLICIT'; yourself.
 		self isExplicit: true.
