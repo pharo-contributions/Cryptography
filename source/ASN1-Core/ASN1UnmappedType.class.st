@@ -4,6 +4,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1UnmappedType class >> isAbstract [
+
+	^ self == ASN1UnmappedType
+]
+
 { #category : #decoding }
 ASN1UnmappedType >> decodeValueIndefiniteLengthWithDERStream: derStream [
 

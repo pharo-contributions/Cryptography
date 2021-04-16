@@ -9,6 +9,12 @@ Class {
 }
 
 { #category : #testing }
+ASN1SubType class >> isAbstract [
+
+	^ self == ASN1SubType
+]
+
+{ #category : #testing }
 ASN1SubType >> isTypeFor: anObject [
 
 	^self parent isTypeFor: anObject

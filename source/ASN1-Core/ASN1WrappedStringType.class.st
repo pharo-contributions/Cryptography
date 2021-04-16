@@ -4,6 +4,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1WrappedStringType class >> isAbstract [
+
+	^ self == ASN1WrappedStringType
+]
+
 { #category : #decoding }
 ASN1WrappedStringType >> decodeValueWithDERStream: derStream length: length [
 

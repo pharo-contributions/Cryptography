@@ -8,6 +8,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1Entity class >> isAbstract [
+
+	^ self == ASN1Entity
+]
+
 { #category : #'instance creation' }
 ASN1Entity class >> name: aSymbol [
 

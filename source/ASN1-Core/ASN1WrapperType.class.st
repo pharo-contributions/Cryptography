@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #testing }
+ASN1WrapperType class >> isAbstract [
+
+	^ self == ASN1WrapperType
+]
+
+{ #category : #testing }
 ASN1WrapperType >> matchesTag: anInteger [
 
 	^ (anInteger bitAnd: 2r11000000) isZero not

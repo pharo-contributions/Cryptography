@@ -4,6 +4,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1OctetsType class >> isAbstract [
+
+	^ self == ASN1OctetsType
+]
+
 { #category : #decoding }
 ASN1OctetsType >> decodeConstructedValueWithDERStream: derStream length: length [
 

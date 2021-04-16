@@ -4,6 +4,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1ConstructedType class >> isAbstract [
+
+	^ self == ASN1ConstructedType
+]
+
 { #category : #encoding }
 ASN1ConstructedType >> encode: anObject withDERStream: derStream [
 

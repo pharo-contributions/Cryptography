@@ -4,6 +4,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1Type class >> isAbstract [
+
+	^ self == ASN1Type
+]
+
 { #category : #accessing }
 ASN1Type >> asn1Tag [
 

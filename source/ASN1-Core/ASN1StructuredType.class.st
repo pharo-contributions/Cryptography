@@ -7,6 +7,12 @@ Class {
 	#category : #'ASN1-Core-Types'
 }
 
+{ #category : #testing }
+ASN1StructuredType class >> isAbstract [
+
+	^ self == ASN1StructuredType
+]
+
 { #category : #'accessing - element construction' }
 ASN1StructuredType >> add: aSymbol type: type [
 
