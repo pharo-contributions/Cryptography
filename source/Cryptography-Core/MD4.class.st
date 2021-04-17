@@ -28,11 +28,6 @@ MD4 class >> input: anArray [
 ]
 
 { #category : #'instance creation' }
-MD4 class >> new [
-	^ super new initialize
-]
-
-{ #category : #'instance creation' }
 MD4 class >> oidString [
 
 	^ '1.2.840.113549.2.5'.
