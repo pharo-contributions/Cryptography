@@ -63,6 +63,15 @@ RandomGenerator class >> key: anInteger [
 	self subclassResponsibility 
 ]
 
+{ #category : #utilities }
+RandomGenerator class >> mousePosition [
+	| x y |
+	x := ByteArray new: 4.
+	y := ByteArray new: 4.
+	SDL2 mouseStateX: x y: y.
+	^ ( x signedLongAt: 1) @ (y signedLongAt: 1)
+]
+
 { #category : #create }
 RandomGenerator class >> picker [
 	^ picker ifNil: [ picker := self withGeneratedKey ]
@@ -83,12 +92,15 @@ RandomGenerator class >> startUp [
 { #category : #utilities }
 RandomGenerator class >> unpredictableStringsDo: aBlock [
 	"Enumerate sources of information from my environment that should be generally hard to guess."
-	| time |
+	| time mousePoint |
+	
 	time := Time millisecondsToRun:
-		[ aBlock
+		[ 
+		mousePoint := self mousePosition.
+		aBlock
 			value: World imageForm bits compressToByteArray ;
-			value: Sensor mousePoint x asString ;
-			value: Sensor mousePoint y asString ;
+			value:  mousePoint x asString ;
+			value:  mousePoint y asString ;
 			value: Time millisecondClockValue asByteArray ;
 			value: Date today asString ;
 			value: Time now asString ;
@@ -97,10 +109,11 @@ RandomGenerator class >> unpredictableStringsDo: aBlock [
 		#(imagePath lastUpdateString systemInformationString shortImageName datedVersion lastQuitLogPosition licenseStringTemplate)  collect:
 			[ : each |
 			aBlock value: (SmalltalkImage current perform: each) asByteArray ] ].
+	mousePoint := self mousePosition.
 	aBlock 
 		value: time asByteArray;
 		"maybe the pointer has moved, hit it again."
-		value: Sensor mousePoint asString ;
+		value: mousePoint asString ;
 		value: Time millisecondClockValue asByteArray
 
 ]
