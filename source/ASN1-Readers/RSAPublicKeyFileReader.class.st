@@ -1,10 +1,13 @@
+"
+Reader for RSA public key files
+"
 Class {
 	#name : #RSAPublicKeyFileReader,
 	#superclass : #Object,
 	#instVars : [
 		'bytes'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-RSA'
 }
 
 { #category : #'instance creation' }
@@ -12,10 +15,7 @@ RSAPublicKeyFileReader class >> fromFile: filename [
 	"(RSAPrivateKeyFileReader fromFile: '/usr/local/ssl/private/CA.key')"
 	"(RSAPrivateKeyFileReader fromFile: '/Users/slosher/Desktop/squeak/certificates/rsa.key')"
 
-	| fs data |
-	fs := StandardFileStream fileNamed: filename.
-	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data.
+	^ self new initializeFromFileContents: filename asFileReference contents
 
 ]
 
@@ -49,18 +49,18 @@ RSAPublicKeyFileReader >> bytes: anObject [
 	bytes := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'private - initialization' }
 RSAPublicKeyFileReader >> initializeFromFileContents: data [
 
 	| i j theData |
 	i := data indexOfSubCollection: '--BEGIN ' startingAt: 1.
 	i = 0 ifTrue: [self derBytes: data asByteArray. ^ self].
 	i := data indexOfSubCollection: 'KEY--' startingAt: i.
-	i := data findAnySubStr: String crlf startingAt: i.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	i := data findAnySubstring: String crlf startingAt: i.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 "	self processProcType: (data copyFrom: i + 1 to: j)."
 	i := j.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 "	self processDEKInfo: (data copyFrom: i + 1 to: j)."
 	i := j.
 	j := data indexOfSubCollection: '--END ' startingAt: i.

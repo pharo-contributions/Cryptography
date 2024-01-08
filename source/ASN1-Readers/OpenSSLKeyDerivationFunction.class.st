@@ -1,10 +1,13 @@
+"
+Reader for OpenSSL key derivation function
+"
 Class {
 	#name : #OpenSSLKeyDerivationFunction,
 	#superclass : #Object,
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-OpenSSL'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 OpenSSLKeyDerivationFunction >> derivedKeyFromPassword: password salt: salt size: size [
 
 	| result block digest |
