@@ -1,3 +1,6 @@
+"
+Reader for DSA private key files
+"
 Class {
 	#name : #DSAPrivateKeyFileReader,
 	#superclass : #Object,
@@ -7,10 +10,10 @@ Class {
 		'iv',
 		'password'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-DSA'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 DSAPrivateKeyFileReader class >> fromFile: filename [
 	"(DSAPrivateKeyFileReader fromFile: '/usr/local/ssl/private/dsa.key')"
 	"(DSAPrivateKeyFileReader fromFile: '/Users/slosher/Desktop/squeak/certificates/dsa.key')"
@@ -18,7 +21,7 @@ DSAPrivateKeyFileReader class >> fromFile: filename [
 	| fs data |
 	fs := StandardFileStream fileNamed: filename.
 	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data.
+	^ self new initializeFromFileContents: data
 
 ]
 
@@ -67,8 +70,7 @@ DSAPrivateKeyFileReader >> bytes: anObject [
 DSAPrivateKeyFileReader >> decrypt [
 
 	| cipher key block encryptedStream decryptedStream |
-	self password isNil 
-		ifTrue: [self password: (FillInTheBlank requestPassword: 'Enter your password')].
+	self password ifNil: [self password: (UIManager default requestPassword: 'Enter your password')].
 	key := OpenSSLKeyDerivationFunction new 
 		derivedKeyFromPassword: self password 
 		salt: self iv 
@@ -105,11 +107,11 @@ DSAPrivateKeyFileReader >> initializeFromFileContents: data [
 	i := data indexOfSubCollection: '--BEGIN ' startingAt: 1.
 	i = 0 ifTrue: [self bytes: data asByteArray. ^ self].
 	i := data indexOfSubCollection: 'KEY--' startingAt: i.
-	i := data findAnySubStr: String crlf startingAt: i.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	i := data findAnySubstring: String crlf startingAt: i.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 	self processProcType: (data copyFrom: i + 1 to: j).
 	i := j.
-	j := data findAnySubStr: String crlf startingAt: i + 1.
+	j := data findAnySubstring: String crlf startingAt: i + 1.
 	self processDEKInfo: (data copyFrom: i + 1 to: j).
 	i := j.
 	j := data indexOfSubCollection: '--END ' startingAt: i.
@@ -154,7 +156,7 @@ DSAPrivateKeyFileReader >> processDEKInfo: data [
 	| stream algorithm |
 	stream := data readStream.
 	stream upTo: $:.
-	algorithm := (stream upTo: $,) withBlanksTrimmed.
+	algorithm := (stream upTo: $,) withBlanksCondensed.
 	self iv: (Integer readFrom: stream base: 16) asByteArray.
 
 ]
