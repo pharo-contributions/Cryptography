@@ -1,10 +1,13 @@
+"
+Reader for X509 DER certfificates
+"
 Class {
 	#name : #X509CertificateDerReader,
 	#superclass : #Object,
 	#instVars : [
 		'derBytes'
 	],
-	#category : 'ASN1-Readers'
+	#category : #'ASN1-Readers-X509'
 }
 
 { #category : #'instance creation' }
@@ -12,7 +15,7 @@ X509CertificateDerReader class >> fromDerBytes: bytes [
 
 	^ self new 
 		derBytes: bytes;
-		yourself.
+		yourself
 
 ]
 
@@ -23,10 +26,7 @@ X509CertificateDerReader class >> fromFile: filename [
 	"(X509CertificateDerReader fromFile: '/Users/slosher/Desktop/squeak/certificates/class3cacert.crt') asCertificate"
 	"(X509CertificateDerReader fromFile: '/Users/slosher/Desktop/squeak/certificates/class1cacert.crt') asCertificate"
 
-	| fs data |
-	fs := StandardFileStream fileNamed: filename.
-	data := fs contentsOfEntireFile.
-	^ self new initializeFromFileContents: data.
+	^ self new initializeFromFileContents: filename asFileReference contents
 
 ]
 
@@ -44,7 +44,7 @@ X509CertificateDerReader >> derBytes: anObject [
 	derBytes := anObject
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #'private - initialization' }
 X509CertificateDerReader >> initializeFromFileContents: data [
 
 	| i j theData |
@@ -54,7 +54,7 @@ X509CertificateDerReader >> initializeFromFileContents: data [
 		ifFalse: [
 			i := data indexOfSubCollection: 'CERTIFICATE--' startingAt: i.
 			j := data indexOfSubCollection: '--END ' startingAt: i.
-			i := data findAnySubStr: String crlf startingAt: i.
+			i := data findAnySubstring: String crlf startingAt: i.
 			theData := (data copyFrom: i to: j)
 				reject: [:c | (c = $-) or: [c isSeparator]]].
 	theData := (Base64MimeConverter mimeDecodeToBytes: theData readStream) contents.
